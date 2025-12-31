@@ -267,16 +267,27 @@
             const emailVal = document.getElementById('inputEmail').value;
             const msgVal = document.getElementById('inputMessage').value;
 
-            // 1. Track in Mixpanel
-            if (typeof mixpanel !== 'undefined') {
-                mixpanel.track("Form Submitted", {
-                    "page": "Home",
-                    "type": "Consultation Request",
-                    "name": nameVal,
-                    "email": emailVal,
-                    "message_snippet": msgVal.substring(0, 50)
-                });
-            }
+           // --- MIXPANEL UPDATE ---
+    if (typeof mixpanel !== 'undefined') {
+        // 1. Identify FIRST so all subsequent events are linked to "Jane Doe"
+        mixpanel.identify(emailVal);
+
+        // 2. Set Profile Properties
+        mixpanel.people.set({
+            "$name": nameVal,
+            "$email": emailVal,
+            "Last Contacted": new Date().toISOString()
+        });
+
+        // 3. Track the Event
+        mixpanel.track("Form Submitted", {
+            "page": "Home",
+            "type": "Consultation Request",
+            "name": nameVal,
+            "email": emailVal,
+            "message_snippet": msgVal.substring(0, 50)
+        });
+    }
 
             // Update UI
             const originalBtnText = submitBtn.innerHTML;
