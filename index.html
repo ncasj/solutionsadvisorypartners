@@ -512,20 +512,44 @@
         </div>
     </footer>
 
-    <script>
-        const contactForm = document.getElementById('contactForm');
-        
-        contactForm.addEventListener('submit', function() {
-            // Track the event in Mixpanel before the browser completes the POST request
-            if (typeof mixpanel !== 'undefined') {
-                mixpanel.track("Form Submitted", {
-                    "page": "Home",
-                    "type": "Consultation Request"
-                });
-            }
-            // The browser will naturally proceed to the action URL (FormSubmit)
+const contactForm = document.getElementById('contactForm');
+
+contactForm.addEventListener('submit', function(e) {
+    e.preventDefault(); // Prevents the weird redirect
+
+    // 1. Track in Mixpanel
+    if (typeof mixpanel !== 'undefined') {
+        mixpanel.track("Form Submitted", {
+            "page": "Home",
+            "type": "Consultation Request"
         });
-    </script>
+    }
+
+    // 2. Send the data in the background
+    const formData = new FormData(contactForm);
+    
+    fetch(contactForm.action, {
+        method: 'POST',
+        body: formData,
+        headers: {
+            'Accept': 'application/json'
+        }
+    })
+    .then(response => {
+        if (response.ok) {
+            // 3. Show success state on the button
+            const btn = document.getElementById('submitBtn');
+            btn.innerHTML = "Message Sent! ✓";
+            btn.style.backgroundColor = "#10b981"; // Green
+            contactForm.reset(); // Clear the form
+        } else {
+            alert("Something went wrong. Please try emailing directly!");
+        }
+    })
+    .catch(error => {
+        alert("Error sending form. Please try again.");
+    });
+});
 
 </body>
 </html>
