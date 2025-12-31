@@ -55,6 +55,16 @@
             record_heatmap_data: true,
         });
     </script>
+    
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+    (function(){
+        // INITIALIZE EMAILJS WITH YOUR PUBLIC KEY
+        // TODO: Replace "YOUR_PUBLIC_KEY" with your actual key from EmailJS dashboard
+        emailjs.init("YOUR_PUBLIC_KEY");
+    })();
+    </script>
+
 </head>
 <body class="bg-brand-light text-slate-800 antialiased">
 
@@ -179,7 +189,7 @@
                     <div class="text-3xl font-serif font-bold text-white mb-6">$5k - $8k <span class="text-sm text-slate-400 font-sans font-normal">/ month</span></div>
                     <ul class="space-y-3 text-sm text-slate-300 mb-8 flex-grow">
                         <li class="flex items-start"><span class="text-brand-accent mr-2">✓</span> Standardize involvement throughout customer journey</li>
-                        <li class="flex items-start"><span class="text-brand-accent mr-2">✓</span> Playbook ideation & creation/li>
+                        <li class="flex items-start"><span class="text-brand-accent mr-2">✓</span> Playbook ideation & creation</li>
                         <li class="flex items-start"><span class="text-brand-accent mr-2">✓</span> Enablement sessions with members of your team</li>
                         <li class="flex items-start"><span class="text-brand-accent mr-2">✓</span> Hiring support for first full-time SE</li>
                     </ul>
@@ -213,17 +223,17 @@
             <form id="contactForm" class="text-left space-y-4 bg-slate-50 p-8 rounded-xl border border-slate-200">
                 <div>
                     <label class="block text-sm font-bold text-slate-700 mb-1">Name</label>
-                    <input type="text" id="inputName" class="w-full p-3 border border-slate-300 rounded focus:outline-none focus:border-brand-accent" placeholder="Jane Doe">
+                    <input type="text" name="name" id="inputName" class="w-full p-3 border border-slate-300 rounded focus:outline-none focus:border-brand-accent" placeholder="Jane Doe" required>
                 </div>
                 <div>
                     <label class="block text-sm font-bold text-slate-700 mb-1">Work Email</label>
-                    <input type="email" id="inputEmail" class="w-full p-3 border border-slate-300 rounded focus:outline-none focus:border-brand-accent" placeholder="jane@company.com">
+                    <input type="email" name="email" id="inputEmail" class="w-full p-3 border border-slate-300 rounded focus:outline-none focus:border-brand-accent" placeholder="jane@company.com" required>
                 </div>
                 <div>
                     <label class="block text-sm font-bold text-slate-700 mb-1">How can we help?</label>
-                    <textarea id="inputMessage" class="w-full p-3 border border-slate-300 rounded focus:outline-none focus:border-brand-accent h-32" placeholder="We are struggling to hire our first SE, we're interested in..."></textarea>
+                    <textarea name="message" id="inputMessage" class="w-full p-3 border border-slate-300 rounded focus:outline-none focus:border-brand-accent h-32" placeholder="We are struggling to hire our first SE, we're interested in..." required></textarea>
                 </div>
-                <button type="button" id="submitBtn" class="w-full py-3 bg-brand-dark text-white font-bold rounded hover:bg-slate-800 transition">
+                <button type="submit" id="submitBtn" class="w-full py-3 bg-brand-dark text-white font-bold rounded hover:bg-slate-800 transition">
                     Send Message
                 </button>
                 <p class="text-xs text-center text-slate-400 mt-4">
@@ -244,45 +254,52 @@
             </div>
         </div>
     </footer>
-<script>
-const contactForm = document.getElementById('contactForm');
 
-contactForm.addEventListener('submit', function(e) {
-    e.preventDefault(); // Prevents the weird redirect
+    <script>
+        const contactForm = document.getElementById('contactForm');
+        const submitBtn = document.getElementById('submitBtn');
 
-    // 1. Track in Mixpanel
-    if (typeof mixpanel !== 'undefined') {
-        mixpanel.track("Form Submitted", {
-            "page": "Home",
-            "type": "Consultation Request"
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault(); // Stop standard form submission
+            
+            // Get values for Mixpanel
+            const nameVal = document.getElementById('inputName').value;
+            const emailVal = document.getElementById('inputEmail').value;
+            const msgVal = document.getElementById('inputMessage').value;
+
+            // 1. Track in Mixpanel
+            if (typeof mixpanel !== 'undefined') {
+                mixpanel.track("Form Submitted", {
+                    "page": "Home",
+                    "type": "Consultation Request",
+                    "name": nameVal,
+                    "email": emailVal,
+                    "message_snippet": msgVal.substring(0, 50)
+                });
+            }
+
+            // Update UI
+            const originalBtnText = submitBtn.innerHTML;
+            submitBtn.innerHTML = "Sending...";
+            submitBtn.disabled = true;
+
+            // 2. Send via EmailJS
+            // TODO: Replace 'YOUR_SERVICE_ID' and 'YOUR_TEMPLATE_ID' with actual values from EmailJS
+            emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this)
+                .then(function() {
+                    // Success
+                    submitBtn.innerHTML = "Message Sent! ✓";
+                    submitBtn.style.backgroundColor = "#10b981"; // Green
+                    submitBtn.classList.remove('hover:bg-slate-800');
+                    contactForm.reset();
+                }, function(error) {
+                    // Fail
+                    console.log('FAILED...', error);
+                    alert("Something went wrong. Please try emailing directly.");
+                    submitBtn.innerHTML = originalBtnText;
+                    submitBtn.disabled = false;
+                });
         });
-    }
-
-    // 2. Send the data in the background
-    const formData = new FormData(contactForm);
-    
-    fetch(contactForm.action, {
-        method: 'POST',
-        body: formData,
-        headers: {
-            'Accept': 'application/json'
-        }
-    })
-    .then(response => {
-        if (response.ok) {
-            // 3. Show success state on the button
-            const btn = document.getElementById('submitBtn');
-            btn.innerHTML = "Message Sent! ✓";
-            btn.style.backgroundColor = "#10b981"; // Green
-            contactForm.reset(); // Clear the form
-        } else {
-            alert("Something went wrong. Please try emailing directly!");
-        }
-    })
-    .catch(error => {
-        alert("Error sending form. Please try again.");
-    });
-});
-<script>
+    </script>
 </body>
 </html>
