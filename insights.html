@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <script src="consent.js"></script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insights | Scaling Technical Revenue Teams | Solutions Advisory Partners</title>
+    <meta name="description" content="Ideas, frameworks, and operator insights on technical sales, demos, POCs, and revenue delivery architecture for Series A–B SaaS companies.">
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        brand: {
+                            dark: '#0f172a',
+                            accent: '#38bdf8',
+                            light: '#f8fafc',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3 { font-family: 'Playfair Display', serif; }
+        .hero-pattern {
+            background-color: #0f172a;
+            background-image: radial-gradient(#1e293b 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+        .insight-card {
+            transition: box-shadow 0.2s ease, transform 0.2s ease, border-color 0.2s ease;
+        }
+        .insight-card:hover {
+            box-shadow: 0 10px 40px -10px rgba(15, 23, 42, 0.15);
+            border-color: #94a3b8;
+        }
+        .featured-card:hover {
+            box-shadow: 0 25px 50px -12px rgba(15, 23, 42, 0.2);
+            border-color: #64748b;
+        }
+        .insight-card.hidden-card {
+            display: none;
+        }
+    </style>
+</head>
+<body class="bg-brand-light text-slate-800 antialiased">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-brand-light/90 backdrop-blur-md border-b border-slate-200">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-serif font-bold text-brand-dark tracking-tight">
+                Solutions Advisory <span class="text-brand-accent">.</span>
+            </a>
+            <div class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-600">
+                <a href="index.html" class="hover:text-brand-accent transition">Home</a>
+                <a href="about.html" class="hover:text-brand-accent transition">About</a>
+                <a href="outcomes.html" class="hover:text-brand-accent transition">Outcomes</a>
+                <a href="services.html" class="hover:text-brand-accent transition">Services &amp; Rates</a>
+                <a href="insights.html" class="hover:text-brand-accent transition text-brand-accent font-semibold">Insights</a>
+                <a href="contact.html" class="px-5 py-2 bg-brand-dark text-white rounded-full hover:bg-slate-700 transition">Contact</a>
+                <a href="https://www.linkedin.com/company/solutions-engineering-advisory/" target="_blank" rel="noopener noreferrer" class="text-slate-500 hover:text-[#0A66C2] transition" aria-label="LinkedIn">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                </a>
+            </div>
+            <button id="mobileMenuBtn" class="md:hidden p-2 text-slate-600 hover:text-brand-accent transition" aria-label="Toggle menu" aria-expanded="false">
+                <svg id="iconHam" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                <svg id="iconX" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+            </button>
+        </div>
+        <div id="mobileMenu" class="hidden md:hidden border-t border-slate-200">
+            <div class="px-6 py-4 flex flex-col space-y-1">
+                <a href="index.html" class="block px-3 py-3 rounded-lg text-base font-medium text-slate-700 hover:bg-slate-100 transition">Home</a>
+                <a href="about.html" class="block px-3 py-3 rounded-lg text-base font-medium text-slate-700 hover:bg-slate-100 transition">About</a>
+                <a href="outcomes.html" class="block px-3 py-3 rounded-lg text-base font-medium text-slate-700 hover:bg-slate-100 transition">Outcomes</a>
+                <a href="services.html" class="block px-3 py-3 rounded-lg text-base font-medium text-slate-700 hover:bg-slate-100 transition">Services &amp; Rates</a>
+                <a href="insights.html" class="block px-3 py-3 rounded-lg text-base font-medium text-brand-accent hover:bg-slate-100 transition">Insights</a>
+                <a href="contact.html" class="block mt-2 px-3 py-3 bg-brand-dark text-white text-base font-bold text-center rounded-lg hover:bg-slate-700 transition">Contact</a>
+                <a href="https://www.linkedin.com/company/solutions-engineering-advisory/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 px-3 py-3 text-slate-500 hover:text-[#0A66C2] transition">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                    <span class="text-sm">LinkedIn</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+    <script>
+    (function(){var b=document.getElementById('mobileMenuBtn'),m=document.getElementById('mobileMenu'),h=document.getElementById('iconHam'),x=document.getElementById('iconX');if(!b||!m)return;b.addEventListener('click',function(){m.classList.toggle('hidden');h.classList.toggle('hidden');x.classList.toggle('hidden');b.setAttribute('aria-expanded',m.classList.contains('hidden')?'false':'true');});m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){m.classList.add('hidden');h.classList.remove('hidden');x.classList.add('hidden');b.setAttribute('aria-expanded','false');});});})();
+    </script>
+
+    <!-- HERO -->
+    <section class="hero-pattern text-white min-h-[70vh] flex items-center pt-24 pb-20">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <p class="text-brand-accent font-medium text-sm uppercase tracking-widest mb-6">Insights</p>
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-8">
+                Insights on Scaling Technical Revenue Teams
+            </h1>
+            <p class="text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto">
+                Ideas, frameworks, and operator insights on technical sales, demos, POCs, and revenue delivery architecture.
+            </p>
+        </div>
+    </section>
+
+    <!-- FEATURED INSIGHT -->
+    <section class="py-20 bg-white border-b border-slate-100">
+        <div class="max-w-5xl mx-auto px-6">
+            <p class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-6">Featured</p>
+            <a href="insights/enterprise-pocs-drag-on.html" class="block group" aria-label="Read featured article: The Hidden Reason SaaS POCs Drag On for Months">
+                <article class="featured-card bg-slate-50 border border-slate-200 rounded-2xl p-8 md:p-10 transition-all duration-200">
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="inline-block px-3 py-1 text-xs font-medium text-brand-dark bg-brand-accent/20 rounded-full border border-brand-accent/30">Proof of Concept</span>
+                    </div>
+                    <h2 class="text-2xl md:text-3xl font-bold text-brand-dark mb-4 group-hover:text-brand-accent transition-colors">
+                        The Hidden Reason SaaS POCs Drag On for Months
+                    </h2>
+                    <p class="text-slate-600 text-lg leading-relaxed mb-6 max-w-2xl">
+                        Most long-running POCs aren't slow because of scope&#8212;they're slow because success criteria were never defined up front. Here's how to fix that before the pilot starts.
+                    </p>
+                    <div class="flex items-center gap-4 text-sm text-slate-500">
+                        <span>8 min read</span>
+                        <span class="text-brand-accent font-medium group-hover:underline">Read article &#8594;</span>
+                    </div>
+                </article>
+            </a>
+        </div>
+    </section>
+
+    <!-- BROWSE BY TOPIC (filter controls) -->
+    <section class="py-14 bg-white border-b border-slate-100">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-2xl md:text-3xl font-bold text-brand-dark mb-4">Browse by Topic</h2>
+            <p class="text-slate-600 mb-8 max-w-xl">Frameworks and insights organized by practice area. Use these to find what's most relevant to your stage.</p>
+
+            <div id="topicFilters" class="flex flex-wrap gap-3" role="group" aria-label="Content categories">
+                <button data-filter="all" class="filter-btn px-4 py-2.5 rounded-lg border border-brand-accent bg-brand-accent/10 text-brand-accent text-sm font-medium transition">All</button>
+                <button data-filter="demo-strategy" class="filter-btn px-4 py-2.5 rounded-lg border border-slate-200 bg-white text-slate-700 text-sm font-medium hover:border-brand-accent hover:text-brand-accent hover:bg-brand-accent/5 transition">Demo Strategy</button>
+                <button data-filter="proof-of-concept" class="filter-btn px-4 py-2.5 rounded-lg border border-slate-200 bg-white text-slate-700 text-sm font-medium hover:border-brand-accent hover:text-brand-accent hover:bg-brand-accent/5 transition">Proof of Concept</button>
+                <button data-filter="technical-sales" class="filter-btn px-4 py-2.5 rounded-lg border border-slate-200 bg-white text-slate-700 text-sm font-medium hover:border-brand-accent hover:text-brand-accent hover:bg-brand-accent/5 transition">Technical Sales</button>
+                <button data-filter="revenue-delivery" class="filter-btn px-4 py-2.5 rounded-lg border border-slate-200 bg-white text-slate-700 text-sm font-medium hover:border-brand-accent hover:text-brand-accent hover:bg-brand-accent/5 transition">Revenue Delivery Architecture</button>
+                <button data-filter="se-leadership" class="filter-btn px-4 py-2.5 rounded-lg border border-slate-200 bg-white text-slate-700 text-sm font-medium hover:border-brand-accent hover:text-brand-accent hover:bg-brand-accent/5 transition">Sales Engineering Leadership</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- INSIGHTS GRID -->
+    <section class="py-20 bg-slate-50">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-2xl md:text-3xl font-bold text-brand-dark mb-2">Latest</h2>
+            <p class="text-slate-600 mb-12 max-w-xl">Operator perspectives on demos, POCs, and revenue delivery. Add real posts here as you publish.</p>
+
+            <div id="insightsGrid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <a href="insights/why-most-saas-demos-fail.html" data-category="demo-strategy" class="insight-card group block bg-white border border-slate-200 rounded-xl p-6 h-full flex flex-col hover:-translate-y-1 transition-all duration-200" aria-label="Read: Why Most SaaS Demos Fail">
+                    <div class="flex flex-wrap gap-2 mb-3">
+                        <span class="inline-block px-2.5 py-1 text-xs font-medium text-slate-600 bg-slate-100 rounded-full">Demo Strategy</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-brand-dark mb-2 group-hover:text-brand-accent transition-colors">Why Most SaaS Demos Fail</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed flex-grow">They're built for the product, not for the buyer. How to structure demos around outcomes and decision criteria instead of features.</p>
+                    <div class="flex items-center justify-between mt-4">
+                        <span class="text-sm text-slate-500">5 min read</span>
+                        <span class="text-sm text-brand-accent font-medium opacity-0 group-hover:opacity-100 transition-opacity">Read &#8594;</span>
+                    </div>
+                </a>
+
+                <a href="insights/enterprise-pocs-drag-on.html" data-category="proof-of-concept" class="insight-card group block bg-white border border-slate-200 rounded-xl p-6 h-full flex flex-col hover:-translate-y-1 transition-all duration-200" aria-label="Read: The Hidden Reason Enterprise POCs Drag On">
+                    <div class="flex flex-wrap gap-2 mb-3">
+                        <span class="inline-block px-2.5 py-1 text-xs font-medium text-slate-600 bg-slate-100 rounded-full">Proof of Concept</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-brand-dark mb-2 group-hover:text-brand-accent transition-colors">The Hidden Reason Enterprise POCs Drag On</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed flex-grow">Undefined success criteria and moving goalposts. A framework for scoping and closing POCs without endless extensions.</p>
+                    <div class="flex items-center justify-between mt-4">
+                        <span class="text-sm text-slate-500">7 min read</span>
+                        <span class="text-sm text-brand-accent font-medium opacity-0 group-hover:opacity-100 transition-opacity">Read &#8594;</span>
+                    </div>
+                </a>
+
+                <a href="insights/technical-discovery-skill.html" data-category="technical-sales" class="insight-card group block bg-white border border-slate-200 rounded-xl p-6 h-full flex flex-col hover:-translate-y-1 transition-all duration-200" aria-label="Read: Technical Discovery: The Most Underrated Skill in SaaS Sales">
+                    <div class="flex flex-wrap gap-2 mb-3">
+                        <span class="inline-block px-2.5 py-1 text-xs font-medium text-slate-600 bg-slate-100 rounded-full">Technical Sales</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-brand-dark mb-2 group-hover:text-brand-accent transition-colors">Technical Discovery: The Most Underrated Skill in SaaS Sales</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed flex-grow">Discovery that uncovers real technical and business fit&#8212;not just checklist questions&#8212;shortens cycles and improves win rates.</p>
+                    <div class="flex items-center justify-between mt-4">
+                        <span class="text-sm text-slate-500">6 min read</span>
+                        <span class="text-sm text-brand-accent font-medium opacity-0 group-hover:opacity-100 transition-opacity">Read &#8594;</span>
+                    </div>
+                </a>
+
+                <a href="insights/sales-implementation-gap.html" data-category="revenue-delivery" class="insight-card group block bg-white border border-slate-200 rounded-xl p-6 h-full flex flex-col hover:-translate-y-1 transition-all duration-200" aria-label="Read: The Sales to Implementation Gap That Kills Customer Success">
+                    <div class="flex flex-wrap gap-2 mb-3">
+                        <span class="inline-block px-2.5 py-1 text-xs font-medium text-slate-600 bg-slate-100 rounded-full">Revenue Delivery Architecture</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-brand-dark mb-2 group-hover:text-brand-accent transition-colors">The Sales &#8594; Implementation Gap That Kills Customer Success</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed flex-grow">What's sold often isn't what's delivered. How to design handoffs so implementation and CS don't inherit broken promises.</p>
+                    <div class="flex items-center justify-between mt-4">
+                        <span class="text-sm text-slate-500">6 min read</span>
+                        <span class="text-sm text-brand-accent font-medium opacity-0 group-hover:opacity-100 transition-opacity">Read &#8594;</span>
+                    </div>
+                </a>
+
+                <a href="insights/sales-engineers-wrong-work.html" data-category="se-leadership" class="insight-card group block bg-white border border-slate-200 rounded-xl p-6 h-full flex flex-col hover:-translate-y-1 transition-all duration-200" aria-label="Read: Why Your Sales Engineers Are Probably Doing the Wrong Work">
+                    <div class="flex flex-wrap gap-2 mb-3">
+                        <span class="inline-block px-2.5 py-1 text-xs font-medium text-slate-600 bg-slate-100 rounded-full">Sales Engineering Leadership</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-brand-dark mb-2 group-hover:text-brand-accent transition-colors">Why Your Sales Engineers Are Probably Doing the Wrong Work</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed flex-grow">SE time is often spent on tasks that don't scale. How to align SE capacity with revenue-critical activities.</p>
+                    <div class="flex items-center justify-between mt-4">
+                        <span class="text-sm text-slate-500">5 min read</span>
+                        <span class="text-sm text-brand-accent font-medium opacity-0 group-hover:opacity-100 transition-opacity">Read &#8594;</span>
+                    </div>
+                </a>
+
+                <a href="insights/high-converting-demo-narrative.html" data-category="demo-strategy" class="insight-card group block bg-white border border-slate-200 rounded-xl p-6 h-full flex flex-col hover:-translate-y-1 transition-all duration-200" aria-label="Read: How to Design a High-Converting Demo Narrative">
+                    <div class="flex flex-wrap gap-2 mb-3">
+                        <span class="inline-block px-2.5 py-1 text-xs font-medium text-slate-600 bg-slate-100 rounded-full">Demo Strategy</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-brand-dark mb-2 group-hover:text-brand-accent transition-colors">How to Design a High-Converting Demo Narrative</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed flex-grow">Structure demos around the buyer's journey and technical decision criteria&#8212;not your feature list.</p>
+                    <div class="flex items-center justify-between mt-4">
+                        <span class="text-sm text-slate-500">5 min read</span>
+                        <span class="text-sm text-brand-accent font-medium opacity-0 group-hover:opacity-100 transition-opacity">Read &#8594;</span>
+                    </div>
+                </a>
+            </div>
+
+            <p id="noResults" class="hidden text-center text-slate-500 mt-12 py-8">No articles in this category yet. Check back soon.</p>
+        </div>
+    </section>
+
+    <!-- CONSULTATION CTA -->
+    <section class="py-24 bg-brand-dark text-white">
+        <div class="max-w-2xl mx-auto px-6 text-center">
+            <p class="text-xl md:text-2xl leading-relaxed text-slate-200 mb-8">
+                If your SaaS company is struggling with demos, POCs, or implementation handoffs, the problem is usually not talent&#8212;it's architecture.
+            </p>
+            <a href="contact.html" class="inline-block px-8 py-4 bg-brand-accent text-brand-dark font-bold rounded-lg hover:bg-white transition">
+                Schedule a Consultation
+            </a>
+        </div>
+    </section>
+
+    <footer class="bg-brand-dark text-slate-400 py-12 border-t border-slate-800">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center">
+            <div class="mb-4 md:mb-0">
+                <span class="text-white font-serif font-bold text-lg">Solutions Advisory Partners.</span>
+                <p class="text-sm mt-1">New York, NY</p>
+            </div>
+            <div class="flex items-center gap-4 text-sm">
+                <a href="privacy.html" class="hover:text-brand-accent transition">Privacy Policy</a>
+                <span>&middot;</span>
+                <span>&copy; 2025 Solutions Advisory Partners. All rights reserved.</span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        (function() {
+            var buttons = document.querySelectorAll('#topicFilters .filter-btn');
+            var cards = document.querySelectorAll('#insightsGrid .insight-card');
+            var noResults = document.getElementById('noResults');
+            var activeClass = 'border-brand-accent bg-brand-accent/10 text-brand-accent';
+            var inactiveClass = 'border-slate-200 bg-white text-slate-700';
+
+            function setActive(btn) {
+                buttons.forEach(function(b) {
+                    b.className = 'filter-btn px-4 py-2.5 rounded-lg border text-sm font-medium transition '
+                        + (b === btn ? activeClass : inactiveClass);
+                });
+            }
+
+            function filterCards(category) {
+                var visibleCount = 0;
+                cards.forEach(function(card) {
+                    if (category === 'all' || card.dataset.category === category) {
+                        card.classList.remove('hidden-card');
+                        visibleCount++;
+                    } else {
+                        card.classList.add('hidden-card');
+                    }
+                });
+                noResults.classList.toggle('hidden', visibleCount > 0);
+            }
+
+            buttons.forEach(function(btn) {
+                btn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    setActive(btn);
+                    filterCards(btn.dataset.filter);
+                });
+            });
+        })();
+    </script>
+</body>
+</html>
