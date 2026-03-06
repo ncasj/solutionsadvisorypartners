@@ -7,7 +7,7 @@ const FOCUS_AREAS = [
   {
     title: '2. Demo and POC Strategy',
     description:
-      'Structuring high-conversion demos and POCs that accelerate enterprise deals instead of letting them drag. Clear criteria, clear timelines, clear technical win definitions.',
+      'Structuring high-conversion demos and POCs that accelerate enterprise deals instead of letting them drag. Clear criteria, clear timelines, clear solutions design definitions.',
   },
   {
     title: '3. Implementation and Handoff Architecture',

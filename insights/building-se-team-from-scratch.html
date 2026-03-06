@@ -2,14 +2,12 @@
 <html lang="en" class="scroll-smooth">
 <head>
     <script src="../consent.js"></script>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Why Your Sales Engineers Are Probably Doing the Wrong Work | Solutions Advisory Partners</title>
-    <meta name="description" content="Sales engineers are one of the most valuable and most misused resources in SaaS. Learn how to shift from reactive support to revenue infrastructure.">
+    <title>Building an SE Team from Scratch | Solutions Advisory Partners</title>
+    <meta name="description" content="Your first SE hire isn't about headcount—it's about building the foundation for a scalable technical sales system. A founder's playbook.">
     <script src="https://cdn.tailwindcss.com/3.4.16"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
-
     <script>
         tailwind.config = {
             theme: {
@@ -38,11 +36,9 @@
             background-size: 20px 20px;
         }
     </style>
-
 </head>
 <body class="bg-brand-light text-slate-800 antialiased">
 
-    <!-- Navigation -->
     <nav class="fixed w-full z-50 bg-brand-light/90 backdrop-blur-md border-b border-slate-200">
         <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
             <a href="../index.html" class="text-2xl font-serif font-bold text-brand-dark tracking-tight">
@@ -93,13 +89,13 @@
                 Back to Insights
             </a>
             <div class="flex flex-wrap gap-2 mb-6">
-                <span class="inline-block px-3 py-1 text-xs font-medium text-brand-dark bg-brand-accent/20 rounded-full border border-brand-accent/30 text-brand-accent">Sales Engineering Leadership</span>
+                <span class="inline-block px-3 py-1 text-xs font-medium text-brand-accent bg-brand-accent/20 rounded-full border border-brand-accent/30">SE Org Design</span>
             </div>
             <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-6">
-                Why Your Sales Engineers Are Probably Doing the Wrong Work
+                Building an SE Team from Scratch: A Founder's Playbook
             </h1>
             <div class="flex items-center gap-4 text-sm text-slate-400">
-                <span>5 min read</span>
+                <span>8 min read</span>
             </div>
         </div>
     </section>
@@ -110,91 +106,151 @@
             <div class="prose prose-lg max-w-none text-slate-700 leading-relaxed space-y-6">
 
                 <p class="text-xl text-slate-800 font-medium leading-relaxed">
-                    Sales engineers are one of the most valuable resources in a SaaS organization. They are also one of the most misused.
+                    Your first SE hire isn't about headcount. It's about building the foundation for a scalable technical sales system. Get it right, and you create leverage across every deal. Get it wrong, and you'll spend the next two years unwinding bad habits.
                 </p>
 
-                <p>In many companies, SE teams spend most of their time on activities that don't scale:</p>
+                <p>
+                    Most founders know when they need marketing, sales, or customer success. But the decision to hire a sales engineer&#8212;and how to structure that role&#8212;is one of the least understood and most consequential decisions in a SaaS company's growth journey.
+                </p>
 
-                <ul class="space-y-2 my-6 ml-4">
-                    <li class="flex items-start"><span class="text-brand-accent mr-3">•</span><span>custom demos</span></li>
-                    <li class="flex items-start"><span class="text-brand-accent mr-3">•</span><span>ad-hoc technical calls</span></li>
-                    <li class="flex items-start"><span class="text-brand-accent mr-3">•</span><span>reactive troubleshooting</span></li>
-                    <li class="flex items-start"><span class="text-brand-accent mr-3">•</span><span>internal support requests</span></li>
+                <h2 class="text-2xl font-bold text-brand-dark mt-12 mb-4">When to Make the First SE Hire</h2>
+
+                <p>
+                    There's no universal ARR threshold that triggers the first SE hire. But there are clear signals. If you're experiencing any three of these simultaneously, it's time:
+                </p>
+
+                <ul class="space-y-3 my-6 ml-4">
+                    <li class="flex items-start"><span class="text-brand-accent mr-3 font-bold">&bull;</span><span><strong>The founder is doing 5+ demos per week.</strong> This means the product has market pull, but the founder's time is becoming the bottleneck. Every demo the founder does is time not spent on product, strategy, or fundraising.</span></li>
+                    <li class="flex items-start"><span class="text-brand-accent mr-3 font-bold">&bull;</span><span><strong>AEs are losing deals on technical depth.</strong> Your sales team can generate interest and run the commercial process, but they struggle to answer deep technical questions or design solutions on the fly. Prospects are asking for "someone technical" to join the conversation.</span></li>
+                    <li class="flex items-start"><span class="text-brand-accent mr-3 font-bold">&bull;</span><span><strong>POC requests are increasing.</strong> When buyers want to test before they buy, someone needs to scope, configure, and manage those evaluations. If your AEs or product team are doing this ad hoc, quality suffers and deals stall.</span></li>
+                    <li class="flex items-start"><span class="text-brand-accent mr-3 font-bold">&bull;</span><span><strong>Deal complexity is rising.</strong> You're moving upmarket. Integration questions, security reviews, and multi-stakeholder evaluations are becoming the norm. These require dedicated technical sales support.</span></li>
+                    <li class="flex items-start"><span class="text-brand-accent mr-3 font-bold">&bull;</span><span><strong>Implementation is suffering.</strong> What's being sold doesn't match what's being delivered. The gap between sales promises and product capabilities is creating churn risk.</span></li>
                 </ul>
 
-                <p>These tasks feel important.</p>
+                <h2 class="text-2xl font-bold text-brand-dark mt-12 mb-4">SE #1 vs. SE #3: Different Profiles</h2>
 
-                <p>But they often prevent SE teams from focusing on work that actually drives revenue.</p>
+                <p>
+                    The first SE you hire is not the same profile as the third. This is where most founders make their biggest mistake.
+                </p>
 
-                <h2 class="text-2xl font-bold text-brand-dark mt-12 mb-4">The Capacity Problem</h2>
+                <p class="font-semibold text-brand-dark text-lg mt-8">SE #1: The Builder</p>
+                <p>
+                    Your first SE needs to be a generalist who can build from nothing. They'll create demo environments, write the first technical content, define the discovery process, scope the first POCs, and probably handle some post-sales technical work too. They need to be comfortable with ambiguity, skilled at cross-functional collaboration, and self-directed. Don't hire someone who needs a playbook&#8212;hire someone who writes playbooks.
+                </p>
 
-                <p>Sales engineers are typically assigned to individual sales reps.</p>
-
-                <p>This model works early in a company's growth.</p>
-
-                <p>But as the organization scales, it creates a capacity problem.</p>
+                <p class="font-semibold text-brand-dark text-lg mt-8">SE #3: The Specialist</p>
+                <p>
+                    By the time you're hiring SE #3, you should have processes to follow. This hire can be more specialized&#8212;perhaps strong in a specific vertical, technology domain, or deal stage. They execute within a system that SE #1 built.
+                </p>
 
                 <blockquote class="border-l-4 border-brand-accent pl-6 py-2 my-8 text-xl text-slate-800 italic">
-                    SEs become a bottleneck. They spend their time responding to requests instead of building systems that make deals easier to close.
+                    The mistake isn't hiring too early or too late. It's hiring the wrong profile for the stage you're at.
                 </blockquote>
 
-                <h2 class="text-2xl font-bold text-brand-dark mt-12 mb-4">The Shift High-Performing Teams Make</h2>
+                <h2 class="text-2xl font-bold text-brand-dark mt-12 mb-4">Define the Engagement Model Before You Hire</h2>
 
-                <p>The best SE organizations move from reactive support to revenue infrastructure.</p>
-
-                <p>Instead of repeating the same work for every deal, they build systems that scale.</p>
-
-                <p>Examples include:</p>
+                <p>
+                    Before you write a job description, answer these questions:
+                </p>
 
                 <div class="bg-slate-50 border border-slate-200 rounded-xl p-6 my-8 space-y-4">
                     <div class="flex items-start">
-                        <span class="text-brand-accent font-bold mr-3">→</span>
-                        <span class="font-medium text-brand-dark">Structured discovery frameworks</span>
+                        <span class="text-brand-accent font-bold mr-3">&rarr;</span>
+                        <div><span class="font-semibold text-brand-dark">When does the SE enter the deal?</span> After qualification? At first meeting? Only for enterprise deals? This defines workload and capacity.</div>
                     </div>
                     <div class="flex items-start">
-                        <span class="text-brand-accent font-bold mr-3">→</span>
-                        <span class="font-medium text-brand-dark">Repeatable demo environments</span>
+                        <span class="text-brand-accent font-bold mr-3">&rarr;</span>
+                        <div><span class="font-semibold text-brand-dark">What does the SE own?</span> Just the demo? The full technical evaluation? POC management? Post-sale handoff? The broader the scope, the fewer deals each SE can support.</div>
                     </div>
                     <div class="flex items-start">
-                        <span class="text-brand-accent font-bold mr-3">→</span>
-                        <span class="font-medium text-brand-dark">POC playbooks</span>
+                        <span class="text-brand-accent font-bold mr-3">&rarr;</span>
+                        <div><span class="font-semibold text-brand-dark">What's the SE-to-AE ratio?</span> In early-stage companies, 1:2 or 1:3 is typical. But this depends entirely on deal complexity and cycle length.</div>
                     </div>
                     <div class="flex items-start">
-                        <span class="text-brand-accent font-bold mr-3">→</span>
-                        <span class="font-medium text-brand-dark">Technical validation templates</span>
+                        <span class="text-brand-accent font-bold mr-3">&rarr;</span>
+                        <div><span class="font-semibold text-brand-dark">How does the SE interact with Product?</span> SEs are the best source of market intelligence. Build the feedback loop from day one.</div>
                     </div>
                 </div>
 
-                <p>These assets allow sales teams to move deals forward with less SE involvement.</p>
+                <p>
+                    Without clear answers to these questions, your SE will spend their first six months figuring out what their job is instead of doing it.
+                </p>
 
-                <h2 class="text-2xl font-bold text-brand-dark mt-12 mb-4">The Real Role of Sales Engineering</h2>
+                <h2 class="text-2xl font-bold text-brand-dark mt-12 mb-4">Build Process Before Headcount</h2>
 
-                <p>Sales engineers shouldn't just support deals.</p>
+                <p>
+                    The most common pattern I see in Series A companies: they hire two SEs, give them no process, and wonder why the team isn't performing six months later.
+                </p>
 
-                <blockquote class="border-l-4 border-brand-accent pl-6 py-2 my-8 text-xl text-slate-800 italic">
-                    They should design the technical systems that make deals easier to win.
-                </blockquote>
-
-                <p>When SE teams operate this way:</p>
+                <p>
+                    Process doesn't mean bureaucracy. It means clarity. Before your second SE hire, you should have documented:
+                </p>
 
                 <ul class="space-y-2 my-6 ml-4">
-                    <li class="flex items-start"><span class="text-brand-accent mr-3">•</span><span>deal velocity increases</span></li>
-                    <li class="flex items-start"><span class="text-brand-accent mr-3">•</span><span>SE capacity expands</span></li>
-                    <li class="flex items-start"><span class="text-brand-accent mr-3">•</span><span>revenue becomes more predictable</span></li>
+                    <li class="flex items-start"><span class="text-brand-accent mr-3">&bull;</span><span>A standard demo flow for your top 2&#8211;3 use cases</span></li>
+                    <li class="flex items-start"><span class="text-brand-accent mr-3">&bull;</span><span>A discovery question framework</span></li>
+                    <li class="flex items-start"><span class="text-brand-accent mr-3">&bull;</span><span>POC scoping criteria (when to say yes, when to say no)</span></li>
+                    <li class="flex items-start"><span class="text-brand-accent mr-3">&bull;</span><span>A solutions design definition</span></li>
+                    <li class="flex items-start"><span class="text-brand-accent mr-3">&bull;</span><span>A handoff process to post-sales</span></li>
                 </ul>
 
-                <p class="text-xl font-semibold text-brand-dark">And the team moves from tactical support to strategic impact.</p>
+                <p>
+                    This is your SE playbook. It doesn't need to be perfect&#8212;it needs to exist. You iterate from there.
+                </p>
+
+                <h2 class="text-2xl font-bold text-brand-dark mt-12 mb-4">Common Founder Mistakes</h2>
+
+                <p class="font-semibold text-brand-dark text-lg mt-8">Hiring too senior</p>
+                <p>
+                    A VP-level SE leader with no team to lead and no process to execute will be frustrated and expensive. At the early stage, you need a player&#8212;not a coach.
+                </p>
+
+                <p class="font-semibold text-brand-dark text-lg mt-8">Hiring too junior</p>
+                <p>
+                    A junior SE who needs mentorship and structure will struggle in a zero-to-one environment. They'll default to demo jockey behavior because that's the only thing they know how to do without guidance.
+                </p>
+
+                <p class="font-semibold text-brand-dark text-lg mt-8">Not defining scope</p>
+                <p>
+                    When the SE role isn't clearly defined, it becomes a catch-all. SEs end up doing support, implementation, documentation, QA, and product management&#8212;everything except the technical selling that drives revenue.
+                </p>
+
+                <p class="text-xl font-semibold text-brand-dark mt-8">
+                    Building an SE team isn't a hiring problem. It's an architecture problem. Get the system right, and the people thrive. Skip the system, and even great hires underperform.
+                </p>
             </div>
         </div>
     </article>
 
-    <section class="py-16 bg-slate-50 border-t border-slate-100">
+    <!-- End-of-Article CTA -->
+    <section class="py-16 bg-slate-50 border-t border-slate-200">
         <div class="max-w-[720px] mx-auto px-6 text-center">
-            <h3 class="text-2xl font-bold text-brand-dark mb-4 font-serif">Found This Useful?</h3>
-            <p class="text-slate-600 mb-8">If your technical sales process needs architecture—not just advice—let's talk.</p>
+            <p class="text-lg font-semibold text-brand-dark mb-2">Found this useful?</p>
+            <p class="text-slate-600 mb-6">Get expert guidance on building your SE function the right way.</p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="../contact.html" class="px-8 py-3 bg-brand-dark text-white font-bold rounded-lg hover:bg-slate-700 transition text-center">Book a Consult</a>
-                <a href="../assessment.html" class="px-8 py-3 border border-slate-300 text-slate-700 font-bold rounded-lg hover:border-brand-accent hover:text-brand-accent transition text-center">Take the SE Maturity Assessment</a>
+                <a href="../contact.html" class="px-6 py-3 bg-brand-dark text-white font-bold rounded-lg hover:bg-slate-700 transition text-center">Book a Consult</a>
+                <a href="../assessment.html" class="px-6 py-3 border border-slate-300 text-brand-dark font-bold rounded-lg hover:border-brand-accent hover:text-brand-accent transition text-center">Take the SE Maturity Assessment</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Articles -->
+    <section class="py-16 bg-white border-t border-slate-200">
+        <div class="max-w-[720px] mx-auto px-6">
+            <h3 class="text-xl font-bold text-brand-dark mb-8">Related Articles</h3>
+            <div class="space-y-4">
+                <a href="ai-for-sales-engineering.html" class="block p-4 bg-slate-50 border border-slate-200 rounded-lg hover:border-brand-accent transition group">
+                    <span class="text-sm text-slate-500">AI for SE</span>
+                    <p class="font-semibold text-brand-dark group-hover:text-brand-accent transition-colors">How AI Is Reshaping Sales Engineering</p>
+                </a>
+                <a href="sales-engineers-wrong-work.html" class="block p-4 bg-slate-50 border border-slate-200 rounded-lg hover:border-brand-accent transition group">
+                    <span class="text-sm text-slate-500">Sales Engineering Leadership</span>
+                    <p class="font-semibold text-brand-dark group-hover:text-brand-accent transition-colors">Why Your Sales Engineers Are Probably Doing the Wrong Work</p>
+                </a>
+                <a href="se-maturity-model.html" class="block p-4 bg-slate-50 border border-slate-200 rounded-lg hover:border-brand-accent transition group">
+                    <span class="text-sm text-slate-500">Sales Engineering Leadership</span>
+                    <p class="font-semibold text-brand-dark group-hover:text-brand-accent transition-colors">The SE Maturity Model</p>
+                </a>
             </div>
         </div>
     </section>

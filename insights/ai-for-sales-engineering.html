@@ -2,14 +2,12 @@
 <html lang="en" class="scroll-smooth">
 <head>
     <script src="../consent.js"></script>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Why Your Sales Engineers Are Probably Doing the Wrong Work | Solutions Advisory Partners</title>
-    <meta name="description" content="Sales engineers are one of the most valuable and most misused resources in SaaS. Learn how to shift from reactive support to revenue infrastructure.">
+    <title>How AI Is Reshaping Sales Engineering | Solutions Advisory Partners</title>
+    <meta name="description" content="AI won't replace SEs—but SEs who use AI will replace those who don't. A practical framework for where AI fits in your technical sales motion.">
     <script src="https://cdn.tailwindcss.com/3.4.16"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
-
     <script>
         tailwind.config = {
             theme: {
@@ -38,11 +36,9 @@
             background-size: 20px 20px;
         }
     </style>
-
 </head>
 <body class="bg-brand-light text-slate-800 antialiased">
 
-    <!-- Navigation -->
     <nav class="fixed w-full z-50 bg-brand-light/90 backdrop-blur-md border-b border-slate-200">
         <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
             <a href="../index.html" class="text-2xl font-serif font-bold text-brand-dark tracking-tight">
@@ -93,13 +89,13 @@
                 Back to Insights
             </a>
             <div class="flex flex-wrap gap-2 mb-6">
-                <span class="inline-block px-3 py-1 text-xs font-medium text-brand-dark bg-brand-accent/20 rounded-full border border-brand-accent/30 text-brand-accent">Sales Engineering Leadership</span>
+                <span class="inline-block px-3 py-1 text-xs font-medium text-brand-accent bg-brand-accent/20 rounded-full border border-brand-accent/30">AI for SE</span>
             </div>
             <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-6">
-                Why Your Sales Engineers Are Probably Doing the Wrong Work
+                How AI Is Reshaping Sales Engineering (and What to Do About It)
             </h1>
             <div class="flex items-center gap-4 text-sm text-slate-400">
-                <span>5 min read</span>
+                <span>7 min read</span>
             </div>
         </div>
     </section>
@@ -110,91 +106,131 @@
             <div class="prose prose-lg max-w-none text-slate-700 leading-relaxed space-y-6">
 
                 <p class="text-xl text-slate-800 font-medium leading-relaxed">
-                    Sales engineers are one of the most valuable resources in a SaaS organization. They are also one of the most misused.
+                    AI won't replace sales engineers. But sales engineers who leverage AI will outperform those who don't. The question isn't whether to adopt AI&#8212;it's where to start and what to protect.
                 </p>
 
-                <p>In many companies, SE teams spend most of their time on activities that don't scale:</p>
+                <p>
+                    Every SE leader is getting the same questions from their executive team: "How are we using AI?" "Can we do more with fewer SEs?" "What's our AI strategy for technical sales?" The pressure to automate is real. But so is the risk of automating the wrong things.
+                </p>
 
-                <ul class="space-y-2 my-6 ml-4">
-                    <li class="flex items-start"><span class="text-brand-accent mr-3">•</span><span>custom demos</span></li>
-                    <li class="flex items-start"><span class="text-brand-accent mr-3">•</span><span>ad-hoc technical calls</span></li>
-                    <li class="flex items-start"><span class="text-brand-accent mr-3">•</span><span>reactive troubleshooting</span></li>
-                    <li class="flex items-start"><span class="text-brand-accent mr-3">•</span><span>internal support requests</span></li>
+                <p>
+                    After working with dozens of technical sales organizations, I've found that the most successful teams don't treat AI as a replacement strategy. They treat it as an amplification strategy&#8212;one that lets their best SEs spend more time on the activities that actually close deals.
+                </p>
+
+                <h2 class="text-2xl font-bold text-brand-dark mt-12 mb-4">Where AI Fits in the SE Workflow</h2>
+
+                <p>
+                    There are specific stages in the technical sales cycle where AI delivers outsized value with minimal risk. These are high-volume, repetitive tasks that consume SE time but don't require the judgment, empathy, or creativity that defines great technical selling.
+                </p>
+
+                <p class="font-semibold text-brand-dark text-lg mt-8">Discovery Prep</p>
+                <p>
+                    Before every discovery call, SEs spend 30&#8211;60 minutes researching the prospect's tech stack, reading their documentation, and reviewing past interactions. AI can compress this to five minutes. Tools that synthesize CRM data, public filings, job postings, and technology signals can generate a pre-call brief that gives SEs a head start before they ever open their notebook.
+                </p>
+
+                <p class="font-semibold text-brand-dark text-lg mt-8">Post-Call Documentation</p>
+                <p>
+                    The most neglected task in technical sales is capturing what happened on a call. Meeting summaries, technical requirements, and action items get lost in the gap between the call ending and the next one starting. AI-powered transcription and summarization solves this at near-zero effort. The result: cleaner CRM data, better handoffs, and institutional memory that survives team turnover.
+                </p>
+
+                <p class="font-semibold text-brand-dark text-lg mt-8">Demo Personalization</p>
+                <p>
+                    Generic demos lose deals. Personalized demos win them. AI can help SEs tailor demo scripts, adjust talk tracks for different personas, and generate scenario-specific data sets for sandbox environments. This doesn't replace demo design&#8212;it accelerates the customization layer that turns a good demo into a great one.
+                </p>
+
+                <p class="font-semibold text-brand-dark text-lg mt-8">Competitive Intelligence</p>
+                <p>
+                    Staying current on competitor capabilities is a full-time job that no SE has time for. AI-powered competitive monitoring can track product updates, pricing changes, and positioning shifts across your competitive landscape. SEs get real-time battle cards instead of quarterly decks that are outdated the moment they're published.
+                </p>
+
+                <h2 class="text-2xl font-bold text-brand-dark mt-12 mb-4">Where AI Doesn't Fit (Yet)</h2>
+
+                <p>
+                    The temptation is to automate everything. Resist it. There are activities in the SE workflow where automation degrades quality, trust, or both.
+                </p>
+
+                <ul class="space-y-3 my-6 ml-4">
+                    <li class="flex items-start"><span class="text-brand-accent mr-3 font-bold">&bull;</span><span><strong>Relationship building.</strong> Enterprise deals are won on trust. Trust is built through human interaction&#8212;reading the room, adjusting your approach, showing genuine curiosity. No model replicates this.</span></li>
+                    <li class="flex items-start"><span class="text-brand-accent mr-3 font-bold">&bull;</span><span><strong>Complex problem diagnosis.</strong> When a prospect describes a multi-system integration challenge with organizational constraints, the SE's job is to synthesize ambiguity into clarity. This requires domain expertise and situational judgment that AI can support but not replace.</span></li>
+                    <li class="flex items-start"><span class="text-brand-accent mr-3 font-bold">&bull;</span><span><strong>Executive presence.</strong> The ability to command a room, navigate objections from a hostile technical evaluator, or simplify a complex architecture for a non-technical CFO&#8212;these are fundamentally human skills.</span></li>
+                    <li class="flex items-start"><span class="text-brand-accent mr-3 font-bold">&bull;</span><span><strong>Creative solution design.</strong> The best SEs don't just configure products&#8212;they design solutions that the buyer hadn't imagined. That creative leap from "what our product does" to "what your business needs" is where deals are won.</span></li>
                 </ul>
 
-                <p>These tasks feel important.</p>
+                <h2 class="text-2xl font-bold text-brand-dark mt-12 mb-4">A Practical Starting Point</h2>
 
-                <p>But they often prevent SE teams from focusing on work that actually drives revenue.</p>
-
-                <h2 class="text-2xl font-bold text-brand-dark mt-12 mb-4">The Capacity Problem</h2>
-
-                <p>Sales engineers are typically assigned to individual sales reps.</p>
-
-                <p>This model works early in a company's growth.</p>
-
-                <p>But as the organization scales, it creates a capacity problem.</p>
-
-                <blockquote class="border-l-4 border-brand-accent pl-6 py-2 my-8 text-xl text-slate-800 italic">
-                    SEs become a bottleneck. They spend their time responding to requests instead of building systems that make deals easier to close.
-                </blockquote>
-
-                <h2 class="text-2xl font-bold text-brand-dark mt-12 mb-4">The Shift High-Performing Teams Make</h2>
-
-                <p>The best SE organizations move from reactive support to revenue infrastructure.</p>
-
-                <p>Instead of repeating the same work for every deal, they build systems that scale.</p>
-
-                <p>Examples include:</p>
+                <p>
+                    If you're an SE leader looking to integrate AI into your team's workflow, here's where to start:
+                </p>
 
                 <div class="bg-slate-50 border border-slate-200 rounded-xl p-6 my-8 space-y-4">
                     <div class="flex items-start">
-                        <span class="text-brand-accent font-bold mr-3">→</span>
-                        <span class="font-medium text-brand-dark">Structured discovery frameworks</span>
+                        <span class="text-brand-accent font-bold mr-3">1.</span>
+                        <div><span class="font-semibold text-brand-dark">Start with discovery prep.</span> It's the lowest-risk, highest-ROI use case. SEs see immediate time savings without changing their selling behavior.</div>
                     </div>
                     <div class="flex items-start">
-                        <span class="text-brand-accent font-bold mr-3">→</span>
-                        <span class="font-medium text-brand-dark">Repeatable demo environments</span>
+                        <span class="text-brand-accent font-bold mr-3">2.</span>
+                        <div><span class="font-semibold text-brand-dark">Automate post-call documentation.</span> Deploy meeting summarization and let SEs redirect that time toward pipeline activities.</div>
                     </div>
                     <div class="flex items-start">
-                        <span class="text-brand-accent font-bold mr-3">→</span>
-                        <span class="font-medium text-brand-dark">POC playbooks</span>
+                        <span class="text-brand-accent font-bold mr-3">3.</span>
+                        <div><span class="font-semibold text-brand-dark">Build AI-assisted demo prep.</span> Create templates that AI can customize per prospect, reducing demo prep time by 40&#8211;60%.</div>
                     </div>
                     <div class="flex items-start">
-                        <span class="text-brand-accent font-bold mr-3">→</span>
-                        <span class="font-medium text-brand-dark">Technical validation templates</span>
+                        <span class="text-brand-accent font-bold mr-3">4.</span>
+                        <div><span class="font-semibold text-brand-dark">Protect high-touch activities.</span> Explicitly define which activities remain human-only and communicate that boundary to your team and your executives.</div>
                     </div>
                 </div>
 
-                <p>These assets allow sales teams to move deals forward with less SE involvement.</p>
+                <h2 class="text-2xl font-bold text-brand-dark mt-12 mb-4">The Risk of Over-Automation</h2>
 
-                <h2 class="text-2xl font-bold text-brand-dark mt-12 mb-4">The Real Role of Sales Engineering</h2>
+                <p>
+                    The biggest mistake I see companies make is treating AI as a headcount reduction strategy for technical sales. They automate the demo, automate the follow-up, and automate the POC kickoff&#8212;then wonder why win rates drop and deal cycles lengthen.
+                </p>
 
-                <p>Sales engineers shouldn't just support deals.</p>
+                <p>
+                    Enterprise buyers can tell when they're being processed instead of partnered with. The moment a prospect feels like they're interacting with a system instead of a person, you've lost the deal. Not because the system was wrong&#8212;but because the trust wasn't built.
+                </p>
 
-                <blockquote class="border-l-4 border-brand-accent pl-6 py-2 my-8 text-xl text-slate-800 italic">
-                    They should design the technical systems that make deals easier to win.
-                </blockquote>
+                <p>
+                    AI should make your SEs faster, not invisible. The goal is 10x leverage on the activities that don't require human judgment, so your team can invest 10x more energy in the activities that do.
+                </p>
 
-                <p>When SE teams operate this way:</p>
-
-                <ul class="space-y-2 my-6 ml-4">
-                    <li class="flex items-start"><span class="text-brand-accent mr-3">•</span><span>deal velocity increases</span></li>
-                    <li class="flex items-start"><span class="text-brand-accent mr-3">•</span><span>SE capacity expands</span></li>
-                    <li class="flex items-start"><span class="text-brand-accent mr-3">•</span><span>revenue becomes more predictable</span></li>
-                </ul>
-
-                <p class="text-xl font-semibold text-brand-dark">And the team moves from tactical support to strategic impact.</p>
+                <p class="text-xl font-semibold text-brand-dark mt-8">
+                    The SE teams that win in the AI era won't be the ones that automate the most. They'll be the ones that automate the right things&#8212;and double down on the human skills that close enterprise deals.
+                </p>
             </div>
         </div>
     </article>
 
-    <section class="py-16 bg-slate-50 border-t border-slate-100">
+    <!-- End-of-Article CTA -->
+    <section class="py-16 bg-slate-50 border-t border-slate-200">
         <div class="max-w-[720px] mx-auto px-6 text-center">
-            <h3 class="text-2xl font-bold text-brand-dark mb-4 font-serif">Found This Useful?</h3>
-            <p class="text-slate-600 mb-8">If your technical sales process needs architecture—not just advice—let's talk.</p>
+            <p class="text-lg font-semibold text-brand-dark mb-2">Found this useful?</p>
+            <p class="text-slate-600 mb-6">Get a personalized assessment of your SE team's AI readiness.</p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="../contact.html" class="px-8 py-3 bg-brand-dark text-white font-bold rounded-lg hover:bg-slate-700 transition text-center">Book a Consult</a>
-                <a href="../assessment.html" class="px-8 py-3 border border-slate-300 text-slate-700 font-bold rounded-lg hover:border-brand-accent hover:text-brand-accent transition text-center">Take the SE Maturity Assessment</a>
+                <a href="../contact.html" class="px-6 py-3 bg-brand-dark text-white font-bold rounded-lg hover:bg-slate-700 transition text-center">Book a Consult</a>
+                <a href="../assessment.html" class="px-6 py-3 border border-slate-300 text-brand-dark font-bold rounded-lg hover:border-brand-accent hover:text-brand-accent transition text-center">Take the SE Maturity Assessment</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Articles -->
+    <section class="py-16 bg-white border-t border-slate-200">
+        <div class="max-w-[720px] mx-auto px-6">
+            <h3 class="text-xl font-bold text-brand-dark mb-8">Related Articles</h3>
+            <div class="space-y-4">
+                <a href="building-se-team-from-scratch.html" class="block p-4 bg-slate-50 border border-slate-200 rounded-lg hover:border-brand-accent transition group">
+                    <span class="text-sm text-slate-500">SE Org Design</span>
+                    <p class="font-semibold text-brand-dark group-hover:text-brand-accent transition-colors">Building an SE Team from Scratch</p>
+                </a>
+                <a href="se-maturity-model.html" class="block p-4 bg-slate-50 border border-slate-200 rounded-lg hover:border-brand-accent transition group">
+                    <span class="text-sm text-slate-500">Sales Engineering Leadership</span>
+                    <p class="font-semibold text-brand-dark group-hover:text-brand-accent transition-colors">The SE Maturity Model</p>
+                </a>
+                <a href="technical-discovery-skill.html" class="block p-4 bg-slate-50 border border-slate-200 rounded-lg hover:border-brand-accent transition group">
+                    <span class="text-sm text-slate-500">Technical Sales</span>
+                    <p class="font-semibold text-brand-dark group-hover:text-brand-accent transition-colors">Technical Discovery: The Most Underrated Skill in SaaS Sales</p>
+                </a>
             </div>
         </div>
     </section>

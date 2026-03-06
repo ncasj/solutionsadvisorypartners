@@ -52,7 +52,8 @@
                 <a href="../index.html" class="hover:text-brand-accent transition">Home</a>
                 <a href="../about.html" class="hover:text-brand-accent transition">About</a>
                 <a href="../outcomes.html" class="hover:text-brand-accent transition">Outcomes</a>
-                <a href="../services.html" class="hover:text-brand-accent transition">Services &amp; Rates</a>
+                <a href="../services.html" class="hover:text-brand-accent transition">Services</a>
+                <a href="../pricing.html" class="hover:text-brand-accent transition">Pricing</a>
                 <a href="../insights.html" class="hover:text-brand-accent transition text-brand-accent font-semibold">Insights</a>
                 <a href="../contact.html" class="px-5 py-2 bg-brand-dark text-white rounded-full hover:bg-slate-700 transition">Contact</a>
                 <a href="https://www.linkedin.com/company/solutions-engineering-advisory/" target="_blank" rel="noopener noreferrer" class="text-slate-500 hover:text-[#0A66C2] transition" aria-label="LinkedIn">
@@ -69,7 +70,8 @@
                 <a href="../index.html" class="block px-3 py-3 rounded-lg text-base font-medium text-slate-700 hover:bg-slate-100 transition">Home</a>
                 <a href="../about.html" class="block px-3 py-3 rounded-lg text-base font-medium text-slate-700 hover:bg-slate-100 transition">About</a>
                 <a href="../outcomes.html" class="block px-3 py-3 rounded-lg text-base font-medium text-slate-700 hover:bg-slate-100 transition">Outcomes</a>
-                <a href="../services.html" class="block px-3 py-3 rounded-lg text-base font-medium text-slate-700 hover:bg-slate-100 transition">Services &amp; Rates</a>
+                <a href="../services.html" class="block px-3 py-3 rounded-lg text-base font-medium text-slate-700 hover:bg-slate-100 transition">Services</a>
+                <a href="../pricing.html" class="block px-3 py-3 rounded-lg text-base font-medium text-slate-700 hover:bg-slate-100 transition">Pricing</a>
                 <a href="../insights.html" class="block px-3 py-3 rounded-lg text-base font-medium text-brand-accent hover:bg-slate-100 transition">Insights</a>
                 <a href="../contact.html" class="block mt-2 px-3 py-3 bg-brand-dark text-white text-base font-bold text-center rounded-lg hover:bg-slate-700 transition">Contact</a>
                 <a href="https://www.linkedin.com/company/solutions-engineering-advisory/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 px-3 py-3 text-slate-500 hover:text-[#0A66C2] transition">
@@ -215,38 +217,52 @@
         </div>
     </article>
 
-    <!-- Back to Insights CTA -->
-    <section class="py-16 bg-slate-50 border-t border-slate-200">
+    <section class="py-16 bg-slate-50 border-t border-slate-100">
         <div class="max-w-[720px] mx-auto px-6 text-center">
-            <a href="../insights.html" class="inline-flex items-center text-sm font-medium text-brand-dark hover:text-brand-accent transition group">
-                <svg class="w-4 h-4 mr-2 group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
-                Back to all Insights
-            </a>
-        </div>
-    </section>
-
-    <!-- Consultation CTA -->
-    <section class="py-24 bg-brand-dark text-white">
-        <div class="max-w-2xl mx-auto px-6 text-center">
-            <p class="text-xl md:text-2xl leading-relaxed text-slate-200 mb-8">
-                If your SaaS company is struggling with demos, POCs, or implementation handoffs, the problem is usually not talent—it's architecture.
-            </p>
-            <a href="../contact.html" class="inline-block px-8 py-4 bg-brand-accent text-brand-dark font-bold rounded-lg hover:bg-white transition">
-                Schedule a Consultation
-            </a>
+            <h3 class="text-2xl font-bold text-brand-dark mb-4 font-serif">Found This Useful?</h3>
+            <p class="text-slate-600 mb-8">If your technical sales process needs architecture—not just advice—let's talk.</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="../contact.html" class="px-8 py-3 bg-brand-dark text-white font-bold rounded-lg hover:bg-slate-700 transition text-center">Book a Consult</a>
+                <a href="../assessment.html" class="px-8 py-3 border border-slate-300 text-slate-700 font-bold rounded-lg hover:border-brand-accent hover:text-brand-accent transition text-center">Take the SE Maturity Assessment</a>
+            </div>
         </div>
     </section>
 
     <footer class="bg-brand-dark text-slate-400 py-12 border-t border-slate-800">
-        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center">
-            <div class="mb-4 md:mb-0">
-                <span class="text-white font-serif font-bold text-lg">Solutions Advisory Partners.</span>
-                <p class="text-sm mt-1">New York, NY</p>
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <span class="text-white font-serif font-bold text-lg block mb-3">Solutions Advisory<span class="text-brand-accent">.</span></span>
+                    <p class="text-sm">New York, NY</p>
+                </div>
+                <div>
+                    <p class="text-xs font-semibold text-slate-300 uppercase tracking-wider mb-3">Services</p>
+                    <div class="space-y-2 text-sm">
+                        <a href="../services.html" class="block hover:text-brand-accent transition">Services</a>
+                        <a href="../pricing.html" class="block hover:text-brand-accent transition">Pricing</a>
+                        <a href="../outcomes.html" class="block hover:text-brand-accent transition">Outcomes</a>
+                    </div>
+                </div>
+                <div>
+                    <p class="text-xs font-semibold text-slate-300 uppercase tracking-wider mb-3">Resources</p>
+                    <div class="space-y-2 text-sm">
+                        <a href="../insights.html" class="block hover:text-brand-accent transition">Insights</a>
+                        <a href="../assessment.html" class="block hover:text-brand-accent transition">SE Maturity Assessment</a>
+                        <a href="../glossary.html" class="block hover:text-brand-accent transition">Glossary</a>
+                    </div>
+                </div>
+                <div>
+                    <p class="text-xs font-semibold text-slate-300 uppercase tracking-wider mb-3">Connect</p>
+                    <div class="space-y-2 text-sm">
+                        <a href="../contact.html" class="block hover:text-brand-accent transition">Contact</a>
+                        <a href="../about.html" class="block hover:text-brand-accent transition">About</a>
+                        <a href="https://www.linkedin.com/company/solutions-engineering-advisory/" target="_blank" rel="noopener noreferrer" class="block hover:text-brand-accent transition">LinkedIn</a>
+                    </div>
+                </div>
             </div>
-            <div class="flex items-center gap-4 text-sm">
+            <div class="pt-6 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4 text-sm">
+                <span>&copy; 2026 Solutions Advisory Partners. All rights reserved.</span>
                 <a href="../privacy.html" class="hover:text-brand-accent transition">Privacy Policy</a>
-                <span>&middot;</span>
-                <span>&copy; 2025 Solutions Advisory Partners. All rights reserved.</span>
             </div>
         </div>
     </footer>

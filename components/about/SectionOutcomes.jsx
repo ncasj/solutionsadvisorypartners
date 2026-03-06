@@ -6,7 +6,7 @@ const OUTCOMES = [
   },
   {
     title: 'Higher POC Conversion',
-    how: 'Time-boxed evaluation frameworks with clear success criteria and technical-win definitions ensure POCs prove value fast\u2014instead of lingering for months with no outcome.',
+    how: 'Time-boxed evaluation frameworks with clear success criteria and solutions-design definitions ensure POCs prove value fast\u2014instead of lingering for months with no outcome.',
     impact: '2\u20133x improvement in POC-to-close rates',
   },
   {

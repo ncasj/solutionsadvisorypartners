@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <script src="consent.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical Sales Glossary | Solutions Advisory Partners</title>
+    <meta name="description" content="20 essential technical sales terms every revenue leader should know. Each includes a definition, why it matters, and the most common failure mode.">
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        brand: {
+                            dark: '#0f172a',
+                            accent: '#38bdf8',
+                            light: '#f8fafc',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3 { font-family: 'Playfair Display', serif; }
+        .hero-pattern {
+            background-color: #0f172a;
+            background-image: radial-gradient(#1e293b 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+    </style>
+</head>
+<body class="bg-brand-light text-slate-800 antialiased">
+
+    <nav class="fixed w-full z-50 bg-brand-light/90 backdrop-blur-md border-b border-slate-200">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-serif font-bold text-brand-dark tracking-tight">
+                Solutions Advisory <span class="text-brand-accent">.</span>
+            </a>
+            <div class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-600">
+                <a href="index.html" class="hover:text-brand-accent transition">Home</a>
+                <a href="about.html" class="hover:text-brand-accent transition">About</a>
+                <a href="outcomes.html" class="hover:text-brand-accent transition">Outcomes</a>
+                <a href="services.html" class="hover:text-brand-accent transition">Services</a>
+                <a href="pricing.html" class="hover:text-brand-accent transition">Pricing</a>
+                <a href="insights.html" class="hover:text-brand-accent transition">Insights</a>
+                <a href="contact.html" class="px-5 py-2 bg-brand-dark text-white rounded-full hover:bg-slate-700 transition">Contact</a>
+                <a href="https://www.linkedin.com/company/solutions-engineering-advisory/" target="_blank" rel="noopener noreferrer" class="text-slate-500 hover:text-[#0A66C2] transition" aria-label="LinkedIn">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                </a>
+            </div>
+            <button id="mobileMenuBtn" class="md:hidden p-2 text-slate-600 hover:text-brand-accent transition" aria-label="Toggle menu" aria-expanded="false">
+                <svg id="iconHam" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                <svg id="iconX" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+            </button>
+        </div>
+        <div id="mobileMenu" class="hidden md:hidden border-t border-slate-200">
+            <div class="px-6 py-4 flex flex-col space-y-1">
+                <a href="index.html" class="block px-3 py-3 rounded-lg text-base font-medium text-slate-700 hover:bg-slate-100 transition">Home</a>
+                <a href="about.html" class="block px-3 py-3 rounded-lg text-base font-medium text-slate-700 hover:bg-slate-100 transition">About</a>
+                <a href="outcomes.html" class="block px-3 py-3 rounded-lg text-base font-medium text-slate-700 hover:bg-slate-100 transition">Outcomes</a>
+                <a href="services.html" class="block px-3 py-3 rounded-lg text-base font-medium text-slate-700 hover:bg-slate-100 transition">Services</a>
+                <a href="pricing.html" class="block px-3 py-3 rounded-lg text-base font-medium text-slate-700 hover:bg-slate-100 transition">Pricing</a>
+                <a href="insights.html" class="block px-3 py-3 rounded-lg text-base font-medium text-slate-700 hover:bg-slate-100 transition">Insights</a>
+                <a href="contact.html" class="block mt-2 px-3 py-3 bg-brand-dark text-white text-base font-bold text-center rounded-lg hover:bg-slate-700 transition">Contact</a>
+                <a href="https://www.linkedin.com/company/solutions-engineering-advisory/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 px-3 py-3 text-slate-500 hover:text-[#0A66C2] transition">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                    <span class="text-sm">LinkedIn</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+    <script>
+    (function(){var b=document.getElementById('mobileMenuBtn'),m=document.getElementById('mobileMenu'),h=document.getElementById('iconHam'),x=document.getElementById('iconX');if(!b||!m)return;b.addEventListener('click',function(){m.classList.toggle('hidden');h.classList.toggle('hidden');x.classList.toggle('hidden');b.setAttribute('aria-expanded',m.classList.contains('hidden')?'false':'true');});m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){m.classList.add('hidden');h.classList.remove('hidden');x.classList.add('hidden');b.setAttribute('aria-expanded','false');});});})();
+    </script>
+
+    <!-- HERO -->
+    <section class="hero-pattern text-white pt-32 pb-20">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <div class="inline-block px-3 py-1 mb-6 text-xs font-semibold tracking-wider text-brand-accent uppercase bg-brand-accent/10 rounded-full border border-brand-accent/20">
+                Technical Sales Glossary
+            </div>
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+                The Language of Technical Sales
+            </h1>
+            <p class="text-lg md:text-xl text-slate-300 mb-4 leading-relaxed max-w-2xl mx-auto">
+                20 essential terms every revenue leader should know. Each includes a definition, why it matters, and the most common failure mode.
+            </p>
+        </div>
+    </section>
+
+    <!-- SEARCH/FILTER -->
+    <section class="py-8 bg-white border-b border-slate-100 sticky top-[73px] z-40 bg-white/95 backdrop-blur-md">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="relative">
+                <svg class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+                <input id="glossarySearch" type="text" placeholder="Search terms&hellip;" class="w-full pl-12 pr-4 py-3 border border-slate-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-brand-accent focus:border-brand-accent transition">
+            </div>
+            <p id="noResults" class="hidden text-center text-slate-500 text-sm mt-4">No matching terms found.</p>
+        </div>
+    </section>
+
+    <!-- GLOSSARY TERMS -->
+    <section class="py-16 bg-brand-light">
+        <div class="max-w-4xl mx-auto px-6 space-y-6" id="glossaryTerms">
+
+            <!-- 1. Champion -->
+            <div class="glossary-card rounded-xl border border-slate-200 p-6 md:p-8 bg-white" data-term="champion">
+                <h3 class="text-xl md:text-2xl font-bold text-brand-dark mb-3 font-serif">Champion</h3>
+                <p class="text-slate-700 leading-relaxed mb-4">
+                    The internal advocate within the buyer&rsquo;s organization who actively supports your solution and guides you through their decision-making process.
+                </p>
+                <div class="grid md:grid-cols-2 gap-4">
+                    <div class="bg-brand-accent/5 border border-brand-accent/10 rounded-lg p-4">
+                        <p class="text-xs font-semibold text-brand-accent uppercase tracking-wider mb-2">Why It Matters</p>
+                        <p class="text-sm text-slate-600 leading-relaxed">Enterprise deals don&rsquo;t close without a champion. They navigate internal politics, build consensus, and fight for budget on your behalf.</p>
+                    </div>
+                    <div class="bg-red-50 border border-red-100 rounded-lg p-4">
+                        <p class="text-xs font-semibold text-red-500 uppercase tracking-wider mb-2">Common Failure Mode</p>
+                        <p class="text-sm text-slate-600 leading-relaxed">Mistaking a &ldquo;friendly contact&rdquo; for a true champion. A real champion has influence, access to decision-makers, and skin in the game.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2. Decision Criteria -->
+            <div class="glossary-card rounded-xl border border-slate-200 p-6 md:p-8 bg-slate-50" data-term="decision criteria">
+                <h3 class="text-xl md:text-2xl font-bold text-brand-dark mb-3 font-serif">Decision Criteria</h3>
+                <p class="text-slate-700 leading-relaxed mb-4">
+                    The specific technical, business, and organizational requirements a buyer uses to evaluate and compare solutions.
+                </p>
+                <div class="grid md:grid-cols-2 gap-4">
+                    <div class="bg-brand-accent/5 border border-brand-accent/10 rounded-lg p-4">
+                        <p class="text-xs font-semibold text-brand-accent uppercase tracking-wider mb-2">Why It Matters</p>
+                        <p class="text-sm text-slate-600 leading-relaxed">If you don&rsquo;t know the decision criteria, you&rsquo;re demoing blind. Every technical touchpoint should map directly to what the buyer is actually evaluating.</p>
+                    </div>
+                    <div class="bg-red-50 border border-red-100 rounded-lg p-4">
+                        <p class="text-xs font-semibold text-red-500 uppercase tracking-wider mb-2">Common Failure Mode</p>
+                        <p class="text-sm text-slate-600 leading-relaxed">Assuming decision criteria are purely technical. In enterprise sales, organizational fit, implementation risk, and vendor stability matter as much as features.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3. Demo Architecture -->
+            <div class="glossary-card rounded-xl border border-slate-200 p-6 md:p-8 bg-white" data-term="demo architecture">
+                <h3 class="text-xl md:text-2xl font-bold text-brand-dark mb-3 font-serif">Demo Architecture</h3>
+                <p class="text-slate-700 leading-relaxed mb-4">
+                    The deliberate structure and narrative flow of a product demonstration, designed around the buyer&rsquo;s problem rather than the product&rsquo;s feature set.
+                </p>
+                <div class="grid md:grid-cols-2 gap-4">
+                    <div class="bg-brand-accent/5 border border-brand-accent/10 rounded-lg p-4">
+                        <p class="text-xs font-semibold text-brand-accent uppercase tracking-wider mb-2">Why It Matters</p>
+                        <p class="text-sm text-slate-600 leading-relaxed">A well-architected demo proves value in the buyer&rsquo;s context. A product tour just shows buttons. The difference is often the difference between a solutions design endorsement and a stalled deal.</p>
+                    </div>
+                    <div class="bg-red-50 border border-red-100 rounded-lg p-4">
+                        <p class="text-xs font-semibold text-red-500 uppercase tracking-wider mb-2">Common Failure Mode</p>
+                        <p class="text-sm text-slate-600 leading-relaxed">Building one &ldquo;standard demo&rdquo; and using it for every prospect. Effective demo architecture is modular&mdash;built from discovery findings and tailored to each stakeholder.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4. Demo Narrative -->
+            <div class="glossary-card rounded-xl border border-slate-200 p-6 md:p-8 bg-slate-50" data-term="demo narrative">
+                <h3 class="text-xl md:text-2xl font-bold text-brand-dark mb-3 font-serif">Demo Narrative</h3>
+                <p class="text-slate-700 leading-relaxed mb-4">
+                    The story arc that frames a demonstration, connecting the buyer&rsquo;s pain points to your solution&rsquo;s outcomes through a logical, compelling sequence.
+                </p>
+                <div class="grid md:grid-cols-2 gap-4">
+                    <div class="bg-brand-accent/5 border border-brand-accent/10 rounded-lg p-4">
+                        <p class="text-xs font-semibold text-brand-accent uppercase tracking-wider mb-2">Why It Matters</p>
+                        <p class="text-sm text-slate-600 leading-relaxed">Features don&rsquo;t close deals&mdash;narratives do. A strong demo narrative answers &ldquo;why should I care?&rdquo; before &ldquo;how does it work?&rdquo;</p>
+                    </div>
+                    <div class="bg-red-50 border border-red-100 rounded-lg p-4">
+                        <p class="text-xs font-semibold text-red-500 uppercase tracking-wider mb-2">Common Failure Mode</p>
+                        <p class="text-sm text-slate-600 leading-relaxed">Leading with features instead of problems. The narrative should start with the buyer&rsquo;s world, not your product&rsquo;s capabilities.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 5. Economic Buyer -->
+            <div class="glossary-card rounded-xl border border-slate-200 p-6 md:p-8 bg-white" data-term="economic buyer">
+                <h3 class="text-xl md:text-2xl font-bold text-brand-dark mb-3 font-serif">Economic Buyer</h3>
+                <p class="text-slate-700 leading-relaxed mb-4">
+                    The person with the final authority and budget to approve the purchase, often distinct from the technical evaluators.
+                </p>
+                <div class="grid md:grid-cols-2 gap-4">
+                    <div class="bg-brand-accent/5 border border-brand-accent/10 rounded-lg p-4">
+                        <p class="text-xs font-semibold text-brand-accent uppercase tracking-wider mb-2">Why It Matters</p>
+                        <p class="text-sm text-slate-600 leading-relaxed">You can win every technical evaluation and still lose the deal if you haven&rsquo;t engaged the economic buyer. Their concerns are ROI, risk, and strategic fit&mdash;not features.</p>
+                    </div>
+                    <div class="bg-red-50 border border-red-100 rounded-lg p-4">
+                        <p class="text-xs font-semibold text-red-500 uppercase tracking-wider mb-2">Common Failure Mode</p>
+                        <p class="text-sm text-slate-600 leading-relaxed">Never engaging the economic buyer directly, or treating their concerns as secondary to the solutions design outcome.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 6. Evaluation Framework -->
+            <div class="glossary-card rounded-xl border border-slate-200 p-6 md:p-8 bg-slate-50" data-term="evaluation framework">
+                <h3 class="text-xl md:text-2xl font-bold text-brand-dark mb-3 font-serif">Evaluation Framework</h3>
+                <p class="text-slate-700 leading-relaxed mb-4">
+                    The structured process and criteria by which a buyer assesses competing solutions, including POC scope, success metrics, and decision timeline.
+                </p>
+                <div class="grid md:grid-cols-2 gap-4">
+                    <div class="bg-brand-accent/5 border border-brand-accent/10 rounded-lg p-4">
+                        <p class="text-xs font-semibold text-brand-accent uppercase tracking-wider mb-2">Why It Matters</p>
+                        <p class="text-sm text-slate-600 leading-relaxed">If you don&rsquo;t help shape the evaluation framework, your competitor will. The vendor who defines the evaluation criteria has a massive structural advantage.</p>
+                    </div>
+                    <div class="bg-red-50 border border-red-100 rounded-lg p-4">
+                        <p class="text-xs font-semibold text-red-500 uppercase tracking-wider mb-2">Common Failure Mode</p>
+                        <p class="text-sm text-slate-600 leading-relaxed">Letting the buyer run an unstructured evaluation with no defined success criteria, timeline, or decision process.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 7. Fractional Leadership -->
+            <div class="glossary-card rounded-xl border border-slate-200 p-6 md:p-8 bg-white" data-term="fractional leadership">
+                <h3 class="text-xl md:text-2xl font-bold text-brand-dark mb-3 font-serif">Fractional Leadership</h3>
+                <p class="text-slate-700 leading-relaxed mb-4">
+                    A senior executive who works with your company on a part-time or contracted basis, providing strategic leadership without the cost of a full-time hire.
+                </p>
+                <div class="grid md:grid-cols-2 gap-4">
+                    <div class="bg-brand-accent/5 border border-brand-accent/10 rounded-lg p-4">
+                        <p class="text-xs font-semibold text-brand-accent uppercase tracking-wider mb-2">Why It Matters</p>
+                        <p class="text-sm text-slate-600 leading-relaxed">Series A&ndash;C companies often need VP-level SE leadership but can&rsquo;t justify a $300k+ full-time hire. Fractional leadership bridges that gap with experienced operating talent.</p>
+                    </div>
+                    <div class="bg-red-50 border border-red-100 rounded-lg p-4">
+                        <p class="text-xs font-semibold text-red-500 uppercase tracking-wider mb-2">Common Failure Mode</p>
+                        <p class="text-sm text-slate-600 leading-relaxed">Treating fractional leaders as consultants who deliver reports. Effective fractional leaders embed in your team and operate&mdash;not just advise.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 8. Implementation Handoff -->
+            <div class="glossary-card rounded-xl border border-slate-200 p-6 md:p-8 bg-slate-50" data-term="implementation handoff">
+                <h3 class="text-xl md:text-2xl font-bold text-brand-dark mb-3 font-serif">Implementation Handoff</h3>
+                <p class="text-slate-700 leading-relaxed mb-4">
+                    The structured transfer of deal context, technical requirements, and customer expectations from the pre-sales team to the post-sales implementation team.
+                </p>
+                <div class="grid md:grid-cols-2 gap-4">
+                    <div class="bg-brand-accent/5 border border-brand-accent/10 rounded-lg p-4">
+                        <p class="text-xs font-semibold text-brand-accent uppercase tracking-wider mb-2">Why It Matters</p>
+                        <p class="text-sm text-slate-600 leading-relaxed">The handoff is where most enterprise deals go wrong after closing. A clean handoff means faster time-to-value and lower churn. A broken one means rework, escalations, and frustrated customers.</p>
+                    </div>
+                    <div class="bg-red-50 border border-red-100 rounded-lg p-4">
+                        <p class="text-xs font-semibold text-red-500 uppercase tracking-wider mb-2">Common Failure Mode</p>
+                        <p class="text-sm text-slate-600 leading-relaxed">Relying on tribal knowledge or a single handoff call. Without documented scoping, success criteria, and technical requirements, implementation starts from scratch.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 9. Multi-Stakeholder Sales -->
+            <div class="glossary-card rounded-xl border border-slate-200 p-6 md:p-8 bg-white" data-term="multi-stakeholder sales">
+                <h3 class="text-xl md:text-2xl font-bold text-brand-dark mb-3 font-serif">Multi-Stakeholder Sales</h3>
+                <p class="text-slate-700 leading-relaxed mb-4">
+                    A sales process involving multiple decision-makers, influencers, and evaluators across different functions (IT, business, procurement, executive).
+                </p>
+                <div class="grid md:grid-cols-2 gap-4">
+                    <div class="bg-brand-accent/5 border border-brand-accent/10 rounded-lg p-4">
+                        <p class="text-xs font-semibold text-brand-accent uppercase tracking-wider mb-2">Why It Matters</p>
+                        <p class="text-sm text-slate-600 leading-relaxed">Enterprise deals are rarely decided by one person. Each stakeholder has different concerns, and your technical selling motion must address them all systematically.</p>
+                    </div>
+                    <div class="bg-red-50 border border-red-100 rounded-lg p-4">
+                        <p class="text-xs font-semibold text-red-500 uppercase tracking-wider mb-2">Common Failure Mode</p>
+                        <p class="text-sm text-slate-600 leading-relaxed">Selling to one persona and hoping they&rsquo;ll &ldquo;handle&rdquo; the others internally. Each stakeholder needs targeted engagement.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 10. POC (Proof of Concept) -->
+            <div class="glossary-card rounded-xl border border-slate-200 p-6 md:p-8 bg-slate-50" data-term="poc proof of concept">
+                <h3 class="text-xl md:text-2xl font-bold text-brand-dark mb-3 font-serif">POC (Proof of Concept)</h3>
+                <p class="text-slate-700 leading-relaxed mb-4">
+                    A time-bound, scoped evaluation where the buyer tests your solution against specific success criteria in their environment.
+                </p>
+                <div class="grid md:grid-cols-2 gap-4">
+                    <div class="bg-brand-accent/5 border border-brand-accent/10 rounded-lg p-4">
+                        <p class="text-xs font-semibold text-brand-accent uppercase tracking-wider mb-2">Why It Matters</p>
+                        <p class="text-sm text-slate-600 leading-relaxed">POCs are the highest-stakes phase of enterprise sales. A well-run POC accelerates the deal and builds conviction. A poorly run one becomes an unpaid engagement that never ends.</p>
+                    </div>
+                    <div class="bg-red-50 border border-red-100 rounded-lg p-4">
+                        <p class="text-xs font-semibold text-red-500 uppercase tracking-wider mb-2">Common Failure Mode</p>
+                        <p class="text-sm text-slate-600 leading-relaxed">Starting a POC without explicit success criteria, a defined timeline, or agreement on what &ldquo;success&rdquo; means. This leads to scope creep and indefinite evaluations.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- MID-PAGE CTA -->
+    <section class="py-16 bg-white border-y border-slate-100">
+        <div class="max-w-3xl mx-auto px-6 text-center">
+            <h2 class="text-2xl md:text-3xl font-bold text-brand-dark mb-4">Want to see these concepts in action?</h2>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="insights.html" class="px-8 py-3 bg-brand-dark text-white font-bold rounded-lg hover:bg-slate-700 transition text-center">Read Our Insights</a>
+                <a href="outcomes.html" class="px-8 py-3 border border-slate-300 text-slate-700 font-bold rounded-lg hover:border-brand-accent hover:text-brand-accent transition text-center">View Outcomes</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- GLOSSARY TERMS (continued) -->
+    <section class="py-16 bg-brand-light">
+        <div class="max-w-4xl mx-auto px-6 space-y-6" id="glossaryTermsContinued">
+
+            <!-- 11. Revenue Delivery Architecture -->
+            <div class="glossary-card rounded-xl border border-slate-200 p-6 md:p-8 bg-white" data-term="revenue delivery architecture">
+                <h3 class="text-xl md:text-2xl font-bold text-brand-dark mb-3 font-serif">Revenue Delivery Architecture</h3>
+                <p class="text-slate-700 leading-relaxed mb-4">
+                    The deliberate system connecting every stage of the technical sale&mdash;from discovery through implementation&mdash;designed to accelerate deals and ensure successful delivery.
+                </p>
+                <div class="grid md:grid-cols-2 gap-4">
+                    <div class="bg-brand-accent/5 border border-brand-accent/10 rounded-lg p-4">
+                        <p class="text-xs font-semibold text-brand-accent uppercase tracking-wider mb-2">Why It Matters</p>
+                        <p class="text-sm text-slate-600 leading-relaxed">Most companies have a sales process and an implementation process, but the system connecting them was never designed. Revenue Delivery Architecture fills that gap.</p>
+                    </div>
+                    <div class="bg-red-50 border border-red-100 rounded-lg p-4">
+                        <p class="text-xs font-semibold text-red-500 uppercase tracking-wider mb-2">Common Failure Mode</p>
+                        <p class="text-sm text-slate-600 leading-relaxed">Treating pre-sales and post-sales as separate silos. The architecture must be end-to-end, with each stage feeding the next.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 12. Sales-to-CS Handoff -->
+            <div class="glossary-card rounded-xl border border-slate-200 p-6 md:p-8 bg-slate-50" data-term="sales-to-cs handoff customer success">
+                <h3 class="text-xl md:text-2xl font-bold text-brand-dark mb-3 font-serif">Sales-to-CS Handoff</h3>
+                <p class="text-slate-700 leading-relaxed mb-4">
+                    The transfer of customer context and relationship from the sales team to the Customer Success team after a deal closes.
+                </p>
+                <div class="grid md:grid-cols-2 gap-4">
+                    <div class="bg-brand-accent/5 border border-brand-accent/10 rounded-lg p-4">
+                        <p class="text-xs font-semibold text-brand-accent uppercase tracking-wider mb-2">Why It Matters</p>
+                        <p class="text-sm text-slate-600 leading-relaxed">Customer Success inherits everything sales promised. Without a structured handoff, CS starts behind and the customer&rsquo;s first experience is confusion.</p>
+                    </div>
+                    <div class="bg-red-50 border border-red-100 rounded-lg p-4">
+                        <p class="text-xs font-semibold text-red-500 uppercase tracking-wider mb-2">Common Failure Mode</p>
+                        <p class="text-sm text-slate-600 leading-relaxed">A single &ldquo;intro email&rdquo; substituting for a real handoff. CS needs documented goals, technical context, key stakeholders, and success criteria.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 13. Sandbox -->
+            <div class="glossary-card rounded-xl border border-slate-200 p-6 md:p-8 bg-white" data-term="sandbox">
+                <h3 class="text-xl md:text-2xl font-bold text-brand-dark mb-3 font-serif">Sandbox</h3>
+                <p class="text-slate-700 leading-relaxed mb-4">
+                    A controlled, representative environment where buyers can interact with your product during evaluation, separate from production.
+                </p>
+                <div class="grid md:grid-cols-2 gap-4">
+                    <div class="bg-brand-accent/5 border border-brand-accent/10 rounded-lg p-4">
+                        <p class="text-xs font-semibold text-brand-accent uppercase tracking-wider mb-2">Why It Matters</p>
+                        <p class="text-sm text-slate-600 leading-relaxed">Sandboxes let buyers experience your product in context. Well-designed sandboxes accelerate evaluation; poorly designed ones create more questions than answers.</p>
+                    </div>
+                    <div class="bg-red-50 border border-red-100 rounded-lg p-4">
+                        <p class="text-xs font-semibold text-red-500 uppercase tracking-wider mb-2">Common Failure Mode</p>
+                        <p class="text-sm text-slate-600 leading-relaxed">Providing a generic sandbox with no guidance. Buyers don&rsquo;t know what to test, what to look for, or how to interpret results.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 14. SE Maturity -->
+            <div class="glossary-card rounded-xl border border-slate-200 p-6 md:p-8 bg-slate-50" data-term="se maturity solutions engineering">
+                <h3 class="text-xl md:text-2xl font-bold text-brand-dark mb-3 font-serif">SE Maturity</h3>
+                <p class="text-slate-700 leading-relaxed mb-4">
+                    The level of organizational sophistication in how a company structures, manages, and scales its Solutions Engineering function.
+                </p>
+                <div class="grid md:grid-cols-2 gap-4">
+                    <div class="bg-brand-accent/5 border border-brand-accent/10 rounded-lg p-4">
+                        <p class="text-xs font-semibold text-brand-accent uppercase tracking-wider mb-2">Why It Matters</p>
+                        <p class="text-sm text-slate-600 leading-relaxed">Companies at different maturity levels need different interventions. A Foundational company needs basic process; a Scaling company needs architecture; an Optimizing company needs refinement.</p>
+                    </div>
+                    <div class="bg-red-50 border border-red-100 rounded-lg p-4">
+                        <p class="text-xs font-semibold text-red-500 uppercase tracking-wider mb-2">Common Failure Mode</p>
+                        <p class="text-sm text-slate-600 leading-relaxed">Applying advanced optimization techniques to a team that doesn&rsquo;t have basic process in place yet. Match the intervention to the maturity level.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 15. Solution Storytelling -->
+            <div class="glossary-card rounded-xl border border-slate-200 p-6 md:p-8 bg-white" data-term="solution storytelling">
+                <h3 class="text-xl md:text-2xl font-bold text-brand-dark mb-3 font-serif">Solution Storytelling</h3>
+                <p class="text-slate-700 leading-relaxed mb-4">
+                    The practice of framing your product&rsquo;s capabilities as a narrative that connects to the buyer&rsquo;s specific business outcomes and challenges.
+                </p>
+                <div class="grid md:grid-cols-2 gap-4">
+                    <div class="bg-brand-accent/5 border border-brand-accent/10 rounded-lg p-4">
+                        <p class="text-xs font-semibold text-brand-accent uppercase tracking-wider mb-2">Why It Matters</p>
+                        <p class="text-sm text-slate-600 leading-relaxed">Buyers don&rsquo;t buy features&mdash;they buy outcomes. Solution storytelling translates technical capability into business value in a way that resonates with both technical and executive stakeholders.</p>
+                    </div>
+                    <div class="bg-red-50 border border-red-100 rounded-lg p-4">
+                        <p class="text-xs font-semibold text-red-500 uppercase tracking-wider mb-2">Common Failure Mode</p>
+                        <p class="text-sm text-slate-600 leading-relaxed">Confusing &ldquo;storytelling&rdquo; with &ldquo;case studies.&rdquo; Solution storytelling happens live, in demos and conversations, tailored to the specific buyer.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 16. Success Criteria -->
+            <div class="glossary-card rounded-xl border border-slate-200 p-6 md:p-8 bg-slate-50" data-term="success criteria">
+                <h3 class="text-xl md:text-2xl font-bold text-brand-dark mb-3 font-serif">Success Criteria</h3>
+                <p class="text-slate-700 leading-relaxed mb-4">
+                    The explicit, measurable outcomes that define whether a POC, evaluation, or implementation has achieved its goals.
+                </p>
+                <div class="grid md:grid-cols-2 gap-4">
+                    <div class="bg-brand-accent/5 border border-brand-accent/10 rounded-lg p-4">
+                        <p class="text-xs font-semibold text-brand-accent uppercase tracking-wider mb-2">Why It Matters</p>
+                        <p class="text-sm text-slate-600 leading-relaxed">Without success criteria, evaluations have no finish line. Defining them upfront creates mutual accountability and gives both sides a clear path to a decision.</p>
+                    </div>
+                    <div class="bg-red-50 border border-red-100 rounded-lg p-4">
+                        <p class="text-xs font-semibold text-red-500 uppercase tracking-wider mb-2">Common Failure Mode</p>
+                        <p class="text-sm text-slate-600 leading-relaxed">Vague criteria like &ldquo;the team likes it&rdquo; or &ldquo;it works.&rdquo; Success criteria must be specific, measurable, and agreed upon by both vendor and buyer.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 17. Technical Discovery -->
+            <div class="glossary-card rounded-xl border border-slate-200 p-6 md:p-8 bg-white" data-term="technical discovery">
+                <h3 class="text-xl md:text-2xl font-bold text-brand-dark mb-3 font-serif">Technical Discovery</h3>
+                <p class="text-slate-700 leading-relaxed mb-4">
+                    The diagnostic phase of a technical sale where SEs uncover the buyer&rsquo;s technical environment, integration requirements, workflow, and underlying business problem.
+                </p>
+                <div class="grid md:grid-cols-2 gap-4">
+                    <div class="bg-brand-accent/5 border border-brand-accent/10 rounded-lg p-4">
+                        <p class="text-xs font-semibold text-brand-accent uppercase tracking-wider mb-2">Why It Matters</p>
+                        <p class="text-sm text-slate-600 leading-relaxed">Discovery is the foundation of everything downstream. Strong discovery makes demos precise, POCs focused, and implementations smooth. Weak discovery makes everything harder.</p>
+                    </div>
+                    <div class="bg-red-50 border border-red-100 rounded-lg p-4">
+                        <p class="text-xs font-semibold text-red-500 uppercase tracking-wider mb-2">Common Failure Mode</p>
+                        <p class="text-sm text-slate-600 leading-relaxed">Treating discovery as a checklist of questions rather than a diagnostic conversation. The goal is to understand the buyer&rsquo;s problem deeply, not just collect data.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 18. Technical GTM (Go-to-Market) -->
+            <div class="glossary-card rounded-xl border border-slate-200 p-6 md:p-8 bg-slate-50" data-term="technical gtm go-to-market">
+                <h3 class="text-xl md:text-2xl font-bold text-brand-dark mb-3 font-serif">Technical GTM (Go-to-Market)</h3>
+                <p class="text-slate-700 leading-relaxed mb-4">
+                    The strategy and systems that govern how a company&rsquo;s technical capabilities are communicated, demonstrated, and validated during the sales process.
+                </p>
+                <div class="grid md:grid-cols-2 gap-4">
+                    <div class="bg-brand-accent/5 border border-brand-accent/10 rounded-lg p-4">
+                        <p class="text-xs font-semibold text-brand-accent uppercase tracking-wider mb-2">Why It Matters</p>
+                        <p class="text-sm text-slate-600 leading-relaxed">Product-market fit gets you in the door. Technical GTM determines whether you can close the deal. It encompasses discovery, demos, POCs, and the entire technical selling motion.</p>
+                    </div>
+                    <div class="bg-red-50 border border-red-100 rounded-lg p-4">
+                        <p class="text-xs font-semibold text-red-500 uppercase tracking-wider mb-2">Common Failure Mode</p>
+                        <p class="text-sm text-slate-600 leading-relaxed">Having a great product and a great sales team, but no deliberate technical GTM motion connecting them. The result is inconsistent execution and deals that stall.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 19. Technical Validation -->
+            <div class="glossary-card rounded-xl border border-slate-200 p-6 md:p-8 bg-white" data-term="technical validation">
+                <h3 class="text-xl md:text-2xl font-bold text-brand-dark mb-3 font-serif">Technical Validation</h3>
+                <p class="text-slate-700 leading-relaxed mb-4">
+                    The process by which a buyer confirms that your solution meets their technical requirements, integration needs, and performance expectations.
+                </p>
+                <div class="grid md:grid-cols-2 gap-4">
+                    <div class="bg-brand-accent/5 border border-brand-accent/10 rounded-lg p-4">
+                        <p class="text-xs font-semibold text-brand-accent uppercase tracking-wider mb-2">Why It Matters</p>
+                        <p class="text-sm text-slate-600 leading-relaxed">Technical validation is where enterprise deals are won or lost. It includes demos, POCs, security reviews, and architecture assessments.</p>
+                    </div>
+                    <div class="bg-red-50 border border-red-100 rounded-lg p-4">
+                        <p class="text-xs font-semibold text-red-500 uppercase tracking-wider mb-2">Common Failure Mode</p>
+                        <p class="text-sm text-slate-600 leading-relaxed">Treating technical validation as a checkbox exercise rather than a strategic opportunity to build conviction and differentiate from competitors.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 20. Solutions Design -->
+            <div class="glossary-card rounded-xl border border-slate-200 p-6 md:p-8 bg-slate-50" data-term="solutions design">
+                <h3 class="text-xl md:text-2xl font-bold text-brand-dark mb-3 font-serif">Solutions Design</h3>
+                <p class="text-slate-700 leading-relaxed mb-4">
+                    The stage in an enterprise deal where the buyer&rsquo;s technical team formally endorses your solution as meeting their requirements, clearing the path for commercial negotiation. It&rsquo;s where solution architecture, success criteria, and stakeholder alignment converge.
+                </p>
+                <div class="grid md:grid-cols-2 gap-4">
+                    <div class="bg-brand-accent/5 border border-brand-accent/10 rounded-lg p-4">
+                        <p class="text-xs font-semibold text-brand-accent uppercase tracking-wider mb-2">Why It Matters</p>
+                        <p class="text-sm text-slate-600 leading-relaxed">Without solutions design, there&rsquo;s no deal. It&rsquo;s the bridge between evaluation and procurement&mdash;and it requires deliberate strategy, not just good demos.</p>
+                    </div>
+                    <div class="bg-red-50 border border-red-100 rounded-lg p-4">
+                        <p class="text-xs font-semibold text-red-500 uppercase tracking-wider mb-2">Common Failure Mode</p>
+                        <p class="text-sm text-slate-600 leading-relaxed">Declaring &ldquo;solutions design complete&rdquo; internally without confirmation from the buyer&rsquo;s technical team. Real solutions design is documented, stakeholder-confirmed, and leads to commercial discussion.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- END-OF-PAGE CTA -->
+    <section class="hero-pattern text-white py-24">
+        <div class="max-w-3xl mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Ready to build your technical sales system?</h2>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="contact.html" class="px-8 py-4 bg-brand-accent text-brand-dark font-bold rounded-lg hover:bg-white transition text-center">Book a Consult</a>
+                <a href="assessment.html" class="px-8 py-4 border border-slate-600 text-white font-bold rounded-lg hover:border-brand-accent hover:text-brand-accent transition text-center">Take the SE Maturity Assessment</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-brand-dark text-slate-400 py-12 border-t border-slate-800">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <span class="text-white font-serif font-bold text-lg block mb-3">Solutions Advisory<span class="text-brand-accent">.</span></span>
+                    <p class="text-sm">New York, NY</p>
+                </div>
+                <div>
+                    <p class="text-xs font-semibold text-slate-300 uppercase tracking-wider mb-3">Services</p>
+                    <div class="space-y-2 text-sm">
+                        <a href="services.html" class="block hover:text-brand-accent transition">Services</a>
+                        <a href="pricing.html" class="block hover:text-brand-accent transition">Pricing</a>
+                        <a href="outcomes.html" class="block hover:text-brand-accent transition">Outcomes</a>
+                    </div>
+                </div>
+                <div>
+                    <p class="text-xs font-semibold text-slate-300 uppercase tracking-wider mb-3">Resources</p>
+                    <div class="space-y-2 text-sm">
+                        <a href="insights.html" class="block hover:text-brand-accent transition">Insights</a>
+                        <a href="assessment.html" class="block hover:text-brand-accent transition">SE Maturity Assessment</a>
+                        <a href="glossary.html" class="block hover:text-brand-accent transition">Glossary</a>
+                    </div>
+                </div>
+                <div>
+                    <p class="text-xs font-semibold text-slate-300 uppercase tracking-wider mb-3">Connect</p>
+                    <div class="space-y-2 text-sm">
+                        <a href="contact.html" class="block hover:text-brand-accent transition">Contact</a>
+                        <a href="about.html" class="block hover:text-brand-accent transition">About</a>
+                        <a href="https://www.linkedin.com/company/solutions-engineering-advisory/" target="_blank" rel="noopener noreferrer" class="block hover:text-brand-accent transition">LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+            <div class="pt-6 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4 text-sm">
+                <span>&copy; 2026 Solutions Advisory Partners. All rights reserved.</span>
+                <a href="privacy.html" class="hover:text-brand-accent transition">Privacy Policy</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+    (function(){
+        var input = document.getElementById('glossarySearch');
+        var cards = document.querySelectorAll('.glossary-card');
+        var noResults = document.getElementById('noResults');
+        if (!input) return;
+        input.addEventListener('input', function(){
+            var q = this.value.toLowerCase().trim();
+            var visible = 0;
+            cards.forEach(function(card){
+                var term = card.getAttribute('data-term') || '';
+                var text = card.textContent.toLowerCase();
+                var match = !q || term.indexOf(q) !== -1 || text.indexOf(q) !== -1;
+                card.style.display = match ? '' : 'none';
+                if (match) visible++;
+            });
+            if (noResults) noResults.classList.toggle('hidden', visible > 0);
+        });
+    })();
+    </script>
+</body>
+</html>

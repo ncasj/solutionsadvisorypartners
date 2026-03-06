@@ -2,13 +2,12 @@
 <html lang="en" class="scroll-smooth">
 <head>
     <script src="consent.js"></script>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Solutions Advisory Partners | Fractional SE Leadership</title>
+    <title>Solutions Advisory Partners | Fractional SE Leadership &amp; Revenue Delivery Architecture</title>
+    <meta name="description" content="Build a repeatable technical sales system for Series A–C B2B SaaS companies. Fractional SE leadership, demo/POC strategy, and implementation handoff architecture.">
     <script src="https://cdn.tailwindcss.com/3.4.16"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
             theme: {
@@ -19,9 +18,9 @@
                     },
                     colors: {
                         brand: {
-                            dark: '#0f172a', /* Slate 900 */
-                            accent: '#38bdf8', /* Sky 400 */
-                            light: '#f8fafc', /* Slate 50 */
+                            dark: '#0f172a',
+                            accent: '#38bdf8',
+                            light: '#f8fafc',
                         }
                     }
                 }
@@ -29,7 +28,6 @@
         }
     </script>
     <style>
-        /* Custom tweaks */
         body { font-family: 'Inter', sans-serif; }
         h1, h2, h3 { font-family: 'Playfair Display', serif; }
         .hero-pattern {
@@ -38,17 +36,6 @@
             background-size: 20px 20px;
         }
     </style>
-
-    
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3.12.1/dist/email.min.js"></script>
-    <script type="text/javascript">
-    (function(){
-        // INITIALIZE EMAILJS WITH YOUR PUBLIC KEY
-        // TODO: Replace "YOUR_PUBLIC_KEY" with your actual key from EmailJS dashboard
-        emailjs.init("mA84J6L0WEIHGyjde");
-    })();
-    </script>
-
 </head>
 <body class="bg-brand-light text-slate-800 antialiased">
 
@@ -61,7 +48,8 @@
                 <a href="index.html" class="hover:text-brand-accent transition text-brand-accent font-semibold">Home</a>
                 <a href="about.html" class="hover:text-brand-accent transition">About</a>
                 <a href="outcomes.html" class="hover:text-brand-accent transition">Outcomes</a>
-                <a href="services.html" class="hover:text-brand-accent transition">Services &amp; Rates</a>
+                <a href="services.html" class="hover:text-brand-accent transition">Services</a>
+                <a href="pricing.html" class="hover:text-brand-accent transition">Pricing</a>
                 <a href="insights.html" class="hover:text-brand-accent transition">Insights</a>
                 <a href="contact.html" class="px-5 py-2 bg-brand-dark text-white rounded-full hover:bg-slate-700 transition">Contact</a>
                 <a href="https://www.linkedin.com/company/solutions-engineering-advisory/" target="_blank" rel="noopener noreferrer" class="text-slate-500 hover:text-[#0A66C2] transition" aria-label="LinkedIn">
@@ -78,7 +66,8 @@
                 <a href="index.html" class="block px-3 py-3 rounded-lg text-base font-medium text-brand-accent hover:bg-slate-100 transition">Home</a>
                 <a href="about.html" class="block px-3 py-3 rounded-lg text-base font-medium text-slate-700 hover:bg-slate-100 transition">About</a>
                 <a href="outcomes.html" class="block px-3 py-3 rounded-lg text-base font-medium text-slate-700 hover:bg-slate-100 transition">Outcomes</a>
-                <a href="services.html" class="block px-3 py-3 rounded-lg text-base font-medium text-slate-700 hover:bg-slate-100 transition">Services &amp; Rates</a>
+                <a href="services.html" class="block px-3 py-3 rounded-lg text-base font-medium text-slate-700 hover:bg-slate-100 transition">Services</a>
+                <a href="pricing.html" class="block px-3 py-3 rounded-lg text-base font-medium text-slate-700 hover:bg-slate-100 transition">Pricing</a>
                 <a href="insights.html" class="block px-3 py-3 rounded-lg text-base font-medium text-slate-700 hover:bg-slate-100 transition">Insights</a>
                 <a href="contact.html" class="block mt-2 px-3 py-3 bg-brand-dark text-white text-base font-bold text-center rounded-lg hover:bg-slate-700 transition">Contact</a>
                 <a href="https://www.linkedin.com/company/solutions-engineering-advisory/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 px-3 py-3 text-slate-500 hover:text-[#0A66C2] transition">
@@ -92,223 +81,438 @@
     (function(){var b=document.getElementById('mobileMenuBtn'),m=document.getElementById('mobileMenu'),h=document.getElementById('iconHam'),x=document.getElementById('iconX');if(!b||!m)return;b.addEventListener('click',function(){m.classList.toggle('hidden');h.classList.toggle('hidden');x.classList.toggle('hidden');b.setAttribute('aria-expanded',m.classList.contains('hidden')?'false':'true');});m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){m.classList.add('hidden');h.classList.remove('hidden');x.classList.add('hidden');b.setAttribute('aria-expanded','false');});});})();
     </script>
 
-    <section id="home" class="hero-pattern text-white min-h-screen flex items-center pt-20">
-        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
-            <div>
-                <div class="inline-block px-3 py-1 mb-6 text-xs font-semibold tracking-wider text-brand-accent uppercase bg-brand-accent/10 rounded-full border border-brand-accent/20">
-                    Fractional SE Leadership
+    <!-- HERO -->
+    <section class="hero-pattern text-white min-h-screen flex items-center pt-20">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <div class="inline-block px-3 py-1 mb-6 text-xs font-semibold tracking-wider text-brand-accent uppercase bg-brand-accent/10 rounded-full border border-brand-accent/20">
+                Revenue Delivery Architecture for B2B SaaS
+            </div>
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+                Build a Repeatable Sales System That Closes <span class="text-brand-accent italic">Enterprise Deals</span> and <span class="text-brand-accent italic">Bridges the Gap</span> Between Product&nbsp;&amp;&nbsp;Revenue.
+            </h1>
+            <p class="text-lg md:text-xl text-slate-300 mb-8 leading-relaxed max-w-2xl mx-auto">
+                We help Series&nbsp;A&ndash;C B2B SaaS companies selling complex, technical products design the systems that turn demos, POCs, and technical evaluations into closed enterprise deals&mdash;without scaling headcount 1:1.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center mb-16">
+                <a href="contact.html" class="px-8 py-4 bg-brand-accent text-brand-dark font-bold rounded-lg hover:bg-white transition text-center">
+                    Book a Consult
+                </a>
+                <a href="assessment.html" class="px-8 py-4 border border-slate-600 text-white font-bold rounded-lg hover:border-brand-accent hover:text-brand-accent transition text-center">
+                    Take the SE Maturity Assessment
+                </a>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-3xl mx-auto">
+                <div class="bg-white/5 border border-white/10 rounded-xl px-6 py-5 text-center">
+                    <p class="text-lg font-bold text-white mb-1">10+ Years</p>
+                    <p class="text-sm text-slate-400">Deep B2B SaaS Experience</p>
                 </div>
-                <h1 class="text-5xl md:text-6xl font-bold leading-tight mb-6">
-                    Bridge the Gap Between <span class="text-brand-accent italic">Technical Product</span> and <span class="text-brand-accent italic">Revenue</span>.
-                </h1>
-                <p class="text-lg text-slate-300 mb-8 leading-relaxed max-w-lg">
-                    We advise on how to build repeatable technical GTM motions that helps tech organizations drive velocity across their entire customer journey without incremental headcount. 
-                    
-                </p>
-                     <p class="text-lg text-slate-300 mb-8 leading-relaxed max-w-lg">
-                    <strong>Professional Solutions Engineering leadership, available fractionally.</strong>
-                </p>
-                <div class="flex flex-col sm:flex-row gap-4">
-                    <a href="contact.html" class="px-8 py-3 bg-brand-accent text-brand-dark font-bold rounded hover:bg-white transition text-center">
-                        Book a Consultation
-                    </a>
-                    <a href="services.html" class="px-8 py-3 border border-slate-600 text-white rounded hover:border-brand-accent hover:text-brand-accent transition text-center">
-                        View Services
-                    </a>
+                <div class="bg-white/5 border border-white/10 rounded-xl px-6 py-5 text-center">
+                    <p class="text-lg font-bold text-white mb-1">Series A&ndash;C Focus</p>
+                    <p class="text-sm text-slate-400">Growth-Stage Specialist</p>
+                </div>
+                <div class="bg-white/5 border border-white/10 rounded-xl px-6 py-5 text-center">
+                    <p class="text-lg font-bold text-white mb-1">Full Spectrum Experience</p>
+                    <p class="text-sm text-slate-400">From Startup to Fortune 500</p>
                 </div>
             </div>
-            <div class="relative hidden md:block">
-                <div class="absolute inset-0 bg-brand-accent/20 blur-3xl rounded-full opacity-30"></div>
-                <div class="relative bg-slate-800 border border-slate-700 p-8 rounded-lg shadow-2xl">
-                    <div class="flex items-center space-x-2 mb-6 border-b border-slate-700 pb-4">
-                        <div class="w-3 h-3 bg-red-500 rounded-full"></div>
-                        <div class="w-3 h-3 bg-yellow-500 rounded-full"></div>
-                        <div class="w-3 h-3 bg-green-500 rounded-full"></div>
+        </div>
+    </section>
+
+    <!-- ENGAGEMENT TRIGGERS -->
+    <section class="py-12 bg-white border-b border-slate-100">
+        <div class="max-w-4xl mx-auto px-6">
+            <p class="text-brand-accent font-medium text-sm uppercase tracking-widest mb-4">Is This You?</p>
+            <h2 class="text-3xl md:text-4xl font-bold text-brand-dark mb-4">Sound Familiar?</h2>
+            <p class="text-slate-600 text-lg mb-10 max-w-2xl">These are the signals that your technical sales motion needs architecture&mdash;not more headcount.</p>
+            <div class="grid md:grid-cols-2 gap-4">
+                <div class="flex items-start gap-4 p-5 rounded-xl border border-slate-200 bg-slate-50">
+                    <svg class="w-5 h-5 text-red-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L4.082 16.5c-.77.833.192 2.5 1.732 2.5z"/></svg>
+                    <div>
+                        <p class="font-semibold text-brand-dark mb-1">Deals stalling during technical evaluation</p>
+                        <p class="text-sm text-slate-500">Buyers go silent after demos. POCs run indefinitely with no clear outcome.</p>
                     </div>
-                    <div class="space-y-4 font-mono text-sm text-slate-300">
-                        <p><span class="text-purple-400">const</span> <span class="text-blue-400">solutionsEng</span> = {</p>
-                        <p class="pl-4">audit: <span class="text-green-400">"Processes"</span>,</p>
-                        <p class="pl-4">build: <span class="text-green-400">"Scalable Teams"</span>,</p>
-                           <p class="pl-4">implement: <span class="text-green-400">"AI Tools"</span>,</p>
-                        <p class="pl-4">outcome: <span class="text-brand-accent">"Revenue +30%"</span></p>
-                        <p>};</p>
-                        <p class="text-slate-500">// Deploying scalable solutions engineering...</p>
+                </div>
+                <div class="flex items-start gap-4 p-5 rounded-xl border border-slate-200 bg-slate-50">
+                    <svg class="w-5 h-5 text-red-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L4.082 16.5c-.77.833.192 2.5 1.732 2.5z"/></svg>
+                    <div>
+                        <p class="font-semibold text-brand-dark mb-1">Inconsistent demo quality across your team</p>
+                        <p class="text-sm text-slate-500">One SE kills it. The rest are winging it with no repeatable narrative.</p>
+                    </div>
+                </div>
+                <div class="flex items-start gap-4 p-5 rounded-xl border border-slate-200 bg-slate-50">
+                    <svg class="w-5 h-5 text-red-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L4.082 16.5c-.77.833.192 2.5 1.732 2.5z"/></svg>
+                    <div>
+                        <p class="font-semibold text-brand-dark mb-1">POCs that drag on for months</p>
+                        <p class="text-sm text-slate-500">No success criteria, no timebox. Evaluations never conclude.</p>
+                    </div>
+                </div>
+                <div class="flex items-start gap-4 p-5 rounded-xl border border-slate-200 bg-slate-50">
+                    <svg class="w-5 h-5 text-red-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L4.082 16.5c-.77.833.192 2.5 1.732 2.5z"/></svg>
+                    <div>
+                        <p class="font-semibold text-brand-dark mb-1">Founders or CTO pulled into sales calls</p>
+                        <p class="text-sm text-slate-500">Technical credibility depends on one person who should be building product.</p>
+                    </div>
+                </div>
+                <div class="flex items-start gap-4 p-5 rounded-xl border border-slate-200 bg-slate-50">
+                    <svg class="w-5 h-5 text-red-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L4.082 16.5c-.77.833.192 2.5 1.732 2.5z"/></svg>
+                    <div>
+                        <p class="font-semibold text-brand-dark mb-1">Handoff to implementation creates scope gaps</p>
+                        <p class="text-sm text-slate-500">What&rsquo;s sold doesn&rsquo;t match what&rsquo;s delivered. Implementation starts from scratch.</p>
+                    </div>
+                </div>
+                <div class="flex items-start gap-4 p-5 rounded-xl border border-slate-200 bg-slate-50">
+                    <svg class="w-5 h-5 text-red-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L4.082 16.5c-.77.833.192 2.5 1.732 2.5z"/></svg>
+                    <div>
+                        <p class="font-semibold text-brand-dark mb-1">SE team is reactive, not strategic</p>
+                        <p class="text-sm text-slate-500">SEs are order-takers on individual deals. No system, just heroics.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="why" class="py-24 bg-white border-t border-slate-200">
-        <div class="max-w-3xl mx-auto px-6">
-            <h2 class="text-3xl md:text-4xl font-bold text-brand-dark mb-8 text-center">Why Fractional SE Advisory?</h2>
-
-            <p class="text-slate-600 leading-relaxed mb-4">
-                Most early-stage tech companies hire expensive AEs and expect them to handle the technical deep-dive. Or they pull their CTO into sales calls, distracting them from product.
-            </p>
-
-            <p class="text-slate-800 font-bold mb-4">Solutions Advisory Partners solves this resource gap.</p>
-
-            <p class="text-slate-600 leading-relaxed mb-12">
-                We operate as your "Head of Solutions Engineering" on a fractional basis. We don't just run demos; we build the <em>systems</em> that allow your sales team to run them flawlessly. From defining the "Technical Win" criteria to building a repeatable demo environment, we professionalize your pre-sales motion.
-            </p>
-
-            <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
-                <div class="bg-slate-50 border border-slate-200 rounded-xl p-6 text-center">
-                    <p class="text-2xl md:text-3xl font-bold text-brand-accent mb-1">10+</p>
-                    <p class="text-xs font-semibold tracking-wider text-slate-500 uppercase">Years Experience</p>
+    <!-- REVENUE DELIVERY ARCHITECTURE FRAMEWORK -->
+    <section class="py-16 bg-slate-50 border-b border-slate-100">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="text-center mb-8">
+                <p class="text-brand-accent font-medium text-sm uppercase tracking-widest mb-4">Our Framework</p>
+                <h2 class="text-3xl md:text-4xl font-bold text-brand-dark mb-6">Revenue Delivery Architecture&trade;</h2>
+                <p class="text-slate-600 text-lg leading-relaxed max-w-3xl mx-auto">
+                    Most companies treat Solutions Engineering as deal support. We treat it as the connective tissue of your entire revenue lifecycle. Revenue Delivery Architecture is the deliberate system that connects every stage of the technical sale&mdash;from first discovery through implementation and renewal&mdash;so deals accelerate and customers succeed.
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-5 gap-4 items-stretch">
+                <div class="relative bg-brand-dark text-white p-6 rounded-xl text-center flex flex-col justify-start">
+                    <p class="text-brand-accent text-xs font-bold uppercase tracking-wider mb-2">01</p>
+                    <h3 class="font-bold text-base mb-2 font-serif">Discovery</h3>
+                    <p class="text-slate-400 text-xs leading-relaxed">Diagnose the buyer&rsquo;s problem. Map their technical environment and decision criteria.</p>
+                    <div class="hidden md:flex absolute -right-3 top-1/2 -translate-y-1/2 z-10 w-6 h-6 items-center justify-center rounded-full bg-brand-accent text-brand-dark">
+                        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+                    </div>
                 </div>
-                <div class="bg-slate-50 border border-slate-200 rounded-xl p-6 text-center">
-                    <p class="text-2xl md:text-3xl font-bold text-brand-accent mb-1">Series A-C</p>
-                    <p class="text-xs font-semibold tracking-wider text-slate-500 uppercase">Growth Specialist</p>
+                <div class="relative bg-brand-dark text-white p-6 rounded-xl text-center flex flex-col justify-start">
+                    <p class="text-brand-accent text-xs font-bold uppercase tracking-wider mb-2">02</p>
+                    <h3 class="font-bold text-base mb-2 font-serif">Solutions Design</h3>
+                    <p class="text-slate-400 text-xs leading-relaxed">Define explicit success criteria and the evaluation framework before anyone opens a demo.</p>
+                    <div class="hidden md:flex absolute -right-3 top-1/2 -translate-y-1/2 z-10 w-6 h-6 items-center justify-center rounded-full bg-brand-accent text-brand-dark">
+                        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+                    </div>
                 </div>
-                <div class="bg-slate-50 border border-slate-200 rounded-xl p-6 text-center">
-                    <p class="text-2xl md:text-3xl font-bold text-brand-accent mb-1">NYC</p>
-                    <p class="text-xs font-semibold tracking-wider text-slate-500 uppercase">Based &amp; Global</p>
+                <div class="relative bg-brand-dark text-white p-6 rounded-xl text-center flex flex-col justify-start">
+                    <p class="text-brand-accent text-xs font-bold uppercase tracking-wider mb-2">03</p>
+                    <h3 class="font-bold text-base mb-2 font-serif">Demo Architecture</h3>
+                    <p class="text-slate-400 text-xs leading-relaxed">Structure every demo around the buyer&rsquo;s problem and workflow&mdash;not a feature tour.</p>
+                    <div class="hidden md:flex absolute -right-3 top-1/2 -translate-y-1/2 z-10 w-6 h-6 items-center justify-center rounded-full bg-brand-accent text-brand-dark">
+                        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+                    </div>
                 </div>
+                <div class="relative bg-brand-dark text-white p-6 rounded-xl text-center flex flex-col justify-start">
+                    <p class="text-brand-accent text-xs font-bold uppercase tracking-wider mb-2">04</p>
+                    <h3 class="font-bold text-base mb-2 font-serif">POC Strategy</h3>
+                    <p class="text-slate-400 text-xs leading-relaxed">Time-boxed validation with clear success criteria. Prove value fast or disqualify early.</p>
+                    <div class="hidden md:flex absolute -right-3 top-1/2 -translate-y-1/2 z-10 w-6 h-6 items-center justify-center rounded-full bg-brand-accent text-brand-dark">
+                        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+                    </div>
+                </div>
+                <div class="bg-brand-dark text-white p-6 rounded-xl text-center flex flex-col justify-start">
+                    <p class="text-brand-accent text-xs font-bold uppercase tracking-wider mb-2">05</p>
+                    <h3 class="font-bold text-base mb-2 font-serif">Implementation Handoff</h3>
+                    <p class="text-slate-400 text-xs leading-relaxed">Bridge sales to delivery. What&rsquo;s sold is what gets implemented&mdash;on time and on scope.</p>
+                </div>
+            </div>
+            <p class="text-center text-slate-500 text-sm mt-8">Each stage feeds the next. When the architecture is deliberate, revenue scales without scaling headcount 1:1.</p>
+        </div>
+    </section>
+
+    <!-- QUANTIFIED OUTCOMES -->
+    <section class="py-12 bg-white border-b border-slate-100">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="text-center mb-8">
+                <p class="text-brand-accent font-medium text-sm uppercase tracking-widest mb-4">Typical Results</p>
+                <h2 class="text-3xl md:text-4xl font-bold text-brand-dark mb-4">Outcomes You Can Measure</h2>
+                <p class="text-slate-500 text-sm">Ranges represent typical results across client engagements.</p>
+            </div>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-slate-50 rounded-xl border border-slate-200 p-6 text-center">
+                    <p class="text-3xl font-bold text-brand-dark mb-2">10&ndash;25%</p>
+                    <p class="text-sm text-slate-600 font-medium">Shorter sales cycles</p>
+                </div>
+                <div class="bg-slate-50 rounded-xl border border-slate-200 p-6 text-center">
+                    <p class="text-3xl font-bold text-brand-dark mb-2">2&ndash;3x</p>
+                    <p class="text-sm text-slate-600 font-medium">POC-to-close conversion improvement</p>
+                </div>
+                <div class="bg-slate-50 rounded-xl border border-slate-200 p-6 text-center">
+                    <p class="text-3xl font-bold text-brand-dark mb-2">40%+</p>
+                    <p class="text-sm text-slate-600 font-medium">Reduction in implementation rework</p>
+                </div>
+                <div class="bg-slate-50 rounded-xl border border-slate-200 p-6 text-center">
+                    <p class="text-3xl font-bold text-brand-dark mb-2">15&ndash;30%</p>
+                    <p class="text-sm text-slate-600 font-medium">Improvement in enterprise win rates</p>
+                </div>
+                <div class="bg-slate-50 rounded-xl border border-slate-200 p-6 text-center">
+                    <p class="text-3xl font-bold text-brand-dark mb-2">2&ndash;3x</p>
+                    <p class="text-sm text-slate-600 font-medium">SE capacity without adding headcount</p>
+                </div>
+                <div class="bg-slate-50 rounded-xl border border-slate-200 p-6 text-center">
+                    <p class="text-3xl font-bold text-brand-dark mb-2">50%+</p>
+                    <p class="text-sm text-slate-600 font-medium">Fewer post-sale escalations</p>
+                </div>
+            </div>
+            <div class="text-center mt-8">
+                <a href="outcomes.html" class="text-brand-accent font-semibold hover:underline">See full case studies &rarr;</a>
             </div>
         </div>
     </section>
 
-    <section id="services" class="py-24 bg-slate-100 border-t border-slate-200">
-        <div class="max-w-6xl mx-auto px-6">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold text-brand-dark mb-4">How We Work</h2>
-                <p class="text-slate-600">Flexible engagement—project-based or ongoing. See our full menu of services and rates for details.</p>
+    <!-- ABOUT & EXPERIENCE -->
+    <section class="py-12 bg-slate-50 border-b border-slate-100">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="text-center mb-10">
+                <p class="text-brand-accent font-medium text-sm uppercase tracking-widest mb-4">Who&rsquo;s Behind This</p>
+                <h2 class="text-3xl md:text-4xl font-bold text-brand-dark">Built on a Decade in the Trenches</h2>
             </div>
+            <div class="bg-white rounded-2xl border border-slate-200 p-8 md:p-10">
+                <div class="flex flex-col md:flex-row gap-8 items-center md:items-start">
+                    <div class="shrink-0">
+                        <div class="w-28 h-28 rounded-xl overflow-hidden bg-slate-100" style="background: conic-gradient(#38bdf8, #0ea5e9, #38bdf8); padding: 2px; border-radius: 0.75rem;">
+                            <img src="assets/nico-headshot.jpg" alt="Nico Castagnola" class="w-full h-full object-cover rounded-xl" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                            <div class="w-full h-full bg-gradient-to-br from-brand-dark to-slate-700 items-center justify-center text-white text-3xl font-serif font-bold rounded-xl" style="display:none;">NC</div>
+                        </div>
+                    </div>
+                    <div class="flex-1 text-center md:text-left">
+                        <h3 class="text-xl font-bold text-brand-dark mb-1">Nico Castagnola</h3>
+                        <p class="text-brand-accent font-semibold text-sm mb-3">Founder &amp; Principal Advisor</p>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            10+ years operating inside B2B SaaS&mdash;leading Solutions Engineering, Solutions Architecture, Implementation, and Technical Account Management at companies ranging from Series&nbsp;A startups to Fortune&nbsp;500 enterprises. I&rsquo;ve built SE teams from scratch, designed demo and POC programs that converted, and architected the handoff systems that keep post-sale delivery clean. Harvard Business School credential. Based in NYC.
+                        </p>
+                    </div>
+                </div>
+                <div class="mt-8 pt-6 border-t border-slate-100">
+                    <p class="text-xs font-semibold tracking-widest text-slate-400 uppercase mb-4 text-center">Industries &amp; Environments</p>
+                    <div class="flex flex-wrap justify-center gap-2">
+                        <span class="px-3 py-1.5 bg-slate-50 text-slate-600 text-xs font-medium rounded-full border border-slate-200">Fortune 500 Technology</span>
+                        <span class="px-3 py-1.5 bg-slate-50 text-slate-600 text-xs font-medium rounded-full border border-slate-200">Series A&ndash;D SaaS</span>
+                        <span class="px-3 py-1.5 bg-slate-50 text-slate-600 text-xs font-medium rounded-full border border-slate-200">eCommerce Platforms</span>
+                        <span class="px-3 py-1.5 bg-slate-50 text-slate-600 text-xs font-medium rounded-full border border-slate-200">FinTech</span>
 
-            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                <div class="bg-brand-dark p-8 rounded-xl shadow-xl border border-slate-700 flex flex-col">
-                    <h3 class="text-xl font-bold text-white mb-2">Ad Hoc</h3>
-                    <p class="text-slate-400 text-sm mb-6">Single projects: build a demo framework, design a handoff process, run a technical audit, or create playbooks. Scope it, deliver it, done.</p>
-                    <ul class="space-y-2 text-sm text-slate-300 mb-8 flex-grow">
-                        <li class="flex items-start"><span class="text-brand-accent mr-2">✓</span> Fixed scope and timeline</li>
-                        <li class="flex items-start"><span class="text-brand-accent mr-2">✓</span> Technical Sales System Build, Demo/POC Strategy, or Handoff Frameworks</li>
-                        <li class="flex items-start"><span class="text-brand-accent mr-2">✓</span> Ideal for a specific gap or one-time need</li>
-                    </ul>
-                    <a href="services.html" class="block w-full py-2 bg-brand-accent text-brand-dark font-bold text-center rounded hover:bg-white transition">Learn More</a>
+                        <span class="px-3 py-1.5 bg-slate-50 text-slate-600 text-xs font-medium rounded-full border border-slate-200">MarTech</span>
+                        <span class="px-3 py-1.5 bg-slate-50 text-slate-600 text-xs font-medium rounded-full border border-slate-200">Enterprise Software</span>
+                    </div>
                 </div>
-
-                <div class="bg-brand-dark p-8 rounded-xl shadow-xl border border-slate-700 flex flex-col">
-                    <h3 class="text-xl font-bold text-white mb-2">Retainer</h3>
-                    <p class="text-slate-400 text-sm mb-6">Ongoing fractional leadership or advisory: act as your Head of SE/Delivery, advise revenue leaders, or support your team with strategy and enablement month over month.</p>
-                    <ul class="space-y-2 text-sm text-slate-300 mb-8 flex-grow">
-                        <li class="flex items-start"><span class="text-brand-accent mr-2">✓</span> Fractional Revenue Architecture Leadership</li>
-                        <li class="flex items-start"><span class="text-brand-accent mr-2">✓</span> Strategy sessions, async access, and continuous improvement</li>
-                        <li class="flex items-start"><span class="text-brand-accent mr-2">✓</span> Scale up or down as your needs change</li>
-                    </ul>
-                    <a href="services.html" class="block w-full py-2 bg-brand-accent text-brand-dark font-bold text-center rounded hover:bg-white transition">Learn More</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="py-24 bg-white">
-        <div class="max-w-2xl mx-auto px-6 text-center">
-            <h2 class="text-3xl md:text-4xl font-bold text-brand-dark mb-6">Ready to Scale?</h2>
-            <p class="text-slate-600 mb-12">
-                Let's discuss your current technical sales challenges. <br>
-                Consultations are free—bad demos are expensive.
-            </p>
-            
-            <form id="contactForm" class="text-left space-y-4 bg-slate-50 p-8 rounded-xl border border-slate-200">
-                <div>
-                    <label class="block text-sm font-bold text-slate-700 mb-1">Name</label>
-                    <input type="text" name="name" id="inputName" class="w-full p-3 border border-slate-300 rounded focus:outline-none focus:border-brand-accent" placeholder="Jane Doe" required>
-                </div>
-                <div>
-                    <label class="block text-sm font-bold text-slate-700 mb-1">Work Email</label>
-                    <input type="email" name="email" id="inputEmail" class="w-full p-3 border border-slate-300 rounded focus:outline-none focus:border-brand-accent" placeholder="jane@company.com" required>
-                </div>
-                <div>
-                    <label class="block text-sm font-bold text-slate-700 mb-1">How can we help?</label>
-                    <textarea name="message" id="inputMessage" class="w-full p-3 border border-slate-300 rounded focus:outline-none focus:border-brand-accent h-32" placeholder="We are struggling to hire our first SE, we're interested in..." required></textarea>
-                </div>
-                <button type="submit" id="submitBtn" class="w-full py-3 bg-brand-dark text-white font-bold rounded hover:bg-slate-800 transition">
-                    Send Message
-                </button>
-                <div id="formError" class="hidden mt-4 p-4 bg-red-50 border border-red-200 rounded-lg text-center">
-                    <p class="text-sm text-red-700 font-medium mb-1">Something went wrong — please try again or email us directly.</p>
-                    <a href="mailto:solutionsadvisorypartners@gmail.com" class="inline-block text-base font-bold text-brand-dark underline hover:text-brand-accent transition">solutionsadvisorypartners@gmail.com</a>
-                </div>
-                <div class="mt-6 pt-4 border-t border-slate-200 text-center">
-                    <p class="text-sm text-slate-500 mb-1">Prefer email?</p>
-                    <a href="mailto:solutionsadvisorypartners@gmail.com" class="inline-flex items-center gap-2 text-base font-semibold text-brand-dark hover:text-brand-accent transition">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" /></svg>
-                        solutionsadvisorypartners@gmail.com
+                <div class="text-center mt-6">
+                    <a href="about.html" class="inline-flex items-center gap-2 text-brand-accent font-semibold text-sm hover:underline">
+                        Full bio &amp; approach
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
                     </a>
                 </div>
-            </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROCESS VISUALIZATION -->
+    <section class="py-16 bg-white border-b border-slate-100">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="text-center mb-10">
+                <p class="text-brand-accent font-medium text-sm uppercase tracking-widest mb-4">How an Engagement Works</p>
+                <h2 class="text-3xl md:text-4xl font-bold text-brand-dark mb-4">From First Call to Scaled System</h2>
+                <p class="text-slate-600 text-lg max-w-2xl mx-auto">A structured path to a repeatable technical sales motion. Every engagement is scoped to your stage and needs.</p>
+            </div>
+            <div class="space-y-6">
+                <div class="flex flex-col md:flex-row gap-6 items-start">
+                    <div class="shrink-0 w-14 h-14 rounded-xl bg-brand-dark flex items-center justify-center text-brand-accent font-bold text-lg">1</div>
+                    <div class="flex-1 bg-slate-50 rounded-xl border border-slate-200 p-6">
+                        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2">
+                            <h3 class="text-lg font-bold text-brand-dark">Discovery Call</h3>
+                            <span class="text-xs font-medium text-slate-400 uppercase tracking-wider">30 min</span>
+                        </div>
+                        <p class="text-slate-600 text-sm mb-3">We learn about your GTM motion, team structure, and where deals are stalling. No pitch deck&mdash;just a diagnostic conversation.</p>
+                        <p class="text-xs text-slate-500"><strong>Deliverable:</strong> Fit assessment and recommended engagement path.</p>
+                    </div>
+                </div>
+                <div class="flex flex-col md:flex-row gap-6 items-start">
+                    <div class="shrink-0 w-14 h-14 rounded-xl bg-brand-dark flex items-center justify-center text-brand-accent font-bold text-lg">2</div>
+                    <div class="flex-1 bg-slate-50 rounded-xl border border-slate-200 p-6">
+                        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2">
+                            <h3 class="text-lg font-bold text-brand-dark">Technical GTM Audit</h3>
+                            <span class="text-xs font-medium text-slate-400 uppercase tracking-wider">1&ndash;2 weeks</span>
+                        </div>
+                        <p class="text-slate-600 text-sm mb-3">Deep-dive into your current technical sales process, team structure, deal flow, and handoff systems. We identify the gaps that are costing you deals.</p>
+                        <p class="text-xs text-slate-500"><strong>Deliverable:</strong> Current-state assessment, gap analysis, and prioritized recommendations.</p>
+                    </div>
+                </div>
+                <div class="flex flex-col md:flex-row gap-6 items-start">
+                    <div class="shrink-0 w-14 h-14 rounded-xl bg-brand-dark flex items-center justify-center text-brand-accent font-bold text-lg">3</div>
+                    <div class="flex-1 bg-slate-50 rounded-xl border border-slate-200 p-6">
+                        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2">
+                            <h3 class="text-lg font-bold text-brand-dark">System Design</h3>
+                            <span class="text-xs font-medium text-slate-400 uppercase tracking-wider">2&ndash;3 weeks</span>
+                        </div>
+                        <p class="text-slate-600 text-sm mb-3">Architect the Revenue Delivery system tailored to your stage, market, and team. Define playbooks, frameworks, and org design.</p>
+                        <p class="text-xs text-slate-500"><strong>Deliverable:</strong> Revenue Delivery Architecture blueprint, recommended frameworks, and implementation roadmap.</p>
+                    </div>
+                </div>
+                <div class="flex flex-col md:flex-row gap-6 items-start">
+                    <div class="shrink-0 w-14 h-14 rounded-xl bg-brand-dark flex items-center justify-center text-brand-accent font-bold text-lg">4</div>
+                    <div class="flex-1 bg-slate-50 rounded-xl border border-slate-200 p-6">
+                        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2">
+                            <h3 class="text-lg font-bold text-brand-dark">Build &amp; Implement</h3>
+                            <span class="text-xs font-medium text-slate-400 uppercase tracking-wider">3&ndash;6 weeks</span>
+                        </div>
+                        <p class="text-slate-600 text-sm mb-3">Build the playbooks, train the team, deploy the frameworks. Demo architectures, POC programs, handoff systems&mdash;all stood up and operational.</p>
+                        <p class="text-xs text-slate-500"><strong>Deliverable:</strong> Deployed frameworks, demo playbooks, POC templates, handoff systems.</p>
+                    </div>
+                </div>
+                <div class="flex flex-col md:flex-row gap-6 items-start">
+                    <div class="shrink-0 w-14 h-14 rounded-xl bg-brand-dark flex items-center justify-center text-brand-accent font-bold text-lg">5</div>
+                    <div class="flex-1 bg-slate-50 rounded-xl border border-slate-200 p-6">
+                        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2">
+                            <h3 class="text-lg font-bold text-brand-dark">Optimize &amp; Scale</h3>
+                            <span class="text-xs font-medium text-slate-400 uppercase tracking-wider">Ongoing</span>
+                        </div>
+                        <p class="text-slate-600 text-sm mb-3">Continuous refinement, coaching, and measurement. Iterate on what&rsquo;s working, adjust what&rsquo;s not, and scale the system as you grow.</p>
+                        <p class="text-xs text-slate-500"><strong>Deliverable:</strong> KPI dashboards, iteration cycles, fractional leadership support.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-16 pt-12 border-t border-slate-200">
+                <div class="text-center mb-8">
+                    <h3 class="text-2xl font-bold text-brand-dark mb-2 font-serif">Flexible Engagement Models</h3>
+                    <p class="text-slate-600">Project-based or ongoing&mdash;scoped to your stage and needs. Every engagement starts with a discovery call.</p>
+                </div>
+                <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                    <div class="bg-brand-dark p-8 rounded-xl shadow-xl border border-slate-700 flex flex-col">
+                        <h3 class="text-xl font-bold text-white mb-2 font-serif">Ad Hoc Projects</h3>
+                        <p class="text-slate-400 text-sm mb-6">Single-scope engagements: build a demo framework, design a handoff process, run a technical audit, or create playbooks. Fixed scope, clear deliverables, defined timeline.</p>
+                        <ul class="space-y-2 text-sm text-slate-300 mb-8 flex-grow">
+                            <li class="flex items-start"><span class="text-brand-accent mr-2">&check;</span> Technical GTM Audit</li>
+                            <li class="flex items-start"><span class="text-brand-accent mr-2">&check;</span> Demo &amp; POC System Build</li>
+                            <li class="flex items-start"><span class="text-brand-accent mr-2">&check;</span> Implementation + Handoff Architecture</li>
+                        </ul>
+                        <a href="contact.html" class="block w-full py-2 bg-brand-accent text-brand-dark font-bold text-center rounded hover:bg-white transition">Request a Tailored Quote</a>
+                    </div>
+                    <div class="bg-brand-dark p-8 rounded-xl shadow-xl border border-slate-700 flex flex-col">
+                        <h3 class="text-xl font-bold text-white mb-2 font-serif">Fractional Retainer</h3>
+                        <p class="text-slate-400 text-sm mb-6">Ongoing fractional SE leadership: act as your Head of SE/Delivery, advise revenue leaders, and drive continuous improvement across your technical GTM motion month over month.</p>
+                        <ul class="space-y-2 text-sm text-slate-300 mb-8 flex-grow">
+                            <li class="flex items-start"><span class="text-brand-accent mr-2">&check;</span> Fractional Revenue Architecture Leadership</li>
+                            <li class="flex items-start"><span class="text-brand-accent mr-2">&check;</span> Strategy sessions + async access</li>
+                            <li class="flex items-start"><span class="text-brand-accent mr-2">&check;</span> Tailored monthly engagement</li>
+                        </ul>
+                        <a href="contact.html" class="block w-full py-2 bg-brand-accent text-brand-dark font-bold text-center rounded hover:bg-white transition">Request a Tailored Quote</a>
+                    </div>
+                </div>
+                <div class="text-center mt-8">
+                    <a href="services.html" class="text-brand-accent font-semibold hover:underline">View all services &rarr;</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SYSTEMS-FIRST SE: CODE BLOCK -->
+    <section class="py-16 bg-white border-b border-slate-100">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <p class="text-brand-accent font-medium text-sm uppercase tracking-widest mb-4">Technical Credibility</p>
+                    <h2 class="text-3xl md:text-4xl font-bold text-brand-dark mb-6">Systems-First SE: How I Think</h2>
+                    <p class="text-slate-600 text-lg leading-relaxed mb-4">
+                        Revenue Delivery Architecture isn&rsquo;t a deck or a workshop. It&rsquo;s a system&mdash;with inputs, stages, handoffs, and measurable outputs at every step.
+                    </p>
+                    <p class="text-slate-600 leading-relaxed">
+                        I approach every engagement the way an engineer approaches a system: diagnose the current state, design the architecture, build with clear interfaces, and measure outcomes. The code motif isn&rsquo;t decoration&mdash;it&rsquo;s how I actually think about your revenue process.
+                    </p>
+                </div>
+                <div class="relative">
+                    <div class="absolute inset-0 bg-brand-accent/20 blur-3xl rounded-full opacity-20"></div>
+                    <div class="relative bg-slate-800 border border-slate-700 p-6 rounded-lg shadow-2xl">
+                        <div class="flex items-center space-x-2 mb-4 border-b border-slate-700 pb-3">
+                            <div class="w-3 h-3 bg-red-500 rounded-full"></div>
+                            <div class="w-3 h-3 bg-yellow-500 rounded-full"></div>
+                            <div class="w-3 h-3 bg-green-500 rounded-full"></div>
+                            <span class="text-slate-500 text-xs ml-2 font-mono">revenue-delivery-architecture.js</span>
+                        </div>
+                        <div class="space-y-2 font-mono text-xs text-slate-300 leading-relaxed">
+                            <p><span class="text-purple-400">const</span> <span class="text-blue-400">revenueArchitecture</span> = {</p>
+                            <p class="pl-4">discovery: {</p>
+                            <p class="pl-8">goal: <span class="text-green-400">"Diagnose buyer problem"</span>,</p>
+                            <p class="pl-8">output: <span class="text-green-400">"Technical requirements map"</span></p>
+                            <p class="pl-4">},</p>
+                            <p class="pl-4">technicalWin: {</p>
+                            <p class="pl-8">goal: <span class="text-green-400">"Define success criteria"</span>,</p>
+                            <p class="pl-8">output: <span class="text-green-400">"Evaluation framework"</span></p>
+                            <p class="pl-4">},</p>
+                            <p class="pl-4">demoArchitecture: {</p>
+                            <p class="pl-8">goal: <span class="text-green-400">"Structured proof of value"</span>,</p>
+                            <p class="pl-8">output: <span class="text-green-400">"Buyer-specific narrative"</span></p>
+                            <p class="pl-4">},</p>
+                            <p class="pl-4">pocStrategy: {</p>
+                            <p class="pl-8">goal: <span class="text-green-400">"Time-boxed validation"</span>,</p>
+                            <p class="pl-8">output: <span class="text-green-400">"Success criteria scorecard"</span></p>
+                            <p class="pl-4">},</p>
+                            <p class="pl-4">handoff: {</p>
+                            <p class="pl-8">goal: <span class="text-green-400">"Clean transition to delivery"</span>,</p>
+                            <p class="pl-8">output: <span class="text-green-400">"Scoped implementation plan"</span></p>
+                            <p class="pl-4">}</p>
+                            <p>};</p>
+                            <p class="text-slate-500 mt-2">// Every stage feeds the next. That&rsquo;s the system.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- END-OF-PAGE CTA -->
+    <section class="hero-pattern text-white py-24">
+        <div class="max-w-3xl mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Your Product Is Strong. Your Technical Sales System Should Be Too.</h2>
+            <p class="text-slate-300 text-lg mb-8 leading-relaxed">
+                If deals are stalling in technical evaluation, POCs are dragging, or your SE team is running on heroics instead of systems&mdash;let&rsquo;s fix that.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="contact.html" class="px-8 py-4 bg-brand-accent text-brand-dark font-bold rounded-lg hover:bg-white transition text-center">Book a Consult</a>
+                <a href="assessment.html" class="px-8 py-4 border border-slate-600 text-white font-bold rounded-lg hover:border-brand-accent hover:text-brand-accent transition text-center">Take the SE Maturity Assessment</a>
+            </div>
         </div>
     </section>
 
     <footer class="bg-brand-dark text-slate-400 py-12 border-t border-slate-800">
-        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center">
-            <div class="mb-4 md:mb-0">
-                <span class="text-white font-serif font-bold text-lg">Solutions Advisory Partners.</span>
-                <p class="text-sm mt-1">New York, NY</p>
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <span class="text-white font-serif font-bold text-lg block mb-3">Solutions Advisory<span class="text-brand-accent">.</span></span>
+                    <p class="text-sm">New York, NY</p>
+                </div>
+                <div>
+                    <p class="text-xs font-semibold text-slate-300 uppercase tracking-wider mb-3">Services</p>
+                    <div class="space-y-2 text-sm">
+                        <a href="services.html" class="block hover:text-brand-accent transition">Services</a>
+                        <a href="pricing.html" class="block hover:text-brand-accent transition">Pricing</a>
+                        <a href="outcomes.html" class="block hover:text-brand-accent transition">Outcomes</a>
+                    </div>
+                </div>
+                <div>
+                    <p class="text-xs font-semibold text-slate-300 uppercase tracking-wider mb-3">Resources</p>
+                    <div class="space-y-2 text-sm">
+                        <a href="insights.html" class="block hover:text-brand-accent transition">Insights</a>
+                        <a href="assessment.html" class="block hover:text-brand-accent transition">SE Maturity Assessment</a>
+                        <a href="glossary.html" class="block hover:text-brand-accent transition">Glossary</a>
+                    </div>
+                </div>
+                <div>
+                    <p class="text-xs font-semibold text-slate-300 uppercase tracking-wider mb-3">Connect</p>
+                    <div class="space-y-2 text-sm">
+                        <a href="contact.html" class="block hover:text-brand-accent transition">Contact</a>
+                        <a href="about.html" class="block hover:text-brand-accent transition">About</a>
+                        <a href="https://www.linkedin.com/company/solutions-engineering-advisory/" target="_blank" rel="noopener noreferrer" class="block hover:text-brand-accent transition">LinkedIn</a>
+                    </div>
+                </div>
             </div>
-            <div class="flex items-center gap-4 text-sm">
+            <div class="pt-6 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4 text-sm">
+                <span>&copy; 2026 Solutions Advisory Partners. All rights reserved.</span>
                 <a href="privacy.html" class="hover:text-brand-accent transition">Privacy Policy</a>
-                <span>&middot;</span>
-                <span>&copy; 2025 Solutions Advisory Partners. All rights reserved.</span>
             </div>
         </div>
     </footer>
-
-    <script>
-        const contactForm = document.getElementById('contactForm');
-        const submitBtn = document.getElementById('submitBtn');
-
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault(); // Stop standard form submission
-            
-            // Get values for Mixpanel
-            const nameVal = document.getElementById('inputName').value;
-            const emailVal = document.getElementById('inputEmail').value;
-            const msgVal = document.getElementById('inputMessage').value;
-
-           // --- MIXPANEL UPDATE ---
-    if (typeof mixpanel !== 'undefined') {
-        // 1. Identify FIRST so all subsequent events are linked to "Jane Doe"
-        mixpanel.identify(emailVal);
-
-        // 2. Set Profile Properties
-        mixpanel.people.set({
-            "$name": nameVal,
-            "$email": emailVal,
-            "Last Contacted": new Date().toISOString()
-        });
-
-        // 3. Track the Event
-        mixpanel.track("Form Submitted", {
-            "page": "Home",
-            "type": "Consultation Request",
-            "name": nameVal,
-            "email": emailVal,
-            "message_snippet": msgVal.substring(0, 50)
-        });
-    }
-
-            const originalBtnText = submitBtn.innerHTML;
-            const formError = document.getElementById('formError');
-            submitBtn.innerHTML = "Sending...";
-            submitBtn.disabled = true;
-            formError.classList.add('hidden');
-
-            emailjs.sendForm('service_mro1akd', 'template_i5x4coi', this)
-                .then(function() {
-                    if (typeof gtag !== 'undefined') {
-                        gtag('event', 'conversion', { 'event_category': 'contact', 'event_label': 'form_submission' });
-                    }
-                    window.location.href = 'thank-you.html';
-                }, function(error) {
-                    console.error('EmailJS submission failed:', error);
-                    formError.classList.remove('hidden');
-                    submitBtn.innerHTML = originalBtnText;
-                    submitBtn.disabled = false;
-                });
-        });
-    </script>
 </body>
 </html>

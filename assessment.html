@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <script src="consent.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SE Maturity Assessment | Solutions Advisory Partners</title>
+    <meta name="description" content="Take the free SE Maturity Assessment. Answer 10 questions about your technical sales process and get a personalized maturity score with actionable recommendations in 3 minutes.">
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3.12.1/dist/email.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        brand: {
+                            dark: '#0f172a',
+                            accent: '#38bdf8',
+                            light: '#f8fafc',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3 { font-family: 'Playfair Display', serif; }
+        .hero-pattern {
+            background-color: #0f172a;
+            background-image: radial-gradient(#1e293b 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+    </style>
+    <script>
+        (function(){ emailjs.init("mA84J6L0WEIHGyjde"); })();
+    </script>
+</head>
+<body class="bg-brand-light text-slate-800 antialiased">
+
+    <nav class="fixed w-full z-50 bg-brand-light/90 backdrop-blur-md border-b border-slate-200">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-serif font-bold text-brand-dark tracking-tight">
+                Solutions Advisory <span class="text-brand-accent">.</span>
+            </a>
+            <div class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-600">
+                <a href="index.html" class="hover:text-brand-accent transition">Home</a>
+                <a href="about.html" class="hover:text-brand-accent transition">About</a>
+                <a href="outcomes.html" class="hover:text-brand-accent transition">Outcomes</a>
+                <a href="services.html" class="hover:text-brand-accent transition">Services</a>
+                <a href="pricing.html" class="hover:text-brand-accent transition">Pricing</a>
+                <a href="insights.html" class="hover:text-brand-accent transition">Insights</a>
+                <a href="contact.html" class="px-5 py-2 bg-brand-dark text-white rounded-full hover:bg-slate-700 transition">Contact</a>
+                <a href="https://www.linkedin.com/company/solutions-engineering-advisory/" target="_blank" rel="noopener noreferrer" class="text-slate-500 hover:text-[#0A66C2] transition" aria-label="LinkedIn">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                </a>
+            </div>
+            <button id="mobileMenuBtn" class="md:hidden p-2 text-slate-600 hover:text-brand-accent transition" aria-label="Toggle menu" aria-expanded="false">
+                <svg id="iconHam" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                <svg id="iconX" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+            </button>
+        </div>
+        <div id="mobileMenu" class="hidden md:hidden border-t border-slate-200">
+            <div class="px-6 py-4 flex flex-col space-y-1">
+                <a href="index.html" class="block px-3 py-3 rounded-lg text-base font-medium text-slate-700 hover:bg-slate-100 transition">Home</a>
+                <a href="about.html" class="block px-3 py-3 rounded-lg text-base font-medium text-slate-700 hover:bg-slate-100 transition">About</a>
+                <a href="outcomes.html" class="block px-3 py-3 rounded-lg text-base font-medium text-slate-700 hover:bg-slate-100 transition">Outcomes</a>
+                <a href="services.html" class="block px-3 py-3 rounded-lg text-base font-medium text-slate-700 hover:bg-slate-100 transition">Services</a>
+                <a href="pricing.html" class="block px-3 py-3 rounded-lg text-base font-medium text-slate-700 hover:bg-slate-100 transition">Pricing</a>
+                <a href="insights.html" class="block px-3 py-3 rounded-lg text-base font-medium text-slate-700 hover:bg-slate-100 transition">Insights</a>
+                <a href="contact.html" class="block mt-2 px-3 py-3 bg-brand-dark text-white text-base font-bold text-center rounded-lg hover:bg-slate-700 transition">Contact</a>
+                <a href="https://www.linkedin.com/company/solutions-engineering-advisory/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 px-3 py-3 text-slate-500 hover:text-[#0A66C2] transition">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                    <span class="text-sm">LinkedIn</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+    <script>
+    (function(){var b=document.getElementById('mobileMenuBtn'),m=document.getElementById('mobileMenu'),h=document.getElementById('iconHam'),x=document.getElementById('iconX');if(!b||!m)return;b.addEventListener('click',function(){m.classList.toggle('hidden');h.classList.toggle('hidden');x.classList.toggle('hidden');b.setAttribute('aria-expanded',m.classList.contains('hidden')?'false':'true');});m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){m.classList.add('hidden');h.classList.remove('hidden');x.classList.add('hidden');b.setAttribute('aria-expanded','false');});});})();
+    </script>
+
+    <!-- HERO -->
+    <section class="hero-pattern text-white py-24 pt-32">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <div class="inline-block px-3 py-1 mb-6 text-xs font-semibold tracking-wider text-brand-accent uppercase bg-brand-accent/10 rounded-full border border-brand-accent/20">
+                Free Assessment
+            </div>
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+                SE Maturity Assessment
+            </h1>
+            <p class="text-lg md:text-xl text-slate-300 mb-4 leading-relaxed max-w-2xl mx-auto">
+                Answer 10 questions about your technical sales process. Get a personalized maturity score and actionable recommendations in 3&nbsp;minutes.
+            </p>
+        </div>
+    </section>
+
+    <!-- SE MATURITY LADDER -->
+    <section class="py-12 bg-white border-b border-slate-100">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="text-center mb-8">
+                <p class="text-brand-accent font-medium text-sm uppercase tracking-widest mb-4">The Maturity Ladder</p>
+                <h2 class="text-3xl md:text-4xl font-bold text-brand-dark mb-4">Where Does Your SE Motion Stand?</h2>
+                <p class="text-slate-600 text-lg max-w-2xl mx-auto">Three stages of technical sales maturity. The assessment below will tell you exactly where you are&mdash;and what to do next.</p>
+            </div>
+            <div class="flex flex-col gap-0">
+                <!-- Optimizing (top of ladder) -->
+                <div class="relative bg-gradient-to-r from-emerald-50 to-cyan-50 border-2 border-emerald-300 rounded-t-xl p-6 md:p-8">
+                    <div class="flex flex-col md:flex-row md:items-center gap-4">
+                        <div class="shrink-0 flex items-center gap-3">
+                            <div class="w-12 h-12 rounded-lg bg-emerald-500 text-white flex items-center justify-center font-bold text-lg shadow-md">3</div>
+                            <div>
+                                <p class="font-bold text-emerald-700 text-lg">Optimizing</p>
+                                <p class="text-emerald-600 text-xs font-semibold uppercase tracking-wider">66&ndash;100%</p>
+                            </div>
+                        </div>
+                        <div class="flex-1 md:pl-4 md:border-l md:border-emerald-200">
+                            <p class="text-slate-700 text-sm leading-relaxed">Deliberate architecture. Repeatable systems. Scalable GTM.</p>
+                        </div>
+                    </div>
+                    <div class="absolute -bottom-px left-8 right-8 h-px bg-slate-200"></div>
+                </div>
+                <!-- Scaling (middle) -->
+                <div class="relative bg-gradient-to-r from-amber-50 to-yellow-50 border-x-2 border-amber-300 p-6 md:p-8">
+                    <div class="flex flex-col md:flex-row md:items-center gap-4">
+                        <div class="shrink-0 flex items-center gap-3">
+                            <div class="w-12 h-12 rounded-lg bg-amber-500 text-white flex items-center justify-center font-bold text-lg shadow-md">2</div>
+                            <div>
+                                <p class="font-bold text-amber-700 text-lg">Scaling</p>
+                                <p class="text-amber-600 text-xs font-semibold uppercase tracking-wider">31&ndash;65%</p>
+                            </div>
+                        </div>
+                        <div class="flex-1 md:pl-4 md:border-l md:border-amber-200">
+                            <p class="text-slate-700 text-sm leading-relaxed">Some process exists. Inconsistent execution. Growing pains.</p>
+                        </div>
+                    </div>
+                    <div class="absolute -bottom-px left-8 right-8 h-px bg-slate-200"></div>
+                </div>
+                <!-- Foundational (bottom) -->
+                <div class="bg-gradient-to-r from-red-50 to-orange-50 border-2 border-red-300 border-t-0 rounded-b-xl p-6 md:p-8">
+                    <div class="flex flex-col md:flex-row md:items-center gap-4">
+                        <div class="shrink-0 flex items-center gap-3">
+                            <div class="w-12 h-12 rounded-lg bg-red-500 text-white flex items-center justify-center font-bold text-lg shadow-md">1</div>
+                            <div>
+                                <p class="font-bold text-red-700 text-lg">Foundational</p>
+                                <p class="text-red-600 text-xs font-semibold uppercase tracking-wider">0&ndash;30%</p>
+                            </div>
+                        </div>
+                        <div class="flex-1 md:pl-4 md:border-l md:border-red-200">
+                            <p class="text-slate-700 text-sm leading-relaxed">Ad-hoc technical sales. Founder-led demos. No repeatable process.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ASSESSMENT QUIZ -->
+    <section id="quizSection" class="py-12 bg-slate-50 border-b border-slate-100">
+        <div class="max-w-3xl mx-auto px-6">
+            <div class="text-center mb-10">
+                <p class="text-brand-accent font-medium text-sm uppercase tracking-widest mb-4">10 Questions</p>
+                <h2 class="text-3xl md:text-4xl font-bold text-brand-dark mb-4">Take the Assessment</h2>
+                <p class="text-slate-600">Select the answer that best describes your current state. Be honest&mdash;that&rsquo;s how you get the most useful result.</p>
+            </div>
+
+            <!-- Progress Bar -->
+            <div class="mb-8">
+                <div class="flex justify-between items-center mb-2">
+                    <span id="progressLabel" class="text-sm font-semibold text-slate-600">Question 1 of 10</span>
+                    <span id="progressPercent" class="text-sm font-semibold text-brand-accent">0%</span>
+                </div>
+                <div class="w-full bg-slate-200 rounded-full h-2.5">
+                    <div id="progressBar" class="bg-brand-accent h-2.5 rounded-full transition-all duration-300" style="width: 0%"></div>
+                </div>
+            </div>
+
+            <!-- Quiz Container -->
+            <div id="quizContainer" class="bg-white rounded-2xl border border-slate-200 shadow-sm p-8 md:p-10">
+                <div id="questionArea"></div>
+                <div class="flex justify-between items-center mt-8 pt-6 border-t border-slate-100">
+                    <button id="prevBtn" onclick="navigateQuiz(-1)" class="px-6 py-3 text-sm font-semibold text-slate-500 border border-slate-300 rounded-lg hover:border-brand-accent hover:text-brand-accent transition disabled:opacity-40 disabled:cursor-not-allowed" disabled>
+                        &larr; Previous
+                    </button>
+                    <button id="nextBtn" onclick="navigateQuiz(1)" class="px-6 py-3 text-sm font-semibold text-white bg-brand-dark rounded-lg hover:bg-slate-700 transition disabled:opacity-40 disabled:cursor-not-allowed" disabled>
+                        Next &rarr;
+                    </button>
+                    <button id="submitBtn" onclick="submitQuiz()" class="hidden px-8 py-3 text-sm font-bold text-brand-dark bg-brand-accent rounded-lg hover:bg-white hover:ring-2 hover:ring-brand-accent transition disabled:opacity-40 disabled:cursor-not-allowed" disabled>
+                        See My Results
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RESULTS (hidden initially) -->
+    <section id="resultsSection" class="hidden py-12 bg-white border-b border-slate-100">
+        <div class="max-w-3xl mx-auto px-6">
+            <div class="text-center mb-10">
+                <p class="text-brand-accent font-medium text-sm uppercase tracking-widest mb-4">Your Results</p>
+                <h2 class="text-3xl md:text-4xl font-bold text-brand-dark mb-4">SE Maturity Score</h2>
+            </div>
+
+            <!-- Score Display -->
+            <div id="scoreCard" class="rounded-2xl border-2 p-8 md:p-10 mb-8 text-center">
+                <div class="mb-6">
+                    <span id="scoreValue" class="text-6xl md:text-7xl font-bold"></span>
+                    <span class="text-2xl text-slate-400 font-light"> / 20</span>
+                </div>
+                <div id="scorePercentBadge" class="inline-block px-4 py-1.5 rounded-full text-sm font-bold mb-6"></div>
+                <h3 id="bandLabel" class="text-2xl font-bold mb-4"></h3>
+                <p id="bandDescription" class="text-slate-600 leading-relaxed mb-6 max-w-xl mx-auto"></p>
+                <div id="bandRecommendation" class="bg-slate-50 rounded-xl p-5 border border-slate-200 text-left">
+                    <p class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">Recommended Next Step</p>
+                    <p id="recText" class="text-slate-700 text-sm leading-relaxed font-medium"></p>
+                </div>
+            </div>
+
+            <!-- Email Capture -->
+            <div class="bg-slate-50 rounded-2xl border border-slate-200 p-8 md:p-10 mb-8">
+                <h3 class="text-xl font-bold text-brand-dark mb-2">Get Your Full Results Report</h3>
+                <p class="text-slate-600 text-sm mb-6">Get your full results report and personalized recommendations.</p>
+                <form id="resultsForm" onsubmit="sendResults(event)" class="space-y-4">
+                    <div class="grid sm:grid-cols-2 gap-4">
+                        <div>
+                            <label for="userName" class="block text-sm font-medium text-slate-700 mb-1">Name</label>
+                            <input type="text" id="userName" name="user_name" required class="w-full px-4 py-3 border border-slate-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-brand-accent focus:border-transparent" placeholder="Your name">
+                        </div>
+                        <div>
+                            <label for="userEmail" class="block text-sm font-medium text-slate-700 mb-1">Work Email</label>
+                            <input type="email" id="userEmail" name="user_email" required class="w-full px-4 py-3 border border-slate-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-brand-accent focus:border-transparent" placeholder="you@company.com">
+                        </div>
+                    </div>
+                    <button type="submit" id="sendResultsBtn" class="w-full sm:w-auto px-8 py-3 bg-brand-dark text-white font-bold rounded-lg hover:bg-slate-700 transition">
+                        Send My Results
+                    </button>
+                    <p id="emailStatus" class="hidden text-sm font-medium mt-2"></p>
+                </form>
+            </div>
+
+            <!-- CTA Buttons -->
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="contact.html" class="px-8 py-4 bg-brand-accent text-brand-dark font-bold rounded-lg hover:bg-white hover:ring-2 hover:ring-brand-accent transition text-center">
+                    Book a Consult
+                </a>
+                <a href="pricing.html" class="px-8 py-4 border border-slate-300 text-slate-700 font-bold rounded-lg hover:border-brand-accent hover:text-brand-accent transition text-center">
+                    View Services &amp; Pricing
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-brand-dark text-slate-400 py-12 border-t border-slate-800">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <span class="text-white font-serif font-bold text-lg block mb-3">Solutions Advisory<span class="text-brand-accent">.</span></span>
+                    <p class="text-sm">New York, NY</p>
+                </div>
+                <div>
+                    <p class="text-xs font-semibold text-slate-300 uppercase tracking-wider mb-3">Services</p>
+                    <div class="space-y-2 text-sm">
+                        <a href="services.html" class="block hover:text-brand-accent transition">Services</a>
+                        <a href="pricing.html" class="block hover:text-brand-accent transition">Pricing</a>
+                        <a href="outcomes.html" class="block hover:text-brand-accent transition">Outcomes</a>
+                    </div>
+                </div>
+                <div>
+                    <p class="text-xs font-semibold text-slate-300 uppercase tracking-wider mb-3">Resources</p>
+                    <div class="space-y-2 text-sm">
+                        <a href="insights.html" class="block hover:text-brand-accent transition">Insights</a>
+                        <a href="assessment.html" class="block hover:text-brand-accent transition">SE Maturity Assessment</a>
+                        <a href="glossary.html" class="block hover:text-brand-accent transition">Glossary</a>
+                    </div>
+                </div>
+                <div>
+                    <p class="text-xs font-semibold text-slate-300 uppercase tracking-wider mb-3">Connect</p>
+                    <div class="space-y-2 text-sm">
+                        <a href="contact.html" class="block hover:text-brand-accent transition">Contact</a>
+                        <a href="about.html" class="block hover:text-brand-accent transition">About</a>
+                        <a href="https://www.linkedin.com/company/solutions-engineering-advisory/" target="_blank" rel="noopener noreferrer" class="block hover:text-brand-accent transition">LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+            <div class="pt-6 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4 text-sm">
+                <span>&copy; 2026 Solutions Advisory Partners. All rights reserved.</span>
+                <a href="privacy.html" class="hover:text-brand-accent transition">Privacy Policy</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+    var questions = [
+        {
+            q: "How does your team handle technical discovery?",
+            opts: [
+                { text: "No formal process\u2014AEs or founders handle it ad-hoc", pts: 0 },
+                { text: "Some SEs do discovery, but it\u2019s inconsistent", pts: 1 },
+                { text: "Structured discovery framework with documented outputs", pts: 2 }
+            ]
+        },
+        {
+            q: "How are demos structured?",
+            opts: [
+                { text: "Standard product walkthrough for every prospect", pts: 0 },
+                { text: "Some customization, but no repeatable narrative framework", pts: 1 },
+                { text: "Buyer-specific demo narratives built on discovery findings", pts: 2 }
+            ]
+        },
+        {
+            q: "How do you manage POCs/evaluations?",
+            opts: [
+                { text: "POCs happen on an ad-hoc basis with no defined criteria", pts: 0 },
+                { text: "We have some POC structure, but timelines slip frequently", pts: 1 },
+                { text: "Time-boxed POCs with explicit success criteria and governance", pts: 2 }
+            ]
+        },
+        {
+            q: "What happens during the sales-to-implementation handoff?",
+            opts: [
+                { text: "Implementation team figures it out from the contract", pts: 0 },
+                { text: "Some handoff notes exist, but gaps are common", pts: 1 },
+                { text: "Structured handoff system with scoping docs and knowledge transfer", pts: 2 }
+            ]
+        },
+        {
+            q: "How is your SE team structured?",
+            opts: [
+                { text: "No dedicated SEs\u2014founders or AEs handle technical selling", pts: 0 },
+                { text: "1\u20132 SEs, but no clear role definition or process", pts: 1 },
+                { text: "Defined SE team with clear engagement model and career paths", pts: 2 }
+            ]
+        },
+        {
+            q: "How do you define \u2018solutions design\u2019 criteria in a deal?",
+            opts: [
+                { text: "We don\u2019t have a formal definition", pts: 0 },
+                { text: "Informally understood, but not documented", pts: 1 },
+                { text: "Explicit solutions design criteria defined per deal with stakeholder alignment", pts: 2 }
+            ]
+        },
+        {
+            q: "How do you track SE capacity and utilization?",
+            opts: [
+                { text: "We don\u2019t\u2014SEs take whatever comes in", pts: 0 },
+                { text: "Rough sense of workload, but no formal tracking", pts: 1 },
+                { text: "Capacity model with deal tiering and priority framework", pts: 2 }
+            ]
+        },
+        {
+            q: "How consistent is your demo quality across the team?",
+            opts: [
+                { text: "Completely depends on the individual SE", pts: 0 },
+                { text: "Some shared materials, but delivery varies widely", pts: 1 },
+                { text: "Standardized narratives with room for personalization", pts: 2 }
+            ]
+        },
+        {
+            q: "How do you measure SE impact on revenue?",
+            opts: [
+                { text: "We don\u2019t measure it directly", pts: 0 },
+                { text: "Anecdotally\u2014we know SEs matter but can\u2019t quantify it", pts: 1 },
+                { text: "Defined metrics: win rate influence, POC conversion, cycle time impact", pts: 2 }
+            ]
+        },
+        {
+            q: "How does your SE team collaborate with Product and CS?",
+            opts: [
+                { text: "Minimal collaboration\u2014mostly siloed", pts: 0 },
+                { text: "Some ad-hoc feedback loops", pts: 1 },
+                { text: "Structured feedback loops, shared priorities, and regular syncs", pts: 2 }
+            ]
+        }
+    ];
+
+    var currentQ = 0;
+    var answers = new Array(questions.length).fill(null);
+
+    function renderQuestion() {
+        var q = questions[currentQ];
+        var html = '<p class="text-xs font-semibold text-brand-accent uppercase tracking-wider mb-3">Question ' + (currentQ + 1) + '</p>';
+        html += '<h3 class="text-xl md:text-2xl font-bold text-brand-dark mb-6" style="font-family:\'Playfair Display\',serif">' + q.q + '</h3>';
+        html += '<div class="space-y-3">';
+        for (var i = 0; i < q.opts.length; i++) {
+            var selected = answers[currentQ] === i;
+            var cls = selected
+                ? 'border-brand-accent bg-brand-accent/5 ring-2 ring-brand-accent/30'
+                : 'border-slate-200 hover:border-slate-300 hover:bg-slate-50';
+            html += '<button onclick="selectAnswer(' + i + ')" class="w-full text-left p-4 rounded-xl border-2 ' + cls + ' transition group">';
+            html += '<div class="flex items-start gap-3">';
+            var dotCls = selected
+                ? 'bg-brand-accent border-brand-accent'
+                : 'border-slate-300 group-hover:border-slate-400';
+            html += '<span class="shrink-0 mt-0.5 w-5 h-5 rounded-full border-2 ' + dotCls + ' flex items-center justify-center">';
+            if (selected) html += '<span class="w-2 h-2 bg-white rounded-full"></span>';
+            html += '</span>';
+            html += '<span class="text-sm text-slate-700 leading-relaxed">' + q.opts[i].text + '</span>';
+            html += '</div></button>';
+        }
+        html += '</div>';
+        document.getElementById('questionArea').innerHTML = html;
+        updateNav();
+    }
+
+    function selectAnswer(idx) {
+        answers[currentQ] = idx;
+        renderQuestion();
+    }
+
+    function updateNav() {
+        var prev = document.getElementById('prevBtn');
+        var next = document.getElementById('nextBtn');
+        var submit = document.getElementById('submitBtn');
+        var isLast = currentQ === questions.length - 1;
+
+        prev.disabled = currentQ === 0;
+        next.disabled = answers[currentQ] === null;
+        submit.disabled = answers[currentQ] === null;
+
+        if (isLast) {
+            next.classList.add('hidden');
+            submit.classList.remove('hidden');
+        } else {
+            next.classList.remove('hidden');
+            submit.classList.add('hidden');
+        }
+
+        var pct = Math.round((currentQ / questions.length) * 100);
+        document.getElementById('progressLabel').textContent = 'Question ' + (currentQ + 1) + ' of ' + questions.length;
+        document.getElementById('progressPercent').textContent = pct + '%';
+        document.getElementById('progressBar').style.width = pct + '%';
+    }
+
+    function navigateQuiz(dir) {
+        if (dir === 1 && answers[currentQ] === null) return;
+        var next = currentQ + dir;
+        if (next < 0 || next >= questions.length) return;
+        currentQ = next;
+        renderQuestion();
+    }
+
+    function submitQuiz() {
+        if (answers[currentQ] === null) return;
+
+        var score = 0;
+        for (var i = 0; i < questions.length; i++) {
+            if (answers[i] !== null) {
+                score += questions[i].opts[answers[i]].pts;
+            }
+        }
+
+        document.getElementById('progressBar').style.width = '100%';
+        document.getElementById('progressPercent').textContent = '100%';
+        document.getElementById('progressLabel').textContent = 'Complete';
+
+        showResults(score);
+    }
+
+    function showResults(score) {
+        var pct = Math.round((score / 20) * 100);
+        var band, desc, rec, accentClass, bgClass, badgeClass;
+
+        if (score <= 6) {
+            band = 'Foundational';
+            desc = 'Your technical sales motion is largely ad-hoc. You\u2019re likely founder-led or have SEs operating without a system. This is the stage where Revenue Delivery Architecture has the highest immediate impact.';
+            rec = 'Start with a Technical GTM Audit to identify your highest-leverage gaps.';
+            accentClass = 'border-red-300';
+            bgClass = 'bg-gradient-to-br from-red-50 to-orange-50';
+            badgeClass = 'bg-red-100 text-red-700';
+        } else if (score <= 13) {
+            band = 'Scaling';
+            desc = 'You have some process in place, but execution is inconsistent. Deals still depend on individual heroics, and handoffs create friction. You need deliberate architecture to get to the next level.';
+            rec = 'A Demo & POC Strategy engagement or Fractional Leadership can accelerate your scaling motion.';
+            accentClass = 'border-amber-300';
+            bgClass = 'bg-gradient-to-br from-amber-50 to-yellow-50';
+            badgeClass = 'bg-amber-100 text-amber-700';
+        } else {
+            band = 'Optimizing';
+            desc = 'You have a structured technical sales process. Your opportunity is to optimize, scale, and build competitive moats. Fractional leadership can help you push from good to great.';
+            rec = 'Consider Fractional Revenue Architecture Leadership for ongoing optimization and strategic guidance.';
+            accentClass = 'border-emerald-300';
+            bgClass = 'bg-gradient-to-br from-emerald-50 to-cyan-50';
+            badgeClass = 'bg-emerald-100 text-emerald-700';
+        }
+
+        document.getElementById('scoreValue').textContent = score;
+        document.getElementById('scorePercentBadge').textContent = pct + '%';
+        document.getElementById('scorePercentBadge').className = 'inline-block px-4 py-1.5 rounded-full text-sm font-bold mb-6 ' + badgeClass;
+        document.getElementById('bandLabel').textContent = band;
+        document.getElementById('bandDescription').textContent = desc;
+        document.getElementById('recText').textContent = rec;
+        var card = document.getElementById('scoreCard');
+        card.className = 'rounded-2xl border-2 p-8 md:p-10 mb-8 text-center ' + accentClass + ' ' + bgClass;
+
+        document.getElementById('quizSection').classList.add('hidden');
+        document.getElementById('resultsSection').classList.remove('hidden');
+
+        document.getElementById('resultsSection').scrollIntoView({ behavior: 'smooth' });
+
+        if (typeof mixpanel !== 'undefined') {
+            mixpanel.track('SE Assessment Completed', {
+                score: score,
+                percentage: pct,
+                band: band
+            });
+        }
+    }
+
+    function sendResults(e) {
+        e.preventDefault();
+        var btn = document.getElementById('sendResultsBtn');
+        var status = document.getElementById('emailStatus');
+        btn.disabled = true;
+        btn.textContent = 'Sending\u2026';
+
+        var score = document.getElementById('scoreValue').textContent;
+        var band = document.getElementById('bandLabel').textContent;
+        var pct = document.getElementById('scorePercentBadge').textContent;
+        var rec = document.getElementById('recText').textContent;
+
+        var params = {
+            user_name: document.getElementById('userName').value,
+            user_email: document.getElementById('userEmail').value,
+            score: score + ' / 20 (' + pct + ')',
+            band: band,
+            recommendation: rec,
+            message: 'SE Maturity Assessment Results\n\nScore: ' + score + ' / 20 (' + pct + ')\nBand: ' + band + '\nRecommendation: ' + rec
+        };
+
+        emailjs.send('service_mro1akd', 'template_i5x4coi', params)
+            .then(function() {
+                status.textContent = 'Results sent! Check your inbox.';
+                status.className = 'text-sm font-medium mt-2 text-emerald-600';
+                status.classList.remove('hidden');
+                btn.textContent = 'Sent \u2713';
+                if (typeof mixpanel !== 'undefined') {
+                    mixpanel.track('SE Assessment Email Submitted', {
+                        score: score,
+                        band: band
+                    });
+                }
+            }, function(err) {
+                status.textContent = 'Something went wrong. Please try again.';
+                status.className = 'text-sm font-medium mt-2 text-red-600';
+                status.classList.remove('hidden');
+                btn.disabled = false;
+                btn.textContent = 'Send My Results';
+            });
+    }
+
+    renderQuestion();
+    </script>
+
+</body>
+</html>

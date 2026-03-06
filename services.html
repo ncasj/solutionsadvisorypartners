@@ -2,13 +2,12 @@
 <html lang="en" class="scroll-smooth">
 <head>
     <script src="consent.js"></script>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services & Rates | Solutions Advisory Partners | Fractional SE Leadership</title>
+    <title>Services | Solutions Advisory Partners | Revenue Delivery Architecture</title>
+    <meta name="description" content="Revenue Delivery Architecture services for Series A&ndash;C B2B SaaS. Technical sales system builds, demo &amp; POC strategy, implementation handoff, and fractional SE leadership.">
     <script src="https://cdn.tailwindcss.com/3.4.16"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
             theme: {
@@ -31,10 +30,16 @@
     <style>
         body { font-family: 'Inter', sans-serif; }
         h1, h2, h3 { font-family: 'Playfair Display', serif; }
+        .hero-pattern {
+            background-color: #0f172a;
+            background-image: radial-gradient(#1e293b 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
     </style>
 </head>
 <body class="bg-brand-light text-slate-800 antialiased">
 
+    <!-- NAV -->
     <nav class="fixed w-full z-50 bg-brand-light/90 backdrop-blur-md border-b border-slate-200">
         <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
             <a href="index.html" class="text-2xl font-serif font-bold text-brand-dark tracking-tight">
@@ -44,7 +49,8 @@
                 <a href="index.html" class="hover:text-brand-accent transition">Home</a>
                 <a href="about.html" class="hover:text-brand-accent transition">About</a>
                 <a href="outcomes.html" class="hover:text-brand-accent transition">Outcomes</a>
-                <a href="services.html" class="hover:text-brand-accent transition text-brand-accent font-semibold">Services & Rates</a>
+                <a href="services.html" class="hover:text-brand-accent transition text-brand-accent font-semibold">Services</a>
+                <a href="pricing.html" class="hover:text-brand-accent transition">Pricing</a>
                 <a href="insights.html" class="hover:text-brand-accent transition">Insights</a>
                 <a href="contact.html" class="px-5 py-2 bg-brand-dark text-white rounded-full hover:bg-slate-700 transition">Contact</a>
                 <a href="https://www.linkedin.com/company/solutions-engineering-advisory/" target="_blank" rel="noopener noreferrer" class="text-slate-500 hover:text-[#0A66C2] transition" aria-label="LinkedIn">
@@ -61,7 +67,8 @@
                 <a href="index.html" class="block px-3 py-3 rounded-lg text-base font-medium text-slate-700 hover:bg-slate-100 transition">Home</a>
                 <a href="about.html" class="block px-3 py-3 rounded-lg text-base font-medium text-slate-700 hover:bg-slate-100 transition">About</a>
                 <a href="outcomes.html" class="block px-3 py-3 rounded-lg text-base font-medium text-slate-700 hover:bg-slate-100 transition">Outcomes</a>
-                <a href="services.html" class="block px-3 py-3 rounded-lg text-base font-medium text-brand-accent hover:bg-slate-100 transition">Services &amp; Rates</a>
+                <a href="services.html" class="block px-3 py-3 rounded-lg text-base font-medium text-brand-accent hover:bg-slate-100 transition">Services</a>
+                <a href="pricing.html" class="block px-3 py-3 rounded-lg text-base font-medium text-slate-700 hover:bg-slate-100 transition">Pricing</a>
                 <a href="insights.html" class="block px-3 py-3 rounded-lg text-base font-medium text-slate-700 hover:bg-slate-100 transition">Insights</a>
                 <a href="contact.html" class="block mt-2 px-3 py-3 bg-brand-dark text-white text-base font-bold text-center rounded-lg hover:bg-slate-700 transition">Contact</a>
                 <a href="https://www.linkedin.com/company/solutions-engineering-advisory/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 px-3 py-3 text-slate-500 hover:text-[#0A66C2] transition">
@@ -75,82 +82,428 @@
     (function(){var b=document.getElementById('mobileMenuBtn'),m=document.getElementById('mobileMenu'),h=document.getElementById('iconHam'),x=document.getElementById('iconX');if(!b||!m)return;b.addEventListener('click',function(){m.classList.toggle('hidden');h.classList.toggle('hidden');x.classList.toggle('hidden');b.setAttribute('aria-expanded',m.classList.contains('hidden')?'false':'true');});m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){m.classList.add('hidden');h.classList.remove('hidden');x.classList.add('hidden');b.setAttribute('aria-expanded','false');});});})();
     </script>
 
-    <section class="pt-32 pb-24 bg-slate-100">
-        <div class="max-w-6xl mx-auto px-6">
-            <div class="text-center mb-16">
-                <h1 class="text-3xl md:text-4xl font-bold text-brand-dark mb-4">Services & Rates</h1>
-                <p class="text-slate-600 max-w-2xl mx-auto">A menu of how we can help. Mix and match—available as ad hoc projects or on retainer. Pricing is customized to scope; reach out for a quote.</p>
+    <!-- 1. HERO -->
+    <section class="hero-pattern text-white pt-32 pb-20">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <div class="inline-block px-3 py-1 mb-6 text-xs font-semibold tracking-wider text-brand-accent uppercase bg-brand-accent/10 rounded-full border border-brand-accent/20">
+                Services
             </div>
-
-            <div class="grid md:grid-cols-2 gap-8">
-                <div class="bg-white p-8 rounded-xl shadow-sm border border-slate-200 flex flex-col">
-                    <h2 class="text-xl font-bold text-brand-dark mb-2">Technical Sales System Build</h2>
-                    <p class="text-slate-500 text-sm mb-4">Repeatable frameworks and playbooks for technical sales.</p>
-                    <div class="text-2xl font-serif font-bold text-brand-dark mb-4"><span class="text-slate-400 font-sans font-normal text-base">From </span>$TBD <span class="text-sm text-slate-400 font-sans font-normal">/ project</span></div>
-                    <ul class="space-y-2 text-sm text-slate-600 mb-6 flex-grow">
-                        <li class="flex items-start"><span class="text-brand-accent mr-2">•</span> Designing repeatable technical discovery frameworks</li>
-                        <li class="flex items-start"><span class="text-brand-accent mr-2">•</span> Structuring demo architecture and solution storytelling</li>
-                        <li class="flex items-start"><span class="text-brand-accent mr-2">•</span> Building POC frameworks and technical validation processes</li>
-                        <li class="flex items-start"><span class="text-brand-accent mr-2">•</span> Creating scalable sales engineering playbooks</li>
-                    </ul>
-                    <a href="contact.html" class="block w-full py-2 border border-brand-dark text-brand-dark font-bold text-center rounded hover:bg-brand-dark hover:text-white transition">Get a Quote</a>
-                </div>
-
-                <div class="bg-white p-8 rounded-xl shadow-sm border border-slate-200 flex flex-col">
-                    <h2 class="text-xl font-bold text-brand-dark mb-2">Demo and POC Strategy</h2>
-                    <p class="text-slate-500 text-sm mb-4">High-conversion demos and POC programs that close enterprise deals.</p>
-                    <div class="text-2xl font-serif font-bold text-brand-dark mb-4"><span class="text-slate-400 font-sans font-normal text-base">From </span>$TBD <span class="text-sm text-slate-400 font-sans font-normal">/ project</span></div>
-                    <ul class="space-y-2 text-sm text-slate-600 mb-6 flex-grow">
-                        <li class="flex items-start"><span class="text-brand-accent mr-2">•</span> Designing high-conversion demo narratives</li>
-                        <li class="flex items-start"><span class="text-brand-accent mr-2">•</span> Structuring proof-of-concept programs that accelerate enterprise deals</li>
-                        <li class="flex items-start"><span class="text-brand-accent mr-2">•</span> Building demo environments and sandbox strategies</li>
-                        <li class="flex items-start"><span class="text-brand-accent mr-2">•</span> Aligning demos to buyer personas and technical decision criteria</li>
-                    </ul>
-                    <a href="contact.html" class="block w-full py-2 border border-brand-dark text-brand-dark font-bold text-center rounded hover:bg-brand-dark hover:text-white transition">Get a Quote</a>
-                </div>
-
-                <div class="bg-white p-8 rounded-xl shadow-sm border border-slate-200 flex flex-col">
-                    <h2 class="text-xl font-bold text-brand-dark mb-2">Implementation and Handoff Frameworks</h2>
-                    <p class="text-slate-500 text-sm mb-4">Smooth handoffs from pre-sales to delivery and fewer implementation delays.</p>
-                    <div class="text-2xl font-serif font-bold text-brand-dark mb-4"><span class="text-slate-400 font-sans font-normal text-base">From </span>$TBD <span class="text-sm text-slate-400 font-sans font-normal">/ project</span></div>
-                    <ul class="space-y-2 text-sm text-slate-600 mb-6 flex-grow">
-                        <li class="flex items-start"><span class="text-brand-accent mr-2">•</span> Designing pre-sales → post-sales handoff systems</li>
-                        <li class="flex items-start"><span class="text-brand-accent mr-2">•</span> Creating solution documentation frameworks</li>
-                        <li class="flex items-start"><span class="text-brand-accent mr-2">•</span> Aligning Sales, Product, Customer Success, and Implementation</li>
-                        <li class="flex items-start"><span class="text-brand-accent mr-2">•</span> Preventing scope creep and implementation delays</li>
-                    </ul>
-                    <a href="contact.html" class="block w-full py-2 border border-brand-dark text-brand-dark font-bold text-center rounded hover:bg-brand-dark hover:text-white transition">Get a Quote</a>
-                </div>
-
-                <div class="bg-brand-dark p-8 rounded-xl shadow-xl border border-slate-700 flex flex-col relative overflow-hidden">
-                    <div class="absolute top-0 right-0 bg-brand-accent text-brand-dark text-xs font-bold px-3 py-1 uppercase">Full-Scope</div>
-                    <h2 class="text-xl font-bold text-white mb-2">Fractional Revenue Architecture Leadership</h2>
-                    <p class="text-slate-400 text-sm mb-4">Act as your fractional Head of SE/Delivery and advise revenue leaders.</p>
-                    <div class="text-2xl font-serif font-bold text-white mb-4"><span class="text-slate-400 font-sans font-normal text-base">From </span>$TBD <span class="text-sm text-slate-400 font-sans font-normal">/ month</span></div>
-                    <ul class="space-y-2 text-sm text-slate-300 mb-6 flex-grow">
-                        <li class="flex items-start"><span class="text-brand-accent mr-2">•</span> Acting as fractional Head of Solutions Engineering / Delivery</li>
-                        <li class="flex items-start"><span class="text-brand-accent mr-2">•</span> Advising CROs, founders, and revenue leaders</li>
-                        <li class="flex items-start"><span class="text-brand-accent mr-2">•</span> Structuring SE teams, delivery organizations, and technical GTM motions</li>
-                        <li class="flex items-start"><span class="text-brand-accent mr-2">•</span> Driving repeatable revenue execution across the entire revenue lifecycle</li>
-                    </ul>
-                    <a href="contact.html" class="block w-full py-2 bg-brand-accent text-brand-dark font-bold text-center rounded hover:bg-white transition">Get a Quote</a>
-                </div>
-            </div>
-
-            <p class="text-center text-slate-500 text-sm mt-12">All engagements can be scoped as one-off projects or ongoing retainers. <a href="contact.html" class="text-brand-accent font-medium hover:underline">Contact us</a> to discuss your needs.</p>
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+                Revenue Delivery Architecture Services
+            </h1>
+            <p class="text-lg md:text-xl text-slate-300 mb-8 leading-relaxed max-w-2xl mx-auto">
+                Every service is tied to a stage of our Revenue Delivery Architecture framework. Scoped to your stage, team, and market.
+            </p>
+            <a href="pricing.html" class="inline-block px-8 py-4 bg-brand-accent text-brand-dark font-bold rounded-lg hover:bg-white transition text-center">
+                View Pricing
+            </a>
         </div>
     </section>
 
-    <footer class="bg-brand-dark text-slate-400 py-12 border-t border-slate-800">
-        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center">
-            <div class="mb-4 md:mb-0">
-                <span class="text-white font-serif font-bold text-lg">Solutions Advisory Partners.</span>
-                <p class="text-sm mt-1">New York, NY</p>
+    <!-- 2. IDEAL FOR / NOT FOR -->
+    <section class="py-12 bg-white border-b border-slate-100">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center shrink-0">
+                            <svg class="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                        </div>
+                        <h2 class="text-2xl font-bold text-brand-dark">Ideal For</h2>
+                    </div>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3">
+                            <span class="text-green-500 mt-1 shrink-0">&check;</span>
+                            <span class="text-slate-700">Series&nbsp;A&ndash;C B2B SaaS companies</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-green-500 mt-1 shrink-0">&check;</span>
+                            <span class="text-slate-700">Complex or technical products sold into mid-market and enterprise</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-green-500 mt-1 shrink-0">&check;</span>
+                            <span class="text-slate-700">Multi-stakeholder sales cycles with technical evaluation/POCs</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-green-500 mt-1 shrink-0">&check;</span>
+                            <span class="text-slate-700">SE team exists but lacks repeatable systems</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-green-500 mt-1 shrink-0">&check;</span>
+                            <span class="text-slate-700">Founders pulled into technical selling</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-green-500 mt-1 shrink-0">&check;</span>
+                            <span class="text-slate-700">Companies with $2M&ndash;$50M ARR, 20&ndash;500 employees</span>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 rounded-full bg-red-100 flex items-center justify-center shrink-0">
+                            <svg class="w-5 h-5 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+                        </div>
+                        <h2 class="text-2xl font-bold text-brand-dark">Likely Not a Fit</h2>
+                    </div>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3">
+                            <span class="text-red-400 mt-1 shrink-0">&times;</span>
+                            <span class="text-slate-700">Consumer or SMB-only products</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-red-400 mt-1 shrink-0">&times;</span>
+                            <span class="text-slate-700">Companies with no technical component to their sale</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-red-400 mt-1 shrink-0">&times;</span>
+                            <span class="text-slate-700">Organizations looking for staff augmentation (we build systems, not run demos for you)</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-red-400 mt-1 shrink-0">&times;</span>
+                            <span class="text-slate-700">Companies not ready to invest in process change</span>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <div class="flex items-center gap-4 text-sm">
+        </div>
+    </section>
+
+    <!-- 3. RDA FRAMEWORK + SERVICE MAPPING -->
+    <section class="py-16 bg-slate-50 border-b border-slate-100">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="text-center mb-8">
+                <p class="text-brand-accent font-medium text-sm uppercase tracking-widest mb-4">Our Framework</p>
+                <h2 class="text-3xl md:text-4xl font-bold text-brand-dark mb-6">Revenue Delivery Architecture&trade;</h2>
+                <p class="text-slate-600 text-lg leading-relaxed max-w-3xl mx-auto">
+                    Every service maps to a specific stage of our five-stage framework&mdash;so you only invest in what your GTM motion actually needs.
+                </p>
+            </div>
+            <!-- 5-Stage Stepper -->
+            <div class="grid grid-cols-1 md:grid-cols-5 gap-4 items-stretch mb-10">
+                <div class="relative bg-brand-dark text-white p-6 rounded-xl text-center flex flex-col justify-start">
+                    <p class="text-brand-accent text-xs font-bold uppercase tracking-wider mb-2">01</p>
+                    <h3 class="font-bold text-base mb-2 font-serif">Discovery</h3>
+                    <p class="text-slate-400 text-xs leading-relaxed">Diagnose the buyer&rsquo;s problem. Map their technical environment.</p>
+                    <div class="hidden md:flex absolute -right-3 top-1/2 -translate-y-1/2 z-10 w-6 h-6 items-center justify-center rounded-full bg-brand-accent text-brand-dark">
+                        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+                    </div>
+                </div>
+                <div class="relative bg-brand-dark text-white p-6 rounded-xl text-center flex flex-col justify-start">
+                    <p class="text-brand-accent text-xs font-bold uppercase tracking-wider mb-2">02</p>
+                    <h3 class="font-bold text-base mb-2 font-serif">Solutions Design</h3>
+                    <p class="text-slate-400 text-xs leading-relaxed">Define success criteria and evaluation framework.</p>
+                    <div class="hidden md:flex absolute -right-3 top-1/2 -translate-y-1/2 z-10 w-6 h-6 items-center justify-center rounded-full bg-brand-accent text-brand-dark">
+                        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+                    </div>
+                </div>
+                <div class="relative bg-brand-dark text-white p-6 rounded-xl text-center flex flex-col justify-start">
+                    <p class="text-brand-accent text-xs font-bold uppercase tracking-wider mb-2">03</p>
+                    <h3 class="font-bold text-base mb-2 font-serif">Demo Architecture</h3>
+                    <p class="text-slate-400 text-xs leading-relaxed">Structure demos around the buyer&rsquo;s problem&mdash;not features.</p>
+                    <div class="hidden md:flex absolute -right-3 top-1/2 -translate-y-1/2 z-10 w-6 h-6 items-center justify-center rounded-full bg-brand-accent text-brand-dark">
+                        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+                    </div>
+                </div>
+                <div class="relative bg-brand-dark text-white p-6 rounded-xl text-center flex flex-col justify-start">
+                    <p class="text-brand-accent text-xs font-bold uppercase tracking-wider mb-2">04</p>
+                    <h3 class="font-bold text-base mb-2 font-serif">POC Strategy</h3>
+                    <p class="text-slate-400 text-xs leading-relaxed">Time-boxed validation with clear success criteria.</p>
+                    <div class="hidden md:flex absolute -right-3 top-1/2 -translate-y-1/2 z-10 w-6 h-6 items-center justify-center rounded-full bg-brand-accent text-brand-dark">
+                        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+                    </div>
+                </div>
+                <div class="bg-brand-dark text-white p-6 rounded-xl text-center flex flex-col justify-start">
+                    <p class="text-brand-accent text-xs font-bold uppercase tracking-wider mb-2">05</p>
+                    <h3 class="font-bold text-base mb-2 font-serif">Implementation Handoff</h3>
+                    <p class="text-slate-400 text-xs leading-relaxed">Bridge sales to delivery. What&rsquo;s sold is what gets built.</p>
+                </div>
+            </div>
+            <!-- Service-to-Stage Mapping -->
+            <div class="bg-white rounded-xl border border-slate-200 overflow-hidden">
+                <div class="grid grid-cols-1 divide-y divide-slate-200">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between p-5 gap-3">
+                        <div class="font-semibold text-brand-dark">Technical Sales System Build</div>
+                        <div class="flex gap-2 flex-wrap">
+                            <span class="inline-block text-xs font-semibold px-3 py-1 bg-brand-accent/10 text-brand-accent rounded-full border border-brand-accent/20">Discovery</span>
+                            <span class="inline-block text-xs font-semibold px-3 py-1 bg-brand-accent/10 text-brand-accent rounded-full border border-brand-accent/20">Solutions Design</span>
+                        </div>
+                    </div>
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between p-5 gap-3">
+                        <div class="font-semibold text-brand-dark">Demo &amp; POC Strategy</div>
+                        <div class="flex gap-2 flex-wrap">
+                            <span class="inline-block text-xs font-semibold px-3 py-1 bg-brand-accent/10 text-brand-accent rounded-full border border-brand-accent/20">Demo Architecture</span>
+                            <span class="inline-block text-xs font-semibold px-3 py-1 bg-brand-accent/10 text-brand-accent rounded-full border border-brand-accent/20">POC Strategy</span>
+                        </div>
+                    </div>
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between p-5 gap-3">
+                        <div class="font-semibold text-brand-dark">Implementation + Handoff Architecture</div>
+                        <div class="flex gap-2 flex-wrap">
+                            <span class="inline-block text-xs font-semibold px-3 py-1 bg-brand-accent/10 text-brand-accent rounded-full border border-brand-accent/20">Implementation Handoff</span>
+                        </div>
+                    </div>
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between p-5 gap-3 bg-brand-dark/5">
+                        <div class="font-semibold text-brand-dark">Fractional Leadership</div>
+                        <div class="flex gap-2 flex-wrap">
+                            <span class="inline-block text-xs font-bold px-3 py-1 bg-brand-dark text-brand-accent rounded-full">All Stages</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. SERVICE CARDS -->
+    <section class="py-16 bg-white border-b border-slate-100">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-10">
+                <p class="text-brand-accent font-medium text-sm uppercase tracking-widest mb-4">Our Services</p>
+                <h2 class="text-3xl md:text-4xl font-bold text-brand-dark">What We Deliver</h2>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm border border-slate-200 flex flex-col">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="inline-block text-xs font-semibold px-3 py-1 bg-brand-accent/10 text-brand-accent rounded-full border border-brand-accent/20">Discovery + Solutions Design</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-brand-dark mb-2">Technical Sales System Build</h3>
+                    <div class="text-sm font-medium text-slate-500 mb-1">Inquire for Quote</div>
+                    <p class="text-xs text-slate-500 mb-5">Timeline: 4&ndash;8 weeks</p>
+                    <ul class="space-y-2 text-sm text-slate-600 mb-6 flex-grow">
+                        <li class="flex items-start"><span class="text-brand-accent mr-2">&bull;</span>Technical discovery framework</li>
+                        <li class="flex items-start"><span class="text-brand-accent mr-2">&bull;</span>Demo architecture &amp; narrative playbook</li>
+                        <li class="flex items-start"><span class="text-brand-accent mr-2">&bull;</span>SE engagement model</li>
+                        <li class="flex items-start"><span class="text-brand-accent mr-2">&bull;</span>Solutions design criteria templates</li>
+                        <li class="flex items-start"><span class="text-brand-accent mr-2">&bull;</span>Sales-to-SE handoff process</li>
+                    </ul>
+                    <a href="contact.html" class="block w-full py-3 border border-brand-dark text-brand-dark font-bold text-center rounded-lg hover:bg-brand-dark hover:text-white transition">Get a Quote</a>
+                </div>
+                <!-- Card 2 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm border border-slate-200 flex flex-col">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="inline-block text-xs font-semibold px-3 py-1 bg-brand-accent/10 text-brand-accent rounded-full border border-brand-accent/20">Demo Architecture + POC Strategy</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-brand-dark mb-2">Demo &amp; POC Strategy</h3>
+                    <div class="text-sm font-medium text-slate-500 mb-1">Inquire for Quote</div>
+                    <p class="text-xs text-slate-500 mb-5">Timeline: 3&ndash;6 weeks</p>
+                    <ul class="space-y-2 text-sm text-slate-600 mb-6 flex-grow">
+                        <li class="flex items-start"><span class="text-brand-accent mr-2">&bull;</span>Demo narrative framework</li>
+                        <li class="flex items-start"><span class="text-brand-accent mr-2">&bull;</span>POC scoping &amp; success criteria templates</li>
+                        <li class="flex items-start"><span class="text-brand-accent mr-2">&bull;</span>Sandbox/environment strategy</li>
+                        <li class="flex items-start"><span class="text-brand-accent mr-2">&bull;</span>Buyer persona demo mapping</li>
+                        <li class="flex items-start"><span class="text-brand-accent mr-2">&bull;</span>Evaluation timeline &amp; governance</li>
+                    </ul>
+                    <a href="contact.html" class="block w-full py-3 border border-brand-dark text-brand-dark font-bold text-center rounded-lg hover:bg-brand-dark hover:text-white transition">Get a Quote</a>
+                </div>
+                <!-- Card 3 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm border border-slate-200 flex flex-col">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="inline-block text-xs font-semibold px-3 py-1 bg-brand-accent/10 text-brand-accent rounded-full border border-brand-accent/20">Implementation Handoff</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-brand-dark mb-2">Implementation + Handoff Architecture</h3>
+                    <div class="text-sm font-medium text-slate-500 mb-1">Inquire for Quote</div>
+                    <p class="text-xs text-slate-500 mb-5">Timeline: 4&ndash;8 weeks</p>
+                    <ul class="space-y-2 text-sm text-slate-600 mb-6 flex-grow">
+                        <li class="flex items-start"><span class="text-brand-accent mr-2">&bull;</span>Pre-sales to post-sales handoff system</li>
+                        <li class="flex items-start"><span class="text-brand-accent mr-2">&bull;</span>Solution documentation framework</li>
+                        <li class="flex items-start"><span class="text-brand-accent mr-2">&bull;</span>Implementation scoping templates</li>
+                        <li class="flex items-start"><span class="text-brand-accent mr-2">&bull;</span>Cross-functional alignment model</li>
+                        <li class="flex items-start"><span class="text-brand-accent mr-2">&bull;</span>Scope management &amp; change control</li>
+                    </ul>
+                    <a href="contact.html" class="block w-full py-3 border border-brand-dark text-brand-dark font-bold text-center rounded-lg hover:bg-brand-dark hover:text-white transition">Get a Quote</a>
+                </div>
+                <!-- Card 4 (FEATURED) -->
+                <div class="bg-brand-dark p-8 rounded-xl shadow-xl border border-slate-700 flex flex-col relative overflow-hidden">
+                    <div class="absolute top-0 right-0 bg-brand-accent text-brand-dark text-xs font-bold px-3 py-1 uppercase">Full-Scope</div>
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="inline-block text-xs font-bold px-3 py-1 bg-brand-accent/20 text-brand-accent rounded-full border border-brand-accent/30">All Stages</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Fractional Revenue Architecture Leadership</h3>
+                    <div class="text-sm font-medium text-slate-400 mb-1">Inquire for Quote</div>
+                    <p class="text-xs text-slate-500 mb-5">Ongoing monthly retainer</p>
+                    <ul class="space-y-2 text-sm text-slate-300 mb-6 flex-grow">
+                        <li class="flex items-start"><span class="text-brand-accent mr-2">&bull;</span>Fractional SE/Delivery leadership</li>
+                        <li class="flex items-start"><span class="text-brand-accent mr-2">&bull;</span>Revenue architecture strategy &amp; execution</li>
+                        <li class="flex items-start"><span class="text-brand-accent mr-2">&bull;</span>Team coaching &amp; enablement</li>
+                        <li class="flex items-start"><span class="text-brand-accent mr-2">&bull;</span>Deal strategy &amp; solutions design support</li>
+                        <li class="flex items-start"><span class="text-brand-accent mr-2">&bull;</span>Process design &amp; continuous improvement</li>
+                    </ul>
+                    <a href="contact.html" class="block w-full py-3 bg-brand-accent text-brand-dark font-bold text-center rounded-lg hover:bg-white transition">Start a Conversation</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. PROCESS VISUALIZATION -->
+    <section class="py-16 bg-slate-50 border-b border-slate-100">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="text-center mb-10">
+                <p class="text-brand-accent font-medium text-sm uppercase tracking-widest mb-4">Our Process</p>
+                <h2 class="text-3xl md:text-4xl font-bold text-brand-dark mb-4">How an Engagement Works</h2>
+                <p class="text-slate-600 text-lg max-w-2xl mx-auto">A structured path from first call to a fully operational Revenue Delivery Architecture.</p>
+            </div>
+            <div class="relative">
+                <div class="hidden md:block absolute left-7 top-0 bottom-0 w-px bg-slate-300"></div>
+                <div class="space-y-8">
+                    <!-- Stage 1 -->
+                    <div class="flex flex-col md:flex-row gap-5 items-start relative">
+                        <div class="shrink-0 w-14 h-14 rounded-full bg-brand-dark flex items-center justify-center text-brand-accent font-bold text-lg z-10">1</div>
+                        <div class="flex-1 bg-white rounded-xl border border-slate-200 p-6">
+                            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2">
+                                <h3 class="text-lg font-bold text-brand-dark">Discovery Call</h3>
+                                <span class="inline-block text-xs font-medium text-slate-500 bg-slate-100 px-3 py-1 rounded-full uppercase tracking-wider">30 min</span>
+                            </div>
+                            <p class="text-slate-600 text-sm mb-3">Learn about your GTM motion, team structure, and where deals are stalling.</p>
+                            <p class="text-xs text-slate-500"><strong>Deliverable:</strong> Fit assessment.</p>
+                        </div>
+                    </div>
+                    <!-- Stage 2 -->
+                    <div class="flex flex-col md:flex-row gap-5 items-start relative">
+                        <div class="shrink-0 w-14 h-14 rounded-full bg-brand-dark flex items-center justify-center text-brand-accent font-bold text-lg z-10">2</div>
+                        <div class="flex-1 bg-white rounded-xl border border-slate-200 p-6">
+                            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2">
+                                <h3 class="text-lg font-bold text-brand-dark">Technical GTM Audit</h3>
+                                <span class="inline-block text-xs font-medium text-slate-500 bg-slate-100 px-3 py-1 rounded-full uppercase tracking-wider">1&ndash;2 weeks</span>
+                            </div>
+                            <p class="text-slate-600 text-sm mb-3">Deep-dive diagnostic into your technical sales process, team, and handoff systems.</p>
+                            <p class="text-xs text-slate-500"><strong>Deliverable:</strong> Gap analysis &amp; recommendations.</p>
+                        </div>
+                    </div>
+                    <!-- Stage 3 -->
+                    <div class="flex flex-col md:flex-row gap-5 items-start relative">
+                        <div class="shrink-0 w-14 h-14 rounded-full bg-brand-dark flex items-center justify-center text-brand-accent font-bold text-lg z-10">3</div>
+                        <div class="flex-1 bg-white rounded-xl border border-slate-200 p-6">
+                            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2">
+                                <h3 class="text-lg font-bold text-brand-dark">System Design</h3>
+                                <span class="inline-block text-xs font-medium text-slate-500 bg-slate-100 px-3 py-1 rounded-full uppercase tracking-wider">2&ndash;3 weeks</span>
+                            </div>
+                            <p class="text-slate-600 text-sm mb-3">Architect the solution tailored to your stage, market, and team.</p>
+                            <p class="text-xs text-slate-500"><strong>Deliverable:</strong> RDA blueprint &amp; roadmap.</p>
+                        </div>
+                    </div>
+                    <!-- Stage 4 -->
+                    <div class="flex flex-col md:flex-row gap-5 items-start relative">
+                        <div class="shrink-0 w-14 h-14 rounded-full bg-brand-dark flex items-center justify-center text-brand-accent font-bold text-lg z-10">4</div>
+                        <div class="flex-1 bg-white rounded-xl border border-slate-200 p-6">
+                            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2">
+                                <h3 class="text-lg font-bold text-brand-dark">Build &amp; Implement</h3>
+                                <span class="inline-block text-xs font-medium text-slate-500 bg-slate-100 px-3 py-1 rounded-full uppercase tracking-wider">3&ndash;6 weeks</span>
+                            </div>
+                            <p class="text-slate-600 text-sm mb-3">Deploy frameworks, train the team, and stand up operational systems.</p>
+                            <p class="text-xs text-slate-500"><strong>Deliverable:</strong> Playbooks, templates, systems.</p>
+                        </div>
+                    </div>
+                    <!-- Stage 5 -->
+                    <div class="flex flex-col md:flex-row gap-5 items-start relative">
+                        <div class="shrink-0 w-14 h-14 rounded-full bg-brand-dark flex items-center justify-center text-brand-accent font-bold text-lg z-10">5</div>
+                        <div class="flex-1 bg-white rounded-xl border border-slate-200 p-6">
+                            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2">
+                                <h3 class="text-lg font-bold text-brand-dark">Optimize &amp; Scale</h3>
+                                <span class="inline-block text-xs font-medium text-slate-500 bg-slate-100 px-3 py-1 rounded-full uppercase tracking-wider">Ongoing</span>
+                            </div>
+                            <p class="text-slate-600 text-sm mb-3">Iterate and measure. Refine what&rsquo;s working, adjust what&rsquo;s not, and scale as you grow.</p>
+                            <p class="text-xs text-slate-500"><strong>Deliverable:</strong> KPI dashboards, coaching.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. SE MATURITY LADDER -->
+    <section class="py-16 bg-slate-50 border-b border-slate-100">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="text-center mb-10">
+                <p class="text-brand-accent font-medium text-sm uppercase tracking-widest mb-4">Maturity Ladder</p>
+                <h2 class="text-3xl md:text-4xl font-bold text-brand-dark mb-4">Where Is Your Team Today?</h2>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Tier 1: Foundational -->
+                <div class="bg-white rounded-xl border border-slate-200 p-8 flex flex-col">
+                    <div class="w-12 h-12 rounded-full bg-amber-100 text-amber-600 flex items-center justify-center font-bold text-lg mb-4">1</div>
+                    <h3 class="text-xl font-bold text-brand-dark mb-2">Foundational</h3>
+                    <p class="text-slate-600 text-sm mb-6 flex-grow">Ad-hoc process, founder-led demos, no repeatable technical sales system in place.</p>
+                    <div class="border-t border-slate-200 pt-4">
+                        <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-1">Recommended</p>
+                        <p class="text-sm font-semibold text-brand-dark">Technical Sales System Build</p>
+                    </div>
+                </div>
+                <!-- Tier 2: Scaling -->
+                <div class="bg-white rounded-xl border border-slate-200 p-8 flex flex-col">
+                    <div class="w-12 h-12 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center font-bold text-lg mb-4">2</div>
+                    <h3 class="text-xl font-bold text-brand-dark mb-2">Scaling</h3>
+                    <p class="text-slate-600 text-sm mb-6 flex-grow">Some process exists but it&rsquo;s inconsistent. Quality varies across SEs and deals.</p>
+                    <div class="border-t border-slate-200 pt-4">
+                        <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-1">Recommended</p>
+                        <p class="text-sm font-semibold text-brand-dark">Demo &amp; POC Strategy or Handoff Architecture</p>
+                    </div>
+                </div>
+                <!-- Tier 3: Optimizing -->
+                <div class="bg-white rounded-xl border border-slate-200 p-8 flex flex-col">
+                    <div class="w-12 h-12 rounded-full bg-green-100 text-green-600 flex items-center justify-center font-bold text-lg mb-4">3</div>
+                    <h3 class="text-xl font-bold text-brand-dark mb-2">Optimizing</h3>
+                    <p class="text-slate-600 text-sm mb-6 flex-grow">Systems are in place but need refinement, measurement, and strategic leadership.</p>
+                    <div class="border-t border-slate-200 pt-4">
+                        <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-1">Recommended</p>
+                        <p class="text-sm font-semibold text-brand-dark">Fractional Leadership</p>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-10">
+                <a href="assessment.html" class="text-brand-accent font-semibold hover:underline">Take the full assessment &rarr;</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. END-OF-PAGE CTA -->
+    <section class="hero-pattern text-white py-24">
+        <div class="max-w-3xl mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Ready to build your Revenue Delivery Architecture?</h2>
+            <p class="text-slate-300 text-lg mb-8 leading-relaxed">
+                Let&rsquo;s scope the right engagement for your stage, team, and market.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="contact.html" class="px-8 py-4 bg-brand-accent text-brand-dark font-bold rounded-lg hover:bg-white transition text-center">Book a Consult</a>
+                <a href="pricing.html" class="px-8 py-4 border border-slate-600 text-white font-bold rounded-lg hover:border-brand-accent hover:text-brand-accent transition text-center">View Pricing</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-brand-dark text-slate-400 py-12 border-t border-slate-800">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <span class="text-white font-serif font-bold text-lg block mb-3">Solutions Advisory<span class="text-brand-accent">.</span></span>
+                    <p class="text-sm">New York, NY</p>
+                </div>
+                <div>
+                    <p class="text-xs font-semibold text-slate-300 uppercase tracking-wider mb-3">Services</p>
+                    <div class="space-y-2 text-sm">
+                        <a href="services.html" class="block hover:text-brand-accent transition">Services</a>
+                        <a href="pricing.html" class="block hover:text-brand-accent transition">Pricing</a>
+                        <a href="outcomes.html" class="block hover:text-brand-accent transition">Outcomes</a>
+                    </div>
+                </div>
+                <div>
+                    <p class="text-xs font-semibold text-slate-300 uppercase tracking-wider mb-3">Resources</p>
+                    <div class="space-y-2 text-sm">
+                        <a href="insights.html" class="block hover:text-brand-accent transition">Insights</a>
+                        <a href="assessment.html" class="block hover:text-brand-accent transition">SE Maturity Assessment</a>
+                        <a href="glossary.html" class="block hover:text-brand-accent transition">Glossary</a>
+                    </div>
+                </div>
+                <div>
+                    <p class="text-xs font-semibold text-slate-300 uppercase tracking-wider mb-3">Connect</p>
+                    <div class="space-y-2 text-sm">
+                        <a href="contact.html" class="block hover:text-brand-accent transition">Contact</a>
+                        <a href="about.html" class="block hover:text-brand-accent transition">About</a>
+                        <a href="https://www.linkedin.com/company/solutions-engineering-advisory/" target="_blank" rel="noopener noreferrer" class="block hover:text-brand-accent transition">LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+            <div class="pt-6 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4 text-sm">
+                <span>&copy; 2026 Solutions Advisory Partners. All rights reserved.</span>
                 <a href="privacy.html" class="hover:text-brand-accent transition">Privacy Policy</a>
-                <span>&middot;</span>
-                <span>&copy; 2025 Solutions Advisory Partners. All rights reserved.</span>
             </div>
         </div>
     </footer>
