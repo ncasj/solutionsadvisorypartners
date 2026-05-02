@@ -28,8 +28,19 @@
     gtag('config', GA_ID);
   }
 
+  var ALLOWED_HOSTS = ['solutionsadvisorypartners.com', 'www.solutionsadvisorypartners.com'];
+
+  function isProductionHost() {
+    var h = window.location.hostname;
+    return ALLOWED_HOSTS.indexOf(h) !== -1;
+  }
+
   function loadMixpanel() {
     if (window._sapMP) return;
+    if (!isProductionHost()) {
+      console.warn('[SAP Analytics] Mixpanel skipped on non-production host:', window.location.hostname);
+      return;
+    }
     window._sapMP = true;
 
     (function (f, b) {
