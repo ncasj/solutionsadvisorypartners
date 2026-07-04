@@ -7,27 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Services | Solutions Advisory Partners | AI Workflows for Lean Software Teams</title>
     <meta name="description" content="AI workflows that give lean software teams Solutions Engineering velocity&mdash;tailored demos, faster POCs, faster solution design (security &amp; RFP responses), and smoother onboarding. No SE hire required.">
-    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <link rel="stylesheet" href="assets/tailwind.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        serif: ['Playfair Display', 'serif'],
-                    },
-                    colors: {
-                        brand: {
-                            dark: '#0f172a',
-                            accent: '#38bdf8',
-                            light: '#f8fafc',
-                        }
-                    }
-                }
-            }
-        }
-    </script>
     <style>
         body { font-family: 'Inter', sans-serif; }
         h1, h2, h3 { font-family: 'Playfair Display', serif; }
@@ -57,7 +38,7 @@
                 Solutions Advisory <span class="text-brand-accent">.</span>
             </a>
             <div class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-600">
-                <a href="outcomes.html" class="hover:text-brand-accent transition">Outcomes</a>
+                <a href="about.html" class="hover:text-brand-accent transition">About</a>
                 <a href="services.html" class="hover:text-brand-accent transition text-brand-accent font-semibold">Services</a>
                 <a href="assessment.html" class="hover:text-brand-accent transition">Assessment</a>
                 <a href="insights.html" class="hover:text-brand-accent transition">Insights</a>
@@ -73,7 +54,7 @@
         </div>
         <div id="mobileMenu" class="hidden md:hidden border-t border-slate-200">
             <div class="px-6 py-4 flex flex-col space-y-1">
-                <a href="outcomes.html" class="block px-3 py-3 rounded-lg text-base font-medium text-slate-700 hover:bg-slate-100 transition">Outcomes</a>
+                <a href="about.html" class="block px-3 py-3 rounded-lg text-base font-medium text-slate-700 hover:bg-slate-100 transition">About</a>
                 <a href="services.html" class="block px-3 py-3 rounded-lg text-base font-medium text-brand-accent hover:bg-slate-100 transition">Services</a>
                 <a href="assessment.html" class="block px-3 py-3 rounded-lg text-base font-medium text-slate-700 hover:bg-slate-100 transition">Assessment</a>
                 <a href="insights.html" class="block px-3 py-3 rounded-lg text-base font-medium text-slate-700 hover:bg-slate-100 transition">Insights</a>
@@ -420,6 +401,170 @@
     </section>
 
     <!-- 6. FAQ -->
+    <section class="py-16 bg-slate-50 border-b border-slate-100">
+        <div class="max-w-5xl mx-auto px-6">
+
+            <div class="text-center mb-10">
+                <p class="text-brand-accent font-medium text-sm uppercase tracking-widest mb-4">Illustrative Scenarios</p>
+                <h2 class="text-3xl md:text-4xl font-bold text-brand-dark mb-6">What an Engagement Looks Like</h2>
+                <p class="text-slate-500 text-lg max-w-3xl mx-auto leading-relaxed">
+                    Illustrative examples of AI workflows in action for lean teams. Problem &rarr; Workflow &rarr; What Changes.
+                </p>
+            </div>
+
+            <div class="space-y-10">
+
+                <!-- Case Study 1 -->
+                <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden">
+                    <div class="bg-brand-dark px-8 py-6">
+                        <h3 class="text-xl md:text-2xl font-bold text-white font-serif mb-2">From Founder-Led Demos to AI-Prepped Demos</h3>
+                        <p class="text-slate-300 text-sm">API integration platform &middot; ~25 people &middot; technical product, no SE on staff &middot; <span class="italic">illustrative</span></p>
+                        <div class="flex flex-wrap gap-2 mt-3">
+                            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full bg-brand-accent/20 text-brand-accent text-xs font-medium">Demo &amp; POC Acceleration</span>
+                        </div>
+                    </div>
+                    <div class="grid md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-slate-100">
+                        <div class="p-8">
+                            <p class="text-xs font-semibold text-red-500 uppercase tracking-wider mb-3">Problem</p>
+                            <p class="text-slate-600 text-sm leading-relaxed">
+                                The two founders ran every technical demo themselves. AEs gave the same generic product tour to everyone, and it didn&#8217;t connect to the buyer&#8217;s problem. Technical deals stalled waiting for a founder to free up.
+                            </p>
+                        </div>
+                        <div class="p-8">
+                            <p class="text-xs font-semibold text-amber-500 uppercase tracking-wider mb-3">Workflow</p>
+                            <p class="text-slate-600 text-sm leading-relaxed">
+                                Built a demo-prep workflow grounded in their product docs and ICP. For each opportunity it drafts a buyer-specific demo narrative, a talk track, and a likely-objection list&#8212;reviewed by the AE before the call. Tuned to three core buyer types.
+                            </p>
+                        </div>
+                        <div class="p-8">
+                            <p class="text-xs font-semibold text-emerald-500 uppercase tracking-wider mb-3">What Changes</p>
+                            <ul class="space-y-2 text-sm text-slate-600">
+                                <li class="flex items-start gap-2">
+                                    <svg class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                                    AEs run tailored demos without a founder in the room
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <svg class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                                    Every demo is mapped to the buyer&#8217;s problem
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <svg class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                                    Founders get most of their demo time back
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <svg class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                                    Deals stop stalling on technical availability
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="px-8 py-4 bg-slate-50 border-t border-slate-100">
+                        <p class="text-xs text-slate-500"><strong class="text-slate-600">Engagement:</strong> Demo &amp; POC Acceleration &middot; <strong class="text-slate-600">Built:</strong> Demo-prep workflow wired to product docs, buyer-type templates, objection library, AE review checklist</p>
+                    </div>
+                </div>
+
+                <!-- Case Study 2 -->
+                <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden">
+                    <div class="bg-brand-dark px-8 py-6">
+                        <h3 class="text-xl md:text-2xl font-bold text-white font-serif mb-2">Solution Design: Days to Minutes</h3>
+                        <p class="text-slate-300 text-sm">Data analytics platform &middot; ~40 people &middot; selling into security-conscious buyers &middot; <span class="italic">illustrative</span></p>
+                        <div class="flex flex-wrap gap-2 mt-3">
+                            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full bg-brand-accent/20 text-brand-accent text-xs font-medium">Solution Design &amp; Onboarding</span>
+                        </div>
+                    </div>
+                    <div class="grid md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-slate-100">
+                        <div class="p-8">
+                            <p class="text-xs font-semibold text-red-500 uppercase tracking-wider mb-3">Problem</p>
+                            <p class="text-slate-600 text-sm leading-relaxed">
+                                Every enterprise deal came with a security questionnaire or RFP. They ate days of the founder&#8217;s and lead engineer&#8217;s time, answers were copied inconsistently from old emails, and deals sat idle waiting on them.
+                            </p>
+                        </div>
+                        <div class="p-8">
+                            <p class="text-xs font-semibold text-amber-500 uppercase tracking-wider mb-3">Workflow</p>
+                            <p class="text-slate-600 text-sm leading-relaxed">
+                                Built a security &amp; RFP responder grounded in a single source of truth: their security posture, policies, and approved past answers. It drafts responses to each questionnaire in minutes; the team reviews and approves rather than writing from scratch.
+                            </p>
+                        </div>
+                        <div class="p-8">
+                            <p class="text-xs font-semibold text-emerald-500 uppercase tracking-wider mb-3">What Changes</p>
+                            <ul class="space-y-2 text-sm text-slate-600">
+                                <li class="flex items-start gap-2">
+                                    <svg class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                                    First drafts in minutes instead of days
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <svg class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                                    Answers are consistent and on-policy
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <svg class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                                    Deals stop stalling on security review
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <svg class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                                    Founder and lead engineer reclaim hours per deal
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="px-8 py-4 bg-slate-50 border-t border-slate-100">
+                        <p class="text-xs text-slate-500"><strong class="text-slate-600">Engagement:</strong> Solution Design &amp; Onboarding Workflows &middot; <strong class="text-slate-600">Built:</strong> Security source-of-truth knowledge base, questionnaire/RFP responder, human review &amp; approval step</p>
+                    </div>
+                </div>
+
+                <!-- Case Study 3 -->
+                <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden">
+                    <div class="bg-brand-dark px-8 py-6">
+                        <h3 class="text-xl md:text-2xl font-bold text-white font-serif mb-2">Onboarding Handoffs That Actually Transfer</h3>
+                        <p class="text-slate-300 text-sm">Workflow automation platform &middot; ~45 people &middot; founder-led sales handing to a small CS team &middot; <span class="italic">illustrative</span></p>
+                        <div class="flex flex-wrap gap-2 mt-3">
+                            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full bg-brand-accent/20 text-brand-accent text-xs font-medium">Solution Design &amp; Onboarding</span>
+                        </div>
+                    </div>
+                    <div class="grid md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-slate-100">
+                        <div class="p-8">
+                            <p class="text-xs font-semibold text-red-500 uppercase tracking-wider mb-3">Problem</p>
+                            <p class="text-slate-600 text-sm leading-relaxed">
+                                What got promised in the sale lived in the founder&#8217;s head. The CS team kicked off blind, customers had to repeat themselves, and onboarding dragged&#8212;setting a bad tone right when new accounts were most fragile.
+                            </p>
+                        </div>
+                        <div class="p-8">
+                            <p class="text-xs font-semibold text-amber-500 uppercase tracking-wider mb-3">Workflow</p>
+                            <p class="text-slate-600 text-sm leading-relaxed">
+                                Built an onboarding &amp; handoff workflow that pulls from call notes, the CRM, and the deal&#8217;s commitments to generate a structured handoff summary&#8212;goals, integrations, success criteria, and open risks&#8212;the moment a deal closes.
+                            </p>
+                        </div>
+                        <div class="p-8">
+                            <p class="text-xs font-semibold text-emerald-500 uppercase tracking-wider mb-3">What Changes</p>
+                            <ul class="space-y-2 text-sm text-slate-600">
+                                <li class="flex items-start gap-2">
+                                    <svg class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                                    CS starts with full context, not a blank page
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <svg class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                                    Customers don&#8217;t have to repeat themselves
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <svg class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                                    What was sold is what gets delivered
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <svg class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                                    New accounts start strong, not behind
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="px-8 py-4 bg-slate-50 border-t border-slate-100">
+                        <p class="text-xs text-slate-500"><strong class="text-slate-600">Engagement:</strong> Solution Design &amp; Onboarding Workflows &middot; <strong class="text-slate-600">Built:</strong> Handoff-summary workflow wired to CRM &amp; call notes, structured summary template, CS kickoff checklist</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
     <section id="faq" class="scroll-mt-24 py-16 bg-slate-50 border-b border-slate-100">
         <div class="max-w-3xl mx-auto px-6">
             <div class="text-center mb-10">
@@ -486,7 +631,7 @@
                     <div class="space-y-2 text-sm">
                         <a href="services.html" class="block hover:text-brand-accent transition">Services</a>
                         <a href="services.html#packages" class="block hover:text-brand-accent transition">Packages</a>
-                        <a href="outcomes.html" class="block hover:text-brand-accent transition">Outcomes</a>
+                        <a href="about.html" class="block hover:text-brand-accent transition">About</a>
                     </div>
                 </div>
                 <div>
@@ -494,7 +639,6 @@
                     <div class="space-y-2 text-sm">
                         <a href="insights.html" class="block hover:text-brand-accent transition">Insights</a>
                         <a href="assessment.html" class="block hover:text-brand-accent transition">AI Readiness Assessment</a>
-                        <a href="glossary.html" class="block hover:text-brand-accent transition">Glossary</a>
                     </div>
                 </div>
                 <div>

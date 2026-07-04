@@ -7,27 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Solutions Advisory Partners | AI Workflows That Give Your Team a Solutions Engineer</title>
     <meta name="description" content="We help lean software companies deploy AI workflows that give their sales team the technical velocity of a Solutions Engineer—stronger demos, faster POCs, smoother onboarding—before you hire one.">
-    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <link rel="stylesheet" href="assets/tailwind.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        serif: ['Playfair Display', 'serif'],
-                    },
-                    colors: {
-                        brand: {
-                            dark: '#0f172a',
-                            accent: '#38bdf8',
-                            light: '#f8fafc',
-                        }
-                    }
-                }
-            }
-        }
-    </script>
     <style>
         body { font-family: 'Inter', sans-serif; }
         h1, h2, h3 { font-family: 'Playfair Display', serif; }
@@ -39,13 +20,13 @@
     </style>
     <link rel="canonical" href="https://www.solutionsadvisorypartners.com/">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Give Your Team a Solutions Engineer—Before You Hire One">
+    <meta property="og:title" content="Give Your Sales Team a Solutions Engineer, Before You Hire One">
     <meta property="og:description" content="We help lean software companies deploy AI workflows that give their sales team the technical velocity of a Solutions Engineer—stronger demos, faster POCs, smoother onboarding—before you hire one.">
     <meta property="og:url" content="https://www.solutionsadvisorypartners.com/">
     <meta property="og:site_name" content="Solutions Advisory Partners">
     <meta property="og:image" content="https://www.solutionsadvisorypartners.com/assets/og-default.png">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Give Your Team a Solutions Engineer—Before You Hire One">
+    <meta name="twitter:title" content="Give Your Sales Team a Solutions Engineer, Before You Hire One">
     <meta name="twitter:description" content="We help lean software companies deploy AI workflows that give their sales team the technical velocity of a Solutions Engineer—stronger demos, faster POCs, smoother onboarding—before you hire one.">
 </head>
 <body class="bg-brand-light text-slate-800 antialiased">
@@ -56,7 +37,7 @@
                 Solutions Advisory <span class="text-brand-accent">.</span>
             </a>
             <div class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-600">
-                <a href="outcomes.html" class="hover:text-brand-accent transition">Outcomes</a>
+                <a href="about.html" class="hover:text-brand-accent transition">About</a>
                 <a href="services.html" class="hover:text-brand-accent transition">Services</a>
                 <a href="assessment.html" class="hover:text-brand-accent transition">Assessment</a>
                 <a href="insights.html" class="hover:text-brand-accent transition">Insights</a>
@@ -72,7 +53,7 @@
         </div>
         <div id="mobileMenu" class="hidden md:hidden border-t border-slate-200">
             <div class="px-6 py-4 flex flex-col space-y-1">
-                <a href="outcomes.html" class="block px-3 py-3 rounded-lg text-base font-medium text-slate-700 hover:bg-slate-100 transition">Outcomes</a>
+                <a href="about.html" class="block px-3 py-3 rounded-lg text-base font-medium text-slate-700 hover:bg-slate-100 transition">About</a>
                 <a href="services.html" class="block px-3 py-3 rounded-lg text-base font-medium text-slate-700 hover:bg-slate-100 transition">Services</a>
                 <a href="assessment.html" class="block px-3 py-3 rounded-lg text-base font-medium text-slate-700 hover:bg-slate-100 transition">Assessment</a>
                 <a href="insights.html" class="block px-3 py-3 rounded-lg text-base font-medium text-slate-700 hover:bg-slate-100 transition">Insights</a>
@@ -89,16 +70,16 @@
     </script>
 
     <!-- HERO -->
-    <section class="hero-pattern text-white min-h-screen flex items-center pt-20">
+    <section class="hero-pattern text-white pt-36 pb-20 md:pt-44 md:pb-24">
         <div class="max-w-4xl mx-auto px-6 text-center">
             <div class="inline-block px-3 py-1 mb-6 text-xs font-semibold tracking-wider text-brand-accent uppercase bg-brand-accent/10 rounded-full border border-brand-accent/20">
                 AI Workflows for Lean Software Teams
             </div>
             <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
-                Give Your Sales Team a <span class="text-brand-accent italic">Solutions Engineer</span>&mdash;<span class="text-brand-accent italic">Before You Hire One</span>.
+                Give Your Sales Team a <span class="text-brand-accent">Solutions Engineer</span>, Before You Hire One.
             </h1>
             <p class="text-lg md:text-xl text-slate-300 mb-8 leading-relaxed max-w-2xl mx-auto">
-                When you&rsquo;re a lean team, technical deals stall, demos feel thin, and onboarding turns chaotic&mdash;because there&rsquo;s no Solutions Engineer in the room yet. We build AI workflows that give your team that technical velocity across the full deal cycle, so you can keep deals moving long before the headcount math makes sense.
+                We build AI workflows that carry the technical side of your deals, from demo prep to security reviews to onboarding, so deals keep moving while your team stays lean.
             </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center mb-16">
                 <a href="contact.html" data-cta="Book a Consult" class="cta px-8 py-4 bg-brand-accent text-brand-dark font-bold rounded-lg hover:bg-white transition text-center">
@@ -115,11 +96,11 @@
                 </div>
                 <div class="bg-white/5 border border-white/10 rounded-xl px-6 py-5">
                     <p class="text-base font-bold text-white mb-1.5">Works for the team you have</p>
-                    <p class="text-sm text-slate-400 leading-relaxed">Your AEs and founders run the workflows&mdash;no new hire to wait on.</p>
+                    <p class="text-sm text-slate-400 leading-relaxed">Your AEs and founders run the workflows. No new hire to wait on.</p>
                 </div>
                 <div class="bg-white/5 border border-white/10 rounded-xl px-6 py-5">
                     <p class="text-base font-bold text-white mb-1.5">Shaped around how you sell</p>
-                    <p class="text-sm text-slate-400 leading-relaxed">We build on your product, docs, and process&mdash;not a generic AI bot.</p>
+                    <p class="text-sm text-slate-400 leading-relaxed">We build on your product, docs, and process, not a generic AI bot.</p>
                 </div>
             </div>
         </div>
@@ -236,7 +217,7 @@
                 </div>
             </div>
             <div class="text-center mt-8">
-                <a href="outcomes.html" class="text-brand-accent font-semibold hover:underline">See full case studies &rarr;</a>
+                <a href="services.html" class="text-brand-accent font-semibold hover:underline">See full case studies &rarr;</a>
             </div>
         </div>
     </section>
@@ -422,7 +403,7 @@
                     <div class="space-y-2 text-sm">
                         <a href="services.html" class="block hover:text-brand-accent transition">Services</a>
                         <a href="services.html#packages" class="block hover:text-brand-accent transition">Packages</a>
-                        <a href="outcomes.html" class="block hover:text-brand-accent transition">Outcomes</a>
+                        <a href="about.html" class="block hover:text-brand-accent transition">About</a>
                     </div>
                 </div>
                 <div>
@@ -430,7 +411,6 @@
                     <div class="space-y-2 text-sm">
                         <a href="insights.html" class="block hover:text-brand-accent transition">Insights</a>
                         <a href="assessment.html" class="block hover:text-brand-accent transition">AI Readiness Assessment</a>
-                        <a href="glossary.html" class="block hover:text-brand-accent transition">Glossary</a>
                     </div>
                 </div>
                 <div>
