@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <script src="../consent.js"></script>
+    <script src="../analytics.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What a Decade of POCs Taught Me About Buying AI | Proofworks</title>
+    <meta name="description" content="Enterprise buyers never take a vendor's word — they demand proof on their own data before committing. Growing businesses should buy AI automation the same way. The playbook, from someone who ran those evaluations for ten years.">
+    <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+    <link rel="stylesheet" href="../assets/tailwind.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3 { font-family: 'Space Grotesk', sans-serif; }
+        .hero-pattern { background-color: #0b1120; background-image: radial-gradient(#1c2941 1px, transparent 1px); background-size: 22px 22px; }
+        article p { margin-bottom: 1.5rem; }
+        article h2 { margin-top: 2.5rem; margin-bottom: 1rem; }
+    </style>
+    <link rel="canonical" href="https://www.proofworks.io/insights/what-a-decade-of-pocs-taught-me-about-ai.html">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="What a Decade of POCs Taught Me About Buying AI">
+    <meta property="og:description" content="Enterprise buyers demand proof on their own data before committing. Growing businesses should buy AI automation the same way.">
+    <meta property="og:url" content="https://www.proofworks.io/insights/what-a-decade-of-pocs-taught-me-about-ai.html">
+    <meta property="og:site_name" content="Proofworks">
+    <meta property="og:image" content="https://www.proofworks.io/assets/og-default.png">
+    <meta name="twitter:card" content="summary_large_image">
+</head>
+<body class="bg-brand-light text-slate-800 antialiased">
+
+    <nav class="fixed w-full z-50 bg-brand-light/90 backdrop-blur-md border-b border-slate-200">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="../index.html" class="flex items-center gap-2 text-2xl font-display font-bold text-brand-dark tracking-tight">
+                <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="1" y="1" width="22" height="22" rx="6" fill="#0b1120"/><path d="M7 12.5l3.2 3.2L17 9" stroke="#34d399" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                proofworks
+            </a>
+            <div class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-600">
+                <a href="../services.html" class="hover:text-emerald-600 transition">Services</a>
+                <a href="../about.html" class="hover:text-emerald-600 transition">About</a>
+                <a href="../assessment.html" class="hover:text-emerald-600 transition">Assessment</a>
+                <a href="../insights.html" class="text-emerald-600 font-semibold">Insights</a>
+                <a href="../contact.html" class="px-5 py-2 bg-brand-dark text-white rounded-full hover:bg-slate-700 transition">Contact</a>
+            </div>
+            <button id="mobileMenuBtn" class="md:hidden p-2 text-slate-600 hover:text-emerald-600 transition" aria-label="Toggle menu" aria-expanded="false">
+                <svg id="iconHam" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                <svg id="iconX" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+            </button>
+        </div>
+        <div id="mobileMenu" class="hidden md:hidden border-t border-slate-200">
+            <div class="px-6 py-4 flex flex-col space-y-1">
+                <a href="../services.html" class="block px-3 py-3 rounded-lg text-base font-medium text-slate-700 hover:bg-slate-100 transition">Services</a>
+                <a href="../about.html" class="block px-3 py-3 rounded-lg text-base font-medium text-slate-700 hover:bg-slate-100 transition">About</a>
+                <a href="../assessment.html" class="block px-3 py-3 rounded-lg text-base font-medium text-slate-700 hover:bg-slate-100 transition">Assessment</a>
+                <a href="../insights.html" class="block px-3 py-3 rounded-lg text-base font-medium text-emerald-600 hover:bg-slate-100 transition">Insights</a>
+                <a href="../contact.html" class="block mt-2 px-3 py-3 bg-brand-dark text-white text-base font-bold text-center rounded-lg hover:bg-slate-700 transition">Contact</a>
+            </div>
+        </div>
+    </nav>
+    <script>
+    (function(){var b=document.getElementById('mobileMenuBtn'),m=document.getElementById('mobileMenu'),h=document.getElementById('iconHam'),x=document.getElementById('iconX');if(!b||!m)return;b.addEventListener('click',function(){m.classList.toggle('hidden');h.classList.toggle('hidden');x.classList.toggle('hidden');b.setAttribute('aria-expanded',m.classList.contains('hidden')?'false':'true');});m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){m.classList.add('hidden');h.classList.remove('hidden');x.classList.add('hidden');b.setAttribute('aria-expanded','false');});});})();
+    </script>
+
+    <header class="hero-pattern text-white py-20 pt-36">
+        <div class="max-w-3xl mx-auto px-6">
+            <a href="../insights.html" class="text-brand-accent text-sm font-semibold hover:underline">&larr; All insights</a>
+            <div class="mt-6 mb-4"><span class="inline-block text-xs font-semibold px-2.5 py-1 bg-brand-accent/20 text-brand-accent rounded-full">Strategy</span></div>
+            <h1 class="text-3xl md:text-5xl font-bold leading-tight mb-6">What a Decade of POCs Taught Me About Buying AI</h1>
+            <p class="text-slate-400 text-sm">By Nico Castagnola &middot; August 2026 &middot; 6 min read</p>
+        </div>
+    </header>
+
+    <article class="py-16 bg-white">
+        <div class="max-w-3xl mx-auto px-6 text-slate-700 text-lg leading-relaxed">
+            <p>For ten years, my job has been standing in front of skeptical buyers while they decided whether my company&rsquo;s software was real. Not whether the demo was impressive&mdash;demos are always impressive; that&rsquo;s what demos are for. Whether it was real: on their data, in their environment, at their volume, handled by their people.</p>
+            <p>The mechanism enterprises use to answer that question is the proof of concept. Before a serious buyer commits serious money, they make the vendor prove the product on a slice of the buyer&rsquo;s actual problem, against criteria written down in advance, on a clock. I&rsquo;ve run hundreds of these evaluations from the vendor side. I have watched deals die because a product that demoed beautifully couldn&rsquo;t survive contact with real invoices, real tickets, real edge cases.</p>
+            <p>Here is what strikes me now, watching growing businesses buy AI automation: <strong class="text-brand-dark">almost nobody makes AI vendors and consultants earn it the way enterprise buyers made us earn it.</strong> The typical AI engagement starts with a vision deck and a retainer, and ends&mdash;months later&mdash;with something that quietly doesn&rsquo;t get used. The failure isn&rsquo;t the technology. It&rsquo;s the buying process.</p>
+
+            <h2 class="text-2xl md:text-3xl font-bold text-brand-dark">What the POC discipline actually is</h2>
+            <p>Strip away the enterprise procurement theater and a good POC has four parts:</p>
+            <p><strong class="text-brand-dark">1. Success criteria, in writing, before anything is built.</strong> Not &ldquo;we&rsquo;ll know it when we see it.&rdquo; Numbers: the invoice takes 22 minutes to process today; the automation must get it under 2, with an error rate below 3%. If you can&rsquo;t write the criteria, you don&rsquo;t understand the problem yet&mdash;which is itself worth learning before you spend.</p>
+            <p><strong class="text-brand-dark">2. Real data, real work.</strong> Every product works on the demo dataset. The demo dataset was chosen because the product works on it. The only test that matters runs on your messy, inconsistent, exception-riddled reality.</p>
+            <p><strong class="text-brand-dark">3. A clock.</strong> Open-ended evaluations don&rsquo;t conclude; they dissolve. Thirty days is enough to prove almost any well-scoped automation. If someone needs six months to show value, the scope is wrong.</p>
+            <p><strong class="text-brand-dark">4. A decision rule.</strong> Pass means scale. Miss means stop. Agreed in advance, so nobody relitigates it under the influence of sunk costs and enthusiasm.</p>
+
+            <h2 class="text-2xl md:text-3xl font-bold text-brand-dark">Why AI sellers avoid this structure</h2>
+            <p>Because it&rsquo;s bad for them and good for you. A consultant paid monthly to &ldquo;drive AI transformation&rdquo; has no incentive to reach a pass/fail moment&mdash;the ambiguity is the business model. A structure with written criteria and a day-30 verdict transfers risk from the buyer to the seller. That&rsquo;s exactly why you should insist on it, and why a seller&rsquo;s reaction to the request is itself a signal. The ones who flinch were planning to sell you confidence. The ones who say &ldquo;great, here&rsquo;s how I&rsquo;d structure the criteria&rdquo; have done this before.</p>
+
+            <h2 class="text-2xl md:text-3xl font-bold text-brand-dark">The questions to ask anyone selling you automation</h2>
+            <p>You don&rsquo;t need to be technical to run this gauntlet. Ask these, and listen for numbers in the answers:</p>
+            <p>&ldquo;What will we measure, and what&rsquo;s the baseline today?&rdquo; &mdash; If they haven&rsquo;t asked to observe your current process, they can&rsquo;t answer this honestly.</p>
+            <p>&ldquo;What happens if the pilot misses?&rdquo; &mdash; The right answer involves you stopping, keeping the work products, and understanding why. The wrong answer is a pivot to how iteration is part of the journey.</p>
+            <p>&ldquo;Will it run on our real data during the pilot?&rdquo; &mdash; A pilot on sample data is a demo with a longer invoice.</p>
+            <p>&ldquo;Who maintains this in month six?&rdquo; &mdash; Automations aren&rsquo;t paintings; they&rsquo;re plumbing. Formats drift, APIs change, volumes grow. Someone must own that, and the answer should be written into the deal.</p>
+
+            <h2 class="text-2xl md:text-3xl font-bold text-brand-dark">The part nobody tells you: failed pilots are a win</h2>
+            <p>In enterprise evaluations, a POC that fails fast is a success&mdash;it just saved the buyer a seven-figure mistake at a five-figure price. The same math holds at SMB scale. A 30-day pilot that proves your invoice process <em>isn&rsquo;t</em> ready for automation (usually because the upstream data is chaos) is cheap tuition, and it tells you exactly what to fix first. The expensive version of that lesson is the same discovery in month eight of a retainer.</p>
+            <p>The AI wave is real. The leverage for growing businesses is real&mdash;I&rsquo;ve never seen technology this well-suited to the manual glue work that eats small teams alive. But real technology deserves a real buying process. Demand proof. The sellers worth hiring will thank you for it.</p>
+        </div>
+    </article>
+
+    <section class="py-12 bg-slate-50 border-t border-slate-100">
+        <div class="max-w-3xl mx-auto px-6 text-center">
+            <h2 class="text-2xl md:text-3xl font-bold text-brand-dark mb-4">This is how I structure every engagement</h2>
+            <p class="text-slate-600 mb-8 max-w-xl mx-auto">Written success criteria, real data, 30 days, your call at the end. That&rsquo;s the Proofworks standard&mdash;because I spent a decade on the other side of it.</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="../services.html" class="px-8 py-3.5 bg-brand-dark text-white font-bold rounded-lg hover:bg-slate-800 transition">See How Pilots Work</a>
+                <a href="../contact.html" class="px-8 py-3.5 border border-slate-300 text-slate-700 font-bold rounded-lg hover:border-brand-accent hover:text-emerald-600 transition">Book an Intro Call</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-brand-dark text-slate-400 py-8 border-t border-slate-800">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4 text-sm">
+            <span>&copy; 2026 Proofworks. All rights reserved.</span>
+            <a href="../privacy.html" class="hover:text-brand-accent transition">Privacy Policy</a>
+        </div>
+    </footer>
+</body>
+</html>

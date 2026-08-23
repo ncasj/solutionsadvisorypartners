@@ -4,10 +4,10 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ['Inter', 'sans-serif'],
-        serif: ['Playfair Display', 'serif'],
+        display: ['Space Grotesk', 'sans-serif'],
       },
       colors: {
-        brand: { dark: '#0f172a', accent: '#38bdf8', light: '#f8fafc' },
+        brand: { dark: '#0b1120', accent: '#34d399', light: '#f8fafc' },
       },
     },
   },

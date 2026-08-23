@@ -1,7 +1,7 @@
 (function () {
   'use strict';
 
-  var CONSENT_KEY = 'sap_analytics_consent';
+  var CONSENT_KEY = 'pw_analytics_consent';
   var GA_ID = 'G-YKTHF2B8VJ';
   var MP_TOKEN = '11313cd5aafb3ac2150a3be3c3846f37';
   var MP_LIB = 'https://cdn.jsdelivr.net/npm/mixpanel-browser@2.75.0/dist/mixpanel.min.js';
@@ -28,7 +28,7 @@
     gtag('config', GA_ID);
   }
 
-  var ALLOWED_HOSTS = ['solutionsadvisorypartners.com', 'www.solutionsadvisorypartners.com'];
+  var ALLOWED_HOSTS = ['proofworks.io', 'www.proofworks.io'];
 
   function isProductionHost() {
     var h = window.location.hostname;
@@ -104,7 +104,7 @@
     banner.setAttribute('aria-label', 'Cookie consent');
     banner.style.cssText =
       'position:fixed;bottom:0;left:0;right:0;z-index:9999;' +
-      'background:#0f172a;border-top:1px solid #334155;' +
+      'background:#0b1120;border-top:1px solid #334155;' +
       'padding:1rem 1.5rem;display:flex;flex-wrap:wrap;align-items:center;' +
       'justify-content:space-between;gap:1rem;font-family:Inter,system-ui,sans-serif;' +
       'transform:translateY(100%);transition:transform .3s ease;';
@@ -114,7 +114,7 @@
     text.innerHTML =
       'We use cookies and analytics (Google Analytics, Mixpanel) to understand how visitors use our site. ' +
       'By accepting, you consent to analytics tracking and session recording. ' +
-      '<a href="/privacy.html" style="color:#38bdf8;text-decoration:underline;">Privacy Policy</a>';
+      '<a href="/privacy.html" style="color:#34d399;text-decoration:underline;">Privacy Policy</a>';
 
     var btns = document.createElement('div');
     btns.style.cssText = 'display:flex;gap:.5rem;flex-shrink:0;';
@@ -132,8 +132,8 @@
     var accept = document.createElement('button');
     accept.textContent = 'Accept';
     accept.style.cssText =
-      'padding:.5rem 1.25rem;border:none;color:#0f172a;' +
-      'background:#38bdf8;border-radius:.375rem;font-size:.875rem;cursor:pointer;' +
+      'padding:.5rem 1.25rem;border:none;color:#0b1120;' +
+      'background:#34d399;border-radius:.375rem;font-size:.875rem;cursor:pointer;' +
       'font-weight:600;font-family:inherit;';
     accept.addEventListener('click', function () {
       setConsent('accepted');

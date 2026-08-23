@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 1200px; height: 630px;
+    background-color: #0b1120;
+    background-image: radial-gradient(#1c2941 1.5px, transparent 1.5px);
+    background-size: 26px 26px;
+    font-family: 'Inter', sans-serif;
+    color: #fff;
+    display: flex; flex-direction: column; justify-content: space-between;
+    padding: 64px 72px;
+  }
+  .logo { display: flex; align-items: center; gap: 16px; }
+  .logo svg { width: 56px; height: 56px; }
+  .logo span { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 44px; letter-spacing: -1px; }
+  h1 {
+    font-family: 'Space Grotesk', sans-serif; font-weight: 700;
+    font-size: 76px; line-height: 1.08; letter-spacing: -2px; max-width: 1000px;
+  }
+  h1 .accent { color: #34d399; }
+  .bottom { display: flex; justify-content: space-between; align-items: flex-end; }
+  .tagline { font-size: 30px; color: #94a3b8; font-weight: 500; }
+  .badge {
+    font-size: 22px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase;
+    color: #34d399; border: 2px solid rgba(52,211,153,.35); background: rgba(52,211,153,.08);
+    padding: 12px 24px; border-radius: 999px;
+  }
+</style>
+</head>
+<body>
+  <div class="logo">
+    <svg viewBox="0 0 24 24" fill="none"><rect x="1" y="1" width="22" height="22" rx="6" fill="#101a30" stroke="#26334d" stroke-width="0.5"/><path d="M7 12.5l3.2 3.2L17 9" stroke="#34d399" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    <span>proofworks</span>
+  </div>
+  <h1>AI automation,<br><span class="accent">proven</span> before it&rsquo;s promised.</h1>
+  <div class="bottom">
+    <div class="tagline">Audit &rarr; Pilot &rarr; Prove &rarr; Scale</div>
+    <div class="badge">proofworks.io</div>
+  </div>
+</body>
+</html>

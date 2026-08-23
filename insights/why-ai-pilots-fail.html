@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <script src="../consent.js"></script>
+    <script src="../analytics.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Why AI Pilots Fail — and How to Write Success Criteria That Mean Something | Proofworks</title>
+    <meta name="description" content="Most AI pilots don't fail loudly — they dissolve. No baseline, no criteria, no decision date. How to structure a 30-day pilot so you know, with numbers, whether to scale or stop.">
+    <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+    <link rel="stylesheet" href="../assets/tailwind.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3 { font-family: 'Space Grotesk', sans-serif; }
+        .hero-pattern { background-color: #0b1120; background-image: radial-gradient(#1c2941 1px, transparent 1px); background-size: 22px 22px; }
+        article p { margin-bottom: 1.5rem; }
+        article h2 { margin-top: 2.5rem; margin-bottom: 1rem; }
+    </style>
+    <link rel="canonical" href="https://www.proofworks.io/insights/why-ai-pilots-fail.html">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Why AI Pilots Fail — and How to Write Success Criteria That Mean Something">
+    <meta property="og:description" content="Most AI pilots don't fail loudly — they dissolve. How to structure a pilot with a real verdict.">
+    <meta property="og:url" content="https://www.proofworks.io/insights/why-ai-pilots-fail.html">
+    <meta property="og:site_name" content="Proofworks">
+    <meta property="og:image" content="https://www.proofworks.io/assets/og-default.png">
+    <meta name="twitter:card" content="summary_large_image">
+</head>
+<body class="bg-brand-light text-slate-800 antialiased">
+
+    <nav class="fixed w-full z-50 bg-brand-light/90 backdrop-blur-md border-b border-slate-200">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="../index.html" class="flex items-center gap-2 text-2xl font-display font-bold text-brand-dark tracking-tight">
+                <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="1" y="1" width="22" height="22" rx="6" fill="#0b1120"/><path d="M7 12.5l3.2 3.2L17 9" stroke="#34d399" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                proofworks
+            </a>
+            <div class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-600">
+                <a href="../services.html" class="hover:text-emerald-600 transition">Services</a>
+                <a href="../about.html" class="hover:text-emerald-600 transition">About</a>
+                <a href="../assessment.html" class="hover:text-emerald-600 transition">Assessment</a>
+                <a href="../insights.html" class="text-emerald-600 font-semibold">Insights</a>
+                <a href="../contact.html" class="px-5 py-2 bg-brand-dark text-white rounded-full hover:bg-slate-700 transition">Contact</a>
+            </div>
+            <button id="mobileMenuBtn" class="md:hidden p-2 text-slate-600 hover:text-emerald-600 transition" aria-label="Toggle menu" aria-expanded="false">
+                <svg id="iconHam" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                <svg id="iconX" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+            </button>
+        </div>
+        <div id="mobileMenu" class="hidden md:hidden border-t border-slate-200">
+            <div class="px-6 py-4 flex flex-col space-y-1">
+                <a href="../services.html" class="block px-3 py-3 rounded-lg text-base font-medium text-slate-700 hover:bg-slate-100 transition">Services</a>
+                <a href="../about.html" class="block px-3 py-3 rounded-lg text-base font-medium text-slate-700 hover:bg-slate-100 transition">About</a>
+                <a href="../assessment.html" class="block px-3 py-3 rounded-lg text-base font-medium text-slate-700 hover:bg-slate-100 transition">Assessment</a>
+                <a href="../insights.html" class="block px-3 py-3 rounded-lg text-base font-medium text-emerald-600 hover:bg-slate-100 transition">Insights</a>
+                <a href="../contact.html" class="block mt-2 px-3 py-3 bg-brand-dark text-white text-base font-bold text-center rounded-lg hover:bg-slate-700 transition">Contact</a>
+            </div>
+        </div>
+    </nav>
+    <script>
+    (function(){var b=document.getElementById('mobileMenuBtn'),m=document.getElementById('mobileMenu'),h=document.getElementById('iconHam'),x=document.getElementById('iconX');if(!b||!m)return;b.addEventListener('click',function(){m.classList.toggle('hidden');h.classList.toggle('hidden');x.classList.toggle('hidden');b.setAttribute('aria-expanded',m.classList.contains('hidden')?'false':'true');});m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){m.classList.add('hidden');h.classList.remove('hidden');x.classList.add('hidden');b.setAttribute('aria-expanded','false');});});})();
+    </script>
+
+    <header class="hero-pattern text-white py-20 pt-36">
+        <div class="max-w-3xl mx-auto px-6">
+            <a href="../insights.html" class="text-brand-accent text-sm font-semibold hover:underline">&larr; All insights</a>
+            <div class="mt-6 mb-4"><span class="inline-block text-xs font-semibold px-2.5 py-1 bg-brand-accent/20 text-brand-accent rounded-full">Method</span></div>
+            <h1 class="text-3xl md:text-5xl font-bold leading-tight mb-6">Why AI Pilots Fail&mdash;and How to Write Success Criteria That Mean Something</h1>
+            <p class="text-slate-400 text-sm">By Nico Castagnola &middot; August 2026 &middot; 6 min read</p>
+        </div>
+    </header>
+
+    <article class="py-16 bg-white">
+        <div class="max-w-3xl mx-auto px-6 text-slate-700 text-lg leading-relaxed">
+            <p>Most AI pilots don&rsquo;t fail loudly. There&rsquo;s no dramatic postmortem, no line item labeled &ldquo;the automation that didn&rsquo;t work.&rdquo; They dissolve: usage tapers, the champion changes jobs or priorities, the tool quietly stops being opened, and six months later someone says &ldquo;we tried AI for that, it didn&rsquo;t really stick.&rdquo; The money is gone, and&mdash;worse&mdash;the organization has learned the wrong lesson: <em>automation doesn&rsquo;t work for us.</em></p>
+            <p>Having run technical evaluations professionally for a decade, I can tell you the dissolution is almost never about the technology. It&rsquo;s about structure. Here are the failure modes I see repeatedly, and the one-page document that prevents all of them.</p>
+
+            <h2 class="text-2xl md:text-3xl font-bold text-brand-dark">The five ways pilots dissolve</h2>
+            <p><strong class="text-brand-dark">1. No baseline.</strong> Nobody measured what the process cost before the pilot, so nobody can demonstrate what changed. &ldquo;It feels faster&rdquo; doesn&rsquo;t survive a budget conversation. If you remember one thing: measure the current state for a week <em>before</em> anything gets built.</p>
+            <p><strong class="text-brand-dark">2. Demo data instead of real work.</strong> The pilot runs on clean examples and works beautifully. Then real volume arrives with its malformed PDFs, weird edge cases, and that one client who emails photos of documents. A pilot that doesn&rsquo;t face the mess is a demo with a longer timeline.</p>
+            <p><strong class="text-brand-dark">3. No decision date.</strong> Open-ended pilots never conclude&mdash;they just age. Without a scheduled day when someone reads the numbers and decides, the pilot&rsquo;s natural end state is limbo.</p>
+            <p><strong class="text-brand-dark">4. Success by enthusiasm.</strong> The verdict gets decided by how excited people feel in week one, not what the data says in week four. Enthusiasm peaks early; reliability problems surface late. Criteria written in advance protect you from your own honeymoon.</p>
+            <p><strong class="text-brand-dark">5. Scope creep mid-pilot.</strong> &ldquo;While we&rsquo;re at it, could it also&hellip;&rdquo; is how a provable 30-day pilot becomes an unprovable 90-day project. New ideas are good news&mdash;they go on the roadmap, not into the pilot.</p>
+
+            <h2 class="text-2xl md:text-3xl font-bold text-brand-dark">The success-criteria one-pager</h2>
+            <p>Every pilot I run starts with a single page, agreed and signed before build day one. It has five rows:</p>
+            <p><strong class="text-brand-dark">Metric</strong> &mdash; the two or three numbers that define success. Almost always some combination of: time per occurrence, hours returned per week, turnaround time, and exception rate. Not &ldquo;team satisfaction.&rdquo; Numbers.</p>
+            <p><strong class="text-brand-dark">Baseline</strong> &mdash; what those numbers are today, actually measured. This week of measurement is the least glamorous and most valuable part of the whole exercise.</p>
+            <p><strong class="text-brand-dark">Target</strong> &mdash; what the automation must hit. Set it where the ROI math works, not at perfection. &ldquo;Invoice processing under 2 minutes with fewer than 3% exceptions&rdquo; is a target; &ldquo;fully automated invoicing&rdquo; is a fantasy that guarantees failure.</p>
+            <p><strong class="text-brand-dark">Measurement method</strong> &mdash; who records the numbers, where, how often. If measurement requires manual effort, it won&rsquo;t happen; build the counting into the automation itself.</p>
+            <p><strong class="text-brand-dark">Decision rule</strong> &mdash; the sentence that prevents limbo: &ldquo;On day 30 we review the scorecard. All targets hit &rarr; scale to full volume. Any target missed &rarr; stop, document why, decide fresh.&rdquo; Agreed in advance, when everyone is calm and nobody has sunk costs to defend.</p>
+
+            <h2 class="text-2xl md:text-3xl font-bold text-brand-dark">Two details that separate real pilots from theater</h2>
+            <p><strong class="text-brand-dark">Exceptions are a design feature.</strong> A pilot targeting a 0% exception rate will either fail or lie. The right design routes the hard 5&ndash;10% of cases to a human review queue and counts them honestly. The automation&rsquo;s job is to make the routine invisible, not to eliminate judgment.</p>
+            <p><strong class="text-brand-dark">A failed pilot must be cheap and informative.</strong> This is the whole point of piloting. If the pilot misses, you should walk away with the build, the documentation, and a written analysis of why&mdash;usually something upstream, like inconsistent intake data, that&rsquo;s worth fixing regardless. If failure would be expensive or embarrassing, it wasn&rsquo;t structured as a pilot; it was a launch wearing a pilot&rsquo;s name tag.</p>
+            <p>None of this requires an enterprise procurement department. It requires one page, one measurement week, and the discipline to let the numbers&mdash;not the vibes&mdash;make the call. That discipline is cheap. Its absence is what&rsquo;s expensive.</p>
+        </div>
+    </article>
+
+    <section class="py-12 bg-slate-50 border-t border-slate-100">
+        <div class="max-w-3xl mx-auto px-6 text-center">
+            <h2 class="text-2xl md:text-3xl font-bold text-brand-dark mb-4">Every Proofworks pilot runs on this structure</h2>
+            <p class="text-slate-600 mb-8 max-w-xl mx-auto">Criteria in writing, real data, a day-30 scorecard, and your call at the end. If that sounds like how you&rsquo;d want to buy, we&rsquo;ll get along.</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="../services.html#method" class="px-8 py-3.5 bg-brand-dark text-white font-bold rounded-lg hover:bg-slate-800 transition">See the Method</a>
+                <a href="../contact.html" class="px-8 py-3.5 border border-slate-300 text-slate-700 font-bold rounded-lg hover:border-brand-accent hover:text-emerald-600 transition">Book an Intro Call</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-brand-dark text-slate-400 py-8 border-t border-slate-800">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4 text-sm">
+            <span>&copy; 2026 Proofworks. All rights reserved.</span>
+            <a href="../privacy.html" class="hover:text-brand-accent transition">Privacy Policy</a>
+        </div>
+    </footer>
+</body>
+</html>

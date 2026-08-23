@@ -1,2 +1,19 @@
-/outcomes /services 301
-/outcomes.html /services 301
+# Legacy paths from the Solutions Advisory Partners era
+/outcomes /services.html 301
+/outcomes.html /services.html 301
+/glossary /insights.html 301
+/glossary.html /insights.html 301
+/insights/why-most-saas-demos-fail.html /insights.html 301
+/insights/se-maturity-model.html /insights.html 301
+/insights/ai-for-sales-engineering.html /insights.html 301
+/insights/technical-discovery-skill.html /insights.html 301
+/insights/revenue-delivery-architecture-explained.html /insights.html 301
+/insights/sales-implementation-gap.html /insights.html 301
+/insights/poc-success-criteria-template.html /insights/why-ai-pilots-fail.html 301
+/insights/sales-engineers-wrong-work.html /insights.html 301
+/insights/implementation-handoff-checklist.html /insights.html 301
+/insights/building-se-team-from-scratch.html /insights.html 301
+/insights/demo-to-poc-pipeline.html /insights.html 301
+/insights/solutions-design-criteria.html /insights.html 301
+/insights/enterprise-pocs-drag-on.html /insights.html 301
+/insights/high-converting-demo-narrative.html /insights.html 301
